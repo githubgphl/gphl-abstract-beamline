@@ -196,7 +196,7 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_oF7QAJflEeOQoP6u6l9OUQ" name="CollectionProposal">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_JFaogJfpEeOQoP6u6l9OUQ" name="collection" visibility="public" type="_hjJDAJfmEeOQoP6u6l9OUQ" isOrdered="true">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_JFaogJfpEeOQoP6u6l9OUQ" name="collection" visibility="public" type="_hjJDAJfmEeOQoP6u6l9OUQ" isOrdered="true" isUnique="false">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JYt_AJfpEeOQoP6u6l9OUQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JYumEJfpEeOQoP6u6l9OUQ" value="*"/>
         <defaultValue xmi:type="uml:LiteralString" xmi:id="_JYvNIJfpEeOQoP6u6l9OUQ">

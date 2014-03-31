@@ -734,10 +734,16 @@
           <layoutConstraint xmi:type="notation:Location" xmi:id="_SAzk0Z-tEeORueP4RwNSuw"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_5xnAcJ-tEeORueP4RwNSuw" type="3012" fontName="Sans Serif" fontHeight="11" lineColor="0">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oVFF0LjgEeOB9q44TOrPvQ" source="CustomAppearance_Annotation">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oVFF0bjgEeOB9q44TOrPvQ" key="CustomAppearance_MaskValue" value="190"/>
+          </eAnnotations>
           <element xmi:type="uml:Property" href="abstract_beamline.uml#_JFaogJfpEeOQoP6u6l9OUQ"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_5xnAcZ-tEeORueP4RwNSuw" x="65" y="39"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_5xrR4J-tEeORueP4RwNSuw" type="3012" fontName="Sans Serif" fontHeight="11" lineColor="0">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tHtuYLjgEeOB9q44TOrPvQ" source="CustomAppearance_Annotation">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tHuVcLjgEeOB9q44TOrPvQ" key="CustomAppearance_MaskValue" value="190"/>
+          </eAnnotations>
           <element xmi:type="uml:Property" href="abstract_beamline.uml#_RMby8JfpEeOQoP6u6l9OUQ"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_5xrR4Z-tEeORueP4RwNSuw" x="65" y="39"/>
         </children>
