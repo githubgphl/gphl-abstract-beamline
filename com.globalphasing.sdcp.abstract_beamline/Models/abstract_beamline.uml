@@ -3,6 +3,9 @@
   <ownedComment xmi:type="uml:Comment" xmi:id="_rQFPsJ-4EeORueP4RwNSuw" annotatedElement="_oQWIIJ-4EeORueP4RwNSuw">
     <body>Must contain settings of X, Y, Z (as corrected by the user if applicable) as well as the settings of the non-scanning rotation axes of the centred position</body>
   </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_o9wa8LjWEeOB9q44TOrPvQ" annotatedElement="_AqMaIJ-0EeORueP4RwNSuw">
+    <body> Either scatterer(s) or phasingWavelengths must be specified or the workflow cannot be started</body>
+  </ownedComment>
   <packageImport xmi:type="uml:PackageImport" xmi:id="_ImsGIZfeEeOQoP6u6l9OUQ">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
@@ -348,7 +351,7 @@
     <packagedElement xmi:type="uml:Class" xmi:id="_AqMaIJ-0EeORueP4RwNSuw" name="UserProvidedInformation">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_EQPTwJ-0EeORueP4RwNSuw" name="scatterer" visibility="public" type="_MNqSwJ-zEeORueP4RwNSuw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ehfb0J-0EeORueP4RwNSuw"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EhgC4J-0EeORueP4RwNSuw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EhgC4J-0EeORueP4RwNSuw" value="*"/>
         <defaultValue xmi:type="uml:LiteralString" xmi:id="_Ehgp8J-0EeORueP4RwNSuw">
           <value xsi:nil="true"/>
         </defaultValue>
@@ -389,6 +392,10 @@
           <value xsi:nil="true"/>
         </defaultValue>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_VBMl4LjWEeOB9q44TOrPvQ" name="phasingWavelength" type="_8pRr8LW4EeOZTslGMEIgsw" association="_VBNM8LjWEeOB9q44TOrPvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VBMl4bjWEeOB9q44TOrPvQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VBMl4rjWEeOB9q44TOrPvQ" value="*"/>
+      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_kQbdUJ-1EeORueP4RwNSuw" name="PriorInformation">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_oaDlIJ-1EeORueP4RwNSuw" name="sampleId" visibility="public" type="_-MC2wJfeEeOQoP6u6l9OUQ">
@@ -422,6 +429,35 @@
       <ownedEnd xmi:type="uml:Property" xmi:id="_HhTxAZ-2EeORueP4RwNSuw" name="priorInformation" type="_kQbdUJ-1EeORueP4RwNSuw" association="_HhTxAJ-2EeORueP4RwNSuw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HhTxAp-2EeORueP4RwNSuw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HhTxA5-2EeORueP4RwNSuw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_8pRr8LW4EeOZTslGMEIgsw" name="PhasingWavelength">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_FMKTALW5EeOZTslGMEIgsw" name="id" visibility="public" type="_-MC2wJfeEeOQoP6u6l9OUQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FzYEALW5EeOZTslGMEIgsw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FzYrELW5EeOZTslGMEIgsw" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_FzZSILW5EeOZTslGMEIgsw">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_LD5icLW5EeOZTslGMEIgsw" name="wavelength" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LWQdwLW5EeOZTslGMEIgsw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LWRE0LW5EeOZTslGMEIgsw" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_LWSS8LW5EeOZTslGMEIgsw">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_R6RkYLW5EeOZTslGMEIgsw" name="role" visibility="public" type="_jSVkwJ-yEeORueP4RwNSuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UBehcLW5EeOZTslGMEIgsw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UBfIgLW5EeOZTslGMEIgsw" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_UBhkwLW5EeOZTslGMEIgsw">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_VBNM8LjWEeOB9q44TOrPvQ" name="userProvidedInformation_phasingWavelength_1" memberEnd="_VBNM8bjWEeOB9q44TOrPvQ _VBMl4LjWEeOB9q44TOrPvQ">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_VBNM8bjWEeOB9q44TOrPvQ" name="userProvidedInformation" type="_AqMaIJ-0EeORueP4RwNSuw" association="_VBNM8LjWEeOB9q44TOrPvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VBNM8rjWEeOB9q44TOrPvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VBNM87jWEeOB9q44TOrPvQ" value="1"/>
       </ownedEnd>
     </packagedElement>
   </packagedElement>
