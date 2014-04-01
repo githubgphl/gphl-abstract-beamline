@@ -71,21 +71,8 @@
         </defaultValue>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_m8xhgJfjEeOQoP6u6l9OUQ" name="SweepWidth" isAbstract="true">
-      <generalization xmi:type="uml:Generalization" xmi:id="_azsaYJfkEeOQoP6u6l9OUQ" general="_NZa1UJfeEeOQoP6u6l9OUQ"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_-yuNgJfkEeOQoP6u6l9OUQ" name="GeometricSweepWidth">
-      <generalization xmi:type="uml:Generalization" xmi:id="_Cj1HoJflEeOQoP6u6l9OUQ" general="_m8xhgJfjEeOQoP6u6l9OUQ"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_GVHn8JflEeOQoP6u6l9OUQ" name="width" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GkEp8JflEeOQoP6u6l9OUQ" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GkFRAJflEeOQoP6u6l9OUQ" value="1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_GkF4EJflEeOQoP6u6l9OUQ">
-          <value xsi:nil="true"/>
-        </defaultValue>
-      </ownedAttribute>
-    </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_r2aUgJfkEeOQoP6u6l9OUQ" name="CollectionSweepWidth">
-      <generalization xmi:type="uml:Generalization" xmi:id="_vUAcwJfkEeOQoP6u6l9OUQ" general="_m8xhgJfjEeOQoP6u6l9OUQ"/>
+      <generalization xmi:type="uml:Generalization" xmi:id="_vUAcwJfkEeOQoP6u6l9OUQ" general="_NZa1UJfeEeOQoP6u6l9OUQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w36fgJfkEeOQoP6u6l9OUQ" name="imageWidth" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w_z3QJfkEeOQoP6u6l9OUQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w_0eUJfkEeOQoP6u6l9OUQ" value="1"/>
@@ -159,7 +146,7 @@
     </ownedComment>
     <packagedElement xmi:type="uml:Class" xmi:id="_hjJDAJfmEeOQoP6u6l9OUQ" name="CollectionSweep">
       <generalization xmi:type="uml:Generalization" xmi:id="_jm0K8JfmEeOQoP6u6l9OUQ" general="_sR8kgJflEeOQoP6u6l9OUQ"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_ljG4gJfmEeOQoP6u6l9OUQ" name="width" visibility="public" type="_r2aUgJfkEeOQoP6u6l9OUQ" isUnique="false" redefinedProperty="_arvGUJfmEeOQoP6u6l9OUQ">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ljG4gJfmEeOQoP6u6l9OUQ" name="width" visibility="public" type="_r2aUgJfkEeOQoP6u6l9OUQ" isUnique="false">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_l2EQwJfmEeOQoP6u6l9OUQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_l2E30JfmEeOQoP6u6l9OUQ" value="1"/>
         <defaultValue xmi:type="uml:LiteralString" xmi:id="_l2Fe4JfmEeOQoP6u6l9OUQ">
@@ -220,7 +207,7 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_Xu3QEJfnEeOQoP6u6l9OUQ" name="GeometricSweep">
       <generalization xmi:type="uml:Generalization" xmi:id="_bIOYkJfnEeOQoP6u6l9OUQ" general="_sR8kgJflEeOQoP6u6l9OUQ"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_f1bHgJfnEeOQoP6u6l9OUQ" name="width" visibility="public" type="_-yuNgJfkEeOQoP6u6l9OUQ" isUnique="false" redefinedProperty="_arvGUJfmEeOQoP6u6l9OUQ">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_f1bHgJfnEeOQoP6u6l9OUQ" name="width" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ" isUnique="false">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gIE9wJfnEeOQoP6u6l9OUQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gIFk0JfnEeOQoP6u6l9OUQ" value="1"/>
         <defaultValue xmi:type="uml:LiteralString" xmi:id="_gIGL4JfnEeOQoP6u6l9OUQ">
@@ -254,13 +241,6 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_45Lx0JflEeOQoP6u6l9OUQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_45M_8JflEeOQoP6u6l9OUQ" value="1"/>
         <defaultValue xmi:type="uml:LiteralString" xmi:id="_45NnAJflEeOQoP6u6l9OUQ">
-          <value xsi:nil="true"/>
-        </defaultValue>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_arvGUJfmEeOQoP6u6l9OUQ" name="width" visibility="public" type="_m8xhgJfjEeOQoP6u6l9OUQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bJZ5wJfmEeOQoP6u6l9OUQ" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bJag0JfmEeOQoP6u6l9OUQ" value="1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_bJbu8JfmEeOQoP6u6l9OUQ">
           <value xsi:nil="true"/>
         </defaultValue>
       </ownedAttribute>
