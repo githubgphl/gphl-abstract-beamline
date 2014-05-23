@@ -28,6 +28,7 @@ public interface Sweep {
     BeamSetting getBeamSetting();
     BeamstopSetting getBeamstopSetting();
     SweepWidth getWidth();
+    String getScanAxis();
     double getStart();
 
 }
