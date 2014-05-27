@@ -18,7 +18,6 @@ import co.gphl.beamline.v2_unstable.instrumentation.BeamSetting;
 import co.gphl.beamline.v2_unstable.instrumentation.BeamstopSetting;
 import co.gphl.beamline.v2_unstable.instrumentation.DetectorSetting;
 import co.gphl.beamline.v2_unstable.instrumentation.GoniostatSetting;
-import co.gphl.beamline.v2_unstable.instrumentation.SweepWidth;
 
 public interface Sweep {
 
@@ -27,7 +26,6 @@ public interface Sweep {
     DetectorSetting getDetectorSetting();
     BeamSetting getBeamSetting();
     BeamstopSetting getBeamstopSetting();
-    SweepWidth getWidth();
     String getScanAxis();
     double getStart();
 

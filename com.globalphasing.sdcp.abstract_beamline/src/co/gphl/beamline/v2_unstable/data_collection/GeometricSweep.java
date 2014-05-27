@@ -12,10 +12,8 @@
  */
 package co.gphl.beamline.v2_unstable.data_collection;
 
-import co.gphl.beamline.v2_unstable.instrumentation.GeometricSweepWidth;
-
 public interface GeometricSweep extends Sweep {
     
-    GeometricSweepWidth getWidth();
+    double getWidth();
     
 }
