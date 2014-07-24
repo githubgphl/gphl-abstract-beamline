@@ -22,4 +22,5 @@ public interface CollectionSweep extends Sweep, Map<String, String> {
     SweepExposure getExposure();
     int getImageStartNum();
     CollectionSweepWidth getWidth();
+    GeometricSweep getGeometricSweep();    
 }

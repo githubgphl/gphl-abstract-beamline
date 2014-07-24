@@ -14,19 +14,9 @@ package co.gphl.beamline.v2_unstable.data_collection;
 
 import java.util.UUID;
 
-import co.gphl.beamline.v2_unstable.instrumentation.BeamSetting;
-import co.gphl.beamline.v2_unstable.instrumentation.BeamstopSetting;
-import co.gphl.beamline.v2_unstable.instrumentation.DetectorSetting;
-import co.gphl.beamline.v2_unstable.instrumentation.GoniostatSetting;
-
 public interface Sweep {
 
     UUID getId();
-    GoniostatSetting getGoniostatSetting();
-    DetectorSetting getDetectorSetting();
-    BeamSetting getBeamSetting();
-    BeamstopSetting getBeamstopSetting();
-    String getScanAxis();
     double getStart();
 
 }
