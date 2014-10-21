@@ -13,7 +13,7 @@
 package co.gphl.beamline.v2_unstable.instrumentation;
 
 
-public interface SweepExposure extends InstrumentationParams {
+public interface ScanExposure extends InstrumentationParams {
 
     double getTime();
     double getIntensity();

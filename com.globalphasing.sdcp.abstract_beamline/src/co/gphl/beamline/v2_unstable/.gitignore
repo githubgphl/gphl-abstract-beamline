@@ -1,4 +1,0 @@
-# PK: Exclude files from v1 abstract beamline. I am keeping them
-# in my workspace for reference until the ASTRA/SDCP implementation
-# of the abstract beamline is functional.
-/*.java

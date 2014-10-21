@@ -22,11 +22,8 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_f7qxEJf1EeOQoP6u6l9OUQ" name="getBeamlineStatus"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_rUZzMJ-xEeORueP4RwNSuw" name="Instrumentation">
-    <packagedElement xmi:type="uml:Class" xmi:id="_NZa1UJfeEeOQoP6u6l9OUQ" name="InstrumentationParams" isAbstract="true">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_iF32QJfeEeOQoP6u6l9OUQ" name="id" type="_-MC2wJfeEeOQoP6u6l9OUQ"/>
-    </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_QgrrwJffEeOQoP6u6l9OUQ" name="BeamSetting">
-      <generalization xmi:type="uml:Generalization" xmi:id="_ND30YJfkEeOQoP6u6l9OUQ" general="_NZa1UJfeEeOQoP6u6l9OUQ"/>
+      <generalization xmi:type="uml:Generalization" xmi:id="_ND30YJfkEeOQoP6u6l9OUQ" general="_sR8kgJflEeOQoP6u6l9OUQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_cDSMQJffEeOQoP6u6l9OUQ" name="wavelength" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fPOj0JffEeOQoP6u6l9OUQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fPPx8JffEeOQoP6u6l9OUQ" value="1"/>
@@ -36,7 +33,7 @@
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_pJRyIJffEeOQoP6u6l9OUQ" name="PositionerSetting" isAbstract="true">
-      <generalization xmi:type="uml:Generalization" xmi:id="_R_xtsJfkEeOQoP6u6l9OUQ" general="_NZa1UJfeEeOQoP6u6l9OUQ"/>
+      <generalization xmi:type="uml:Generalization" xmi:id="_R_xtsJfkEeOQoP6u6l9OUQ" general="_sR8kgJflEeOQoP6u6l9OUQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_PPnQAJfgEeOQoP6u6l9OUQ" name="axisSetting" type="_i169sJffEeOQoP6u6l9OUQ" association="_PPn3EJfgEeOQoP6u6l9OUQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PPnQAZfgEeOQoP6u6l9OUQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PPnQApfgEeOQoP6u6l9OUQ" value="*"/>
@@ -51,8 +48,8 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PPn3E5fgEeOQoP6u6l9OUQ" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_-plxkJfiEeOQoP6u6l9OUQ" name="SweepExposure">
-      <generalization xmi:type="uml:Generalization" xmi:id="_QQ_3sJfkEeOQoP6u6l9OUQ" general="_NZa1UJfeEeOQoP6u6l9OUQ"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_-plxkJfiEeOQoP6u6l9OUQ" name="ScanExposure">
+      <generalization xmi:type="uml:Generalization" xmi:id="_QQ_3sJfkEeOQoP6u6l9OUQ" general="_sR8kgJflEeOQoP6u6l9OUQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_DlJsoJfjEeOQoP6u6l9OUQ" name="time" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_D3gn8JfjEeOQoP6u6l9OUQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_D3hPAJfjEeOQoP6u6l9OUQ" value="1"/>
@@ -80,8 +77,8 @@
     <packagedElement xmi:type="uml:Class" xmi:id="_7pD_0JfiEeOQoP6u6l9OUQ" name="DetectorSetting">
       <generalization xmi:type="uml:Generalization" xmi:id="_haS68JfkEeOQoP6u6l9OUQ" general="_pJRyIJffEeOQoP6u6l9OUQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_r2aUgJfkEeOQoP6u6l9OUQ" name="CollectionSweepWidth">
-      <generalization xmi:type="uml:Generalization" xmi:id="_vUAcwJfkEeOQoP6u6l9OUQ" general="_NZa1UJfeEeOQoP6u6l9OUQ"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_r2aUgJfkEeOQoP6u6l9OUQ" name="ScanWidth">
+      <generalization xmi:type="uml:Generalization" xmi:id="_dB4ewFhLEeSONvFHwpw1ng" general="_sR8kgJflEeOQoP6u6l9OUQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_w36fgJfkEeOQoP6u6l9OUQ" name="imageWidth" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w_z3QJfkEeOQoP6u6l9OUQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w_0eUJfkEeOQoP6u6l9OUQ" value="1"/>
@@ -145,14 +142,14 @@
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_JPTgsJ-yEeORueP4RwNSuw" name="Instructions">
-    <ownedComment xmi:type="uml:Comment" xmi:id="_ljidQJ-wEeORueP4RwNSuw" annotatedElement="_sR8kgJflEeOQoP6u6l9OUQ">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_ljidQJ-wEeORueP4RwNSuw" annotatedElement="_Xu3QEJfnEeOQoP6u6l9OUQ">
       <body>The start attribute is taken as the initial setting of goniostatSetting::scanAxis. Any setting for the scan axis specified in goniostatSetting should be ignored</body>
     </ownedComment>
     <ownedComment xmi:type="uml:Comment" xmi:id="_JyHtcJ4_EeO6a5RR8yLOUA" annotatedElement="_Xu3QEJfnEeOQoP6u6l9OUQ">
-      <body>A set of one or more geometric sweeps define an overall data collection without going into execution-level specifics such as: interleaving, exposure, image width etc. They can be used for presentation purposes or to summarise a data collection that is decomposed in a way that would be otherwise hard to understand
+      <body>A set of one or more sweeps define an overall data collection without going into execution-level specifics such as: interleaving, exposure, image width etc. They can be used for presentation purposes or to summarise a data collection that is decomposed in a way that would be otherwise hard to understand
 </body>
     </ownedComment>
-    <packagedElement xmi:type="uml:Class" xmi:id="_hjJDAJfmEeOQoP6u6l9OUQ" name="CollectionSweep">
+    <packagedElement xmi:type="uml:Class" xmi:id="_hjJDAJfmEeOQoP6u6l9OUQ" name="Scan">
       <generalization xmi:type="uml:Generalization" xmi:id="_jm0K8JfmEeOQoP6u6l9OUQ" general="_sR8kgJflEeOQoP6u6l9OUQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_ljG4gJfmEeOQoP6u6l9OUQ" name="width" visibility="public" type="_r2aUgJfkEeOQoP6u6l9OUQ" isUnique="false">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_l2EQwJfmEeOQoP6u6l9OUQ" value="1"/>
@@ -187,6 +184,13 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZOe28RMxEeSP4pLtdegIlQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZOe28hMxEeSP4pLtdegIlQ" value="1"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dBb5UJ-wEeORueP4RwNSuw" name="start" visibility="public" type="_i169sJffEeOQoP6u6l9OUQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dG9SgJ-wEeORueP4RwNSuw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dG95kJ-wEeORueP4RwNSuw" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_dG-goJ-wEeORueP4RwNSuw">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_dDmDoJfoEeOQoP6u6l9OUQ" name="collectionSweep_string_1" memberEnd="_dDmDoZfoEeOQoP6u6l9OUQ _dDlckJfoEeOQoP6u6l9OUQ">
       <ownedEnd xmi:type="uml:Property" xmi:id="_dDmDoZfoEeOQoP6u6l9OUQ" name="collectionSweep" type="_hjJDAJfmEeOQoP6u6l9OUQ" association="_dDmDoJfoEeOQoP6u6l9OUQ">
@@ -194,7 +198,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dDmDo5foEeOQoP6u6l9OUQ" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_Xu3QEJfnEeOQoP6u6l9OUQ" name="GeometricSweep">
+    <packagedElement xmi:type="uml:Class" xmi:id="_Xu3QEJfnEeOQoP6u6l9OUQ" name="Sweep">
       <generalization xmi:type="uml:Generalization" xmi:id="_bIOYkJfnEeOQoP6u6l9OUQ" general="_sR8kgJflEeOQoP6u6l9OUQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_f1bHgJfnEeOQoP6u6l9OUQ" name="width" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ" isUnique="false">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gIE9wJfnEeOQoP6u6l9OUQ" value="1"/>
@@ -235,32 +239,11 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZOfeAhMxEeSP4pLtdegIlQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZOfeAxMxEeSP4pLtdegIlQ" value="*"/>
       </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_sR8kgJflEeOQoP6u6l9OUQ" name="Sweep" isAbstract="true">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_9_tYkJ-tEeORueP4RwNSuw" name="id" visibility="public" type="_-MC2wJfeEeOQoP6u6l9OUQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-DnoMJ-tEeORueP4RwNSuw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-Do2UJ-tEeORueP4RwNSuw" value="1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_-DpdYJ-tEeORueP4RwNSuw">
-          <value xsi:nil="true"/>
-        </defaultValue>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_dBb5UJ-wEeORueP4RwNSuw" name="start" visibility="public" type="_i169sJffEeOQoP6u6l9OUQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dG9SgJ-wEeORueP4RwNSuw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dG95kJ-wEeORueP4RwNSuw" value="1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_dG-goJ-wEeORueP4RwNSuw">
-          <value xsi:nil="true"/>
-        </defaultValue>
-      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_MdnYAFhHEeSONvFHwpw1ng" name="start" type="_i169sJffEeOQoP6u6l9OUQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_ZOfeABMxEeSP4pLtdegIlQ" name="collectionSweep_geometricSweep_1" memberEnd="_ZOfeARMxEeSP4pLtdegIlQ _ZOe28BMxEeSP4pLtdegIlQ"/>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_mEU5IChHEeSuSbp_QHtIcg" name="CollectionProposal">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_SACIwJ-tEeORueP4RwNSuw" name="id" visibility="public" type="_-MC2wJfeEeOQoP6u6l9OUQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_URIBoJ-tEeORueP4RwNSuw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_URIosJ-tEeORueP4RwNSuw" value="1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_URIosZ-tEeORueP4RwNSuw">
-          <value xsi:nil="true"/>
-        </defaultValue>
-      </ownedAttribute>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ywaIEFhIEeSONvFHwpw1ng" name="CollectionProposal">
+      <generalization xmi:type="uml:Generalization" xmi:id="_GOhGkFhJEeSONvFHwpw1ng" general="_sR8kgJflEeOQoP6u6l9OUQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_JFaogJfpEeOQoP6u6l9OUQ" name="collection" visibility="public" type="_hjJDAJfmEeOQoP6u6l9OUQ" isOrdered="true" isUnique="false">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JYt_AJfpEeOQoP6u6l9OUQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JYumEJfpEeOQoP6u6l9OUQ" value="*"/>
@@ -493,5 +476,14 @@
     <packagedElement xmi:type="uml:Realization" xmi:id="_DH3xwChREeSuSbp_QHtIcg" name="Realization4" supplier="_cc1WQChOEeSuSbp_QHtIcg">
       <client xmi:type="uml:Class" href="../../com.globalphasing.astra.messages/Models/model.uml#_95dooChPEeSuSbp_QHtIcg"/>
     </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sR8kgJflEeOQoP6u6l9OUQ" name="IdentifiedElement" isAbstract="true">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_9_tYkJ-tEeORueP4RwNSuw" name="id" visibility="public" type="_-MC2wJfeEeOQoP6u6l9OUQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-DnoMJ-tEeORueP4RwNSuw" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-Do2UJ-tEeORueP4RwNSuw" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_-DpdYJ-tEeORueP4RwNSuw">
+        <value xsi:nil="true"/>
+      </defaultValue>
+    </ownedAttribute>
   </packagedElement>
 </uml:Model>

@@ -12,7 +12,7 @@
  */
 package co.gphl.beamline.v2_unstable.instrumentation;
 
-public interface CollectionSweepWidth extends InstrumentationParams  {
+public interface ScanWidth extends InstrumentationParams  {
 
     double getImageWidth();
     int getNumImages();

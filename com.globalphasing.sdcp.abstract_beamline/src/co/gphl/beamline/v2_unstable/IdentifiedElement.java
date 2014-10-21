@@ -10,17 +10,17 @@
  * use is in force.
  *
  */
-package co.gphl.beamline.v2_unstable.data_collection;
 
-import java.util.Map;
+package co.gphl.beamline.v2_unstable;
 
-import co.gphl.beamline.v2_unstable.instrumentation.CollectionSweepWidth;
-import co.gphl.beamline.v2_unstable.instrumentation.SweepExposure;
+import java.util.UUID;
 
-public interface CollectionSweep extends Sweep, Map<String, String> {
+/**
+ * @author pkeller
+ *
+ */
+public interface IdentifiedElement {
 
-    SweepExposure getExposure();
-    int getImageStartNum();
-    CollectionSweepWidth getWidth();
-    GeometricSweep getGeometricSweep();    
+    UUID getId();
+    
 }
