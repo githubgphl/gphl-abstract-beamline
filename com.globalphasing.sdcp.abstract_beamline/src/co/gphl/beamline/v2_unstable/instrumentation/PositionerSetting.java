@@ -14,8 +14,10 @@ package co.gphl.beamline.v2_unstable.instrumentation;
 
 import java.util.Map;
 
+import co.gphl.beamline.v2_unstable.IdentifiedElement;
+
 public interface PositionerSetting
-    extends InstrumentationParams, Map<String, Double> {
+    extends IdentifiedElement, Map<String, Double> {
     
     Map<String, Double> getSettings();
     

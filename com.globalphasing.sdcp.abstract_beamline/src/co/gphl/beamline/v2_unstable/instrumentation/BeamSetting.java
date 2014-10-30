@@ -12,7 +12,9 @@
  */
 package co.gphl.beamline.v2_unstable.instrumentation;
 
-public interface BeamSetting extends InstrumentationParams {
+import co.gphl.beamline.v2_unstable.IdentifiedElement;
+
+public interface BeamSetting extends IdentifiedElement {
 
     double getWavelength();
         

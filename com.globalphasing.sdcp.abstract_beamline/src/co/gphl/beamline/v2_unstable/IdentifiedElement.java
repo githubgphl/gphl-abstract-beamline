@@ -22,5 +22,6 @@ import java.util.UUID;
 public interface IdentifiedElement {
 
     UUID getId();
+    boolean isGeneratedId();
     
 }

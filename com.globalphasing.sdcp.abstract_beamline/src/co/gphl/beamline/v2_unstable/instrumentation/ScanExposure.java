@@ -12,8 +12,10 @@
  */
 package co.gphl.beamline.v2_unstable.instrumentation;
 
+import co.gphl.beamline.v2_unstable.IdentifiedElement;
 
-public interface ScanExposure extends InstrumentationParams {
+
+public interface ScanExposure extends IdentifiedElement {
 
     double getTime();
     double getIntensity();

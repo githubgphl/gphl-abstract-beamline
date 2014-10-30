@@ -12,7 +12,9 @@
  */
 package co.gphl.beamline.v2_unstable.instrumentation;
 
-public interface ScanWidth extends InstrumentationParams  {
+import co.gphl.beamline.v2_unstable.IdentifiedElement;
+
+public interface ScanWidth extends IdentifiedElement  {
 
     double getImageWidth();
     int getNumImages();
