@@ -1,0 +1,2 @@
+# Ignore html previews of Markdown files
+.*.md.html
