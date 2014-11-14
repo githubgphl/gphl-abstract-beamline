@@ -39,7 +39,7 @@ description and action must dovetail.
 For a strategy to achieve optimality, it needs to rely on complex
 sequences of measurements dictated by scientific criteria and
 imperatives; while in order to achieve "executability" it must be
-translatable to a sequence of instrumental actions available from the
+translatable into a sequence of instrumental actions available from the
 BCS.
 
 A common vocabulary is therefore required for the instructions in
