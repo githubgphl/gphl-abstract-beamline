@@ -25,7 +25,7 @@ phasing experiments.
 Global Phasing, among others, has been interested in bucking
 that trend by creating combined capabilities for the fast design of
 optimal strategies and the direct supervision of their execution on an
-actual beamline. GPhL's approach is to aim for a full "third-party
+actual beamline. GPhL's approach has been to aim for a full "third-party
 design and control" capability rather for than separate add-on programs
 that would need to be invoked by local software on each specific
 beamline or group of beamlines running under the BCS.
