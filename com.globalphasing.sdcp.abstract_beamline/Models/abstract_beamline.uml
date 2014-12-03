@@ -240,6 +240,13 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZOfeAxMxEeSP4pLtdegIlQ" value="*"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_MdnYAFhHEeSONvFHwpw1ng" name="start" type="_i169sJffEeOQoP6u6l9OUQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_AnAk8HpKEeSgGdkzQZzVGg" name="sweepGroup" visibility="public" type="_3sNd0JfkEeOQoP6u6l9OUQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BOrB4HpKEeSgGdkzQZzVGg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BOteIHpKEeSgGdkzQZzVGg" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_BOusQHpKEeSgGdkzQZzVGg">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_ZOfeABMxEeSP4pLtdegIlQ" name="collectionSweep_geometricSweep_1" memberEnd="_ZOfeARMxEeSP4pLtdegIlQ _ZOe28BMxEeSP4pLtdegIlQ"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_ywaIEFhIEeSONvFHwpw1ng" name="CollectionProposal">

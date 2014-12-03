@@ -29,6 +29,8 @@ public interface Sweep extends IdentifiedElement {
     String getScanAxis();
     double getWidth();
     double getStart();
+    Integer getSweepGroup();
+    boolean isSetSweepGroup();
     Set<Scan> getScans();
     
 }

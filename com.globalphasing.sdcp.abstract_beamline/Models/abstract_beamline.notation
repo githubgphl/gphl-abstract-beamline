@@ -893,6 +893,10 @@
           <element xmi:type="uml:Property" href="abstract_beamline.uml#_MdnYAFhHEeSONvFHwpw1ng"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_MeTUgVhHEeSONvFHwpw1ng"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_PVPT8HpKEeSgGdkzQZzVGg" type="3012" fontName="Sans" fontHeight="11" lineColor="0">
+          <element xmi:type="uml:Property" href="abstract_beamline.uml#_AnAk8HpKEeSgGdkzQZzVGg"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_PVPT8XpKEeSgGdkzQZzVGg" x="34" y="100"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_Xu66c5fnEeOQoP6u6l9OUQ"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_Xu66dJfnEeOQoP6u6l9OUQ"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_Xu66dZfnEeOQoP6u6l9OUQ"/>
@@ -915,7 +919,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_a_zgEhMwEeSP4pLtdegIlQ"/>
       </children>
       <element xmi:type="uml:Class" href="abstract_beamline.uml#_Xu3QEJfnEeOQoP6u6l9OUQ"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xu5sUZfnEeOQoP6u6l9OUQ" x="399" y="260" width="291" height="116"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xu5sUZfnEeOQoP6u6l9OUQ" x="399" y="260" width="292" height="136"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_azJD8JfoEeOQoP6u6l9OUQ" type="2009" fontName="" fontHeight="11" lineColor="0">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_azJD8pfoEeOQoP6u6l9OUQ" source="ShadowFigure">
@@ -996,7 +1000,7 @@
       </eAnnotations>
       <children xmi:type="notation:DecorationNode" xmi:id="_lkCMhp-wEeORueP4RwNSuw" type="5038"/>
       <element xmi:type="uml:Comment" href="abstract_beamline.uml#_ljidQJ-wEeORueP4RwNSuw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lkBlcZ-wEeORueP4RwNSuw" x="476" y="400" width="149" height="81"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lkBlcZ-wEeORueP4RwNSuw" x="471" y="435" width="149" height="81"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_2KOjkFhIEeSONvFHwpw1ng" type="2008" fontName="Sans" fontHeight="11" fillColor="6421601" lineColor="0">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2KPKoFhIEeSONvFHwpw1ng" source="ShadowFigure">
