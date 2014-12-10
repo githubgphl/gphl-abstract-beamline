@@ -9,6 +9,14 @@
   <ownedComment xmi:type="uml:Comment" xmi:id="_NLHdgCg_EeSuSbp_QHtIcg" annotatedElement="_4Ycb0J-yEeORueP4RwNSuw _ED0d0J-zEeORueP4RwNSuw _MNqSwJ-zEeORueP4RwNSuw">
     <body> Many combinations of element and edge will be disallowed, depending on basic scientific criteria and/or the capabilities of the beamline</body>
   </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_sNNx4IBKEeSdSI8TP7jZpg" annotatedElement="_ywaIEFhIEeSONvFHwpw1ng">
+    <body>relativeImageDir is an externally-specified directory under which images should be written by the beamline for this data collection. It is relative to an absolute path that:
+* is determined by the beamline setup
+* cannot be modified by data collection parameters
+Further subdirectories relative to relativeImageDir for the images produced by individual scans can be specified in a beamline-dependent way using Scan::paramName/Scan::filenameParam.
+
+</body>
+  </ownedComment>
   <packageImport xmi:type="uml:PackageImport" xmi:id="_ImsGIZfeEeOQoP6u6l9OUQ">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
@@ -262,6 +270,14 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RdNZ4JfpEeOQoP6u6l9OUQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RdOA8JfpEeOQoP6u6l9OUQ" value="*"/>
         <defaultValue xmi:type="uml:LiteralString" xmi:id="_RdOoAJfpEeOQoP6u6l9OUQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_XLu8IIBKEeSdSI8TP7jZpg" name="relativeImageDir" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Xl8y8IBKEeSdSI8TP7jZpg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Xl-BEIBKEeSdSI8TP7jZpg" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_Xl-oIIBKEeSdSI8TP7jZpg">
           <value xsi:nil="true"/>
         </defaultValue>
       </ownedAttribute>
