@@ -17,7 +17,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
-public interface CollectionProposal extends Serializable {
+import co.gphl.beamline.v2_unstable.IdentifiedElement;
+
+public interface CollectionProposal extends Serializable, IdentifiedElement {
 
     UUID getCollectionId();
     UUID getStrategyId();
