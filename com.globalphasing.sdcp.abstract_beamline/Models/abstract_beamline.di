@@ -22,6 +22,9 @@
     <availablePage>
       <emfPageIdentifier href="abstract_beamline.notation#_aPnYUJ-4EeORueP4RwNSuw"/>
     </availablePage>
+    <availablePage>
+      <emfPageIdentifier href="abstract_beamline.notation#_Tw7lYKyNEeSAYN-eWA_Wkw"/>
+    </availablePage>
   </pageList>
   <sashModel currentSelection="//@sashModel/@windows.0/@children.0">
     <windows>
@@ -46,6 +49,9 @@
         </children>
         <children>
           <emfPageIdentifier href="abstract_beamline.notation#_aPnYUJ-4EeORueP4RwNSuw"/>
+        </children>
+        <children>
+          <emfPageIdentifier href="abstract_beamline.notation#_Tw7lYKyNEeSAYN-eWA_Wkw"/>
         </children>
       </children>
     </windows>
