@@ -6,5 +6,6 @@ Bundle-Version: 1.0.0.qualifier
 Export-Package: co.gphl.beamline.v2_unstable,
  co.gphl.beamline.v2_unstable.data_collection,
  co.gphl.beamline.v2_unstable.domain_types,
+ co.gphl.beamline.v2_unstable.information,
  co.gphl.beamline.v2_unstable.instrumentation
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
