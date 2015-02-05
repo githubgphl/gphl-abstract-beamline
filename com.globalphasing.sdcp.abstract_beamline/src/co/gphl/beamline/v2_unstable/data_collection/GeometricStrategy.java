@@ -1,5 +1,5 @@
 /*
- * Copyright © 2014 by Global Phasing Ltd. All rights reserved
+ * Copyright © 2015 by Global Phasing Ltd. All rights reserved
  *
  * This software is proprietary to and embodies the confidential
  * technology of Global Phasing Limited (GPhL).
@@ -10,19 +10,21 @@
  * use is in force.
  *
  */
+
 package co.gphl.beamline.v2_unstable.data_collection;
 
 import java.io.Serializable;
-import java.util.List;
-import java.util.UUID;
+import java.util.Set;
 
 import co.gphl.beamline.v2_unstable.IdentifiedElement;
 
-public interface CollectionProposal extends Serializable, IdentifiedElement {
+/**
+ * @author pkeller
+ *
+ */
+public interface GeometricStrategy extends Serializable, IdentifiedElement {
 
-    UUID getCollectionId();
-    String getRelativeImageDir();
-    List<? extends Scan> getCollection();
-    GeometricStrategy getStrategy();
-
+    Set<Sweep> getSweep();
+    boolean isInterleave();
+    
 }
