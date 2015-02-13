@@ -305,6 +305,34 @@ Further subdirectories relative to relativeImageDir for the images produced by i
           <value xsi:nil="true"/>
         </defaultValue>
       </ownedAttribute>
+      <ownedAttribute xmi:id="_4sSh0LIHEeSDifNhU1GYbw" name="allowedWidths" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5HVfELIHEeSDifNhU1GYbw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5HWGILIHEeSDifNhU1GYbw" value="*"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_5HXUQLIHEeSDifNhU1GYbw">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_AD_IILIIEeSDifNhU1GYbw" name="defaultWidthIdx" visibility="public" type="_LXRoUJfnEeOQoP6u6l9OUQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AOOpQLIIEeSDifNhU1GYbw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AOPQULIIEeSDifNhU1GYbw" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_AOQecLIIEeSDifNhU1GYbw">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_sJ1PULLiEeSkZ-QD4g8g_A" name="allowedWidths" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2aOhELLiEeSkZ-QD4g8g_A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2aPIILLiEeSkZ-QD4g8g_A" value="*"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_2aQWQLLiEeSkZ-QD4g8g_A">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_KPKrMLLjEeSkZ-QD4g8g_A" name="defaultWidthIdx" visibility="public" type="_3sNd0JfkEeOQoP6u6l9OUQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KcHiELLjEeSkZ-QD4g8g_A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KcHiEbLjEeSkZ-QD4g8g_A" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_KcIwMLLjEeSkZ-QD4g8g_A">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_umVo8KyKEeSAYN-eWA_Wkw" clientDependency="_Gy56oKyLEeSAYN-eWA_Wkw _Hf6xoKyLEeSAYN-eWA_Wkw" name="GeometricStrategy"/>
     <packagedElement xmi:type="uml:Realization" xmi:id="_Gy56oKyLEeSAYN-eWA_Wkw" name="Realization1" client="_umVo8KyKEeSAYN-eWA_Wkw">

@@ -14,6 +14,7 @@
 package co.gphl.beamline.v2_unstable.data_collection;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 
 import co.gphl.beamline.v2_unstable.IdentifiedElement;
@@ -26,5 +27,6 @@ public interface GeometricStrategy extends Serializable, IdentifiedElement {
 
     Set<Sweep> getSweep();
     boolean isInterleave();
-    
+    List<Double> getAllowedWidths();
+    int getDefaultWidthIdx();
 }

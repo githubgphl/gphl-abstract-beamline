@@ -1128,6 +1128,14 @@
           <element xmi:type="uml:Property" href="abstract_beamline.uml#_GyOskKyIEeSAYN-eWA_Wkw"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_GyP6sayIEeSAYN-eWA_Wkw"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_4tL5sLIHEeSDifNhU1GYbw" type="3012" fontName="Sans" fontHeight="11" lineColor="0">
+          <element xmi:type="uml:Property" href="abstract_beamline.uml#_4sSh0LIHEeSDifNhU1GYbw"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_4tL5sbIHEeSDifNhU1GYbw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_AEA9ULIIEeSDifNhU1GYbw" type="3012" fontName="Sans" fontHeight="11" lineColor="0">
+          <element xmi:type="uml:Property" href="abstract_beamline.uml#_AD_IILIIEeSDifNhU1GYbw"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_AEA9UbIIEeSDifNhU1GYbw"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_7g_ltqyDEeSAYN-eWA_Wkw"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_7g_lt6yDEeSAYN-eWA_Wkw"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_7g_luKyDEeSAYN-eWA_Wkw"/>
@@ -1150,7 +1158,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7hGTYqyDEeSAYN-eWA_Wkw"/>
       </children>
       <element xmi:type="uml:Class" href="abstract_beamline.uml#_2RLR4KyDEeSAYN-eWA_Wkw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7g9wgayDEeSAYN-eWA_Wkw" x="-68" y="205" width="201" height="76"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7g9wgayDEeSAYN-eWA_Wkw" x="-68" y="205" width="249" height="106"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_mxbiQZflEeOQoP6u6l9OUQ"/>
     <element xmi:type="uml:Model" href="abstract_beamline.uml#_ImsGIJfeEeOQoP6u6l9OUQ"/>
