@@ -12,10 +12,14 @@
  */
 package co.gphl.beamline.v2_unstable.instrumentation;
 
+import java.util.UUID;
+
 public interface GoniostatSetting extends PositionerSetting {
 
     SettingStatus getStatus();
     void setStatus(SettingStatus status);
     String getScanAxis();
+    
+    UUID getCentringId();
     
 }
