@@ -341,11 +341,36 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         </defaultValue>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_umVo8KyKEeSAYN-eWA_Wkw" clientDependency="_Gy56oKyLEeSAYN-eWA_Wkw _Hf6xoKyLEeSAYN-eWA_Wkw" name="GeometricStrategy"/>
-    <packagedElement xmi:type="uml:Realization" xmi:id="_Gy56oKyLEeSAYN-eWA_Wkw" name="Realization1" client="_umVo8KyKEeSAYN-eWA_Wkw">
-      <supplier xmi:type="uml:Interface" href="../../com.globalphasing.astra.messages/Models/model.uml#_fgQaMDAoEeOkH44hMJVBzQ"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_umVo8KyKEeSAYN-eWA_Wkw" name="GeometricStrategy"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_CcFSQLtbEeS-Ne1HNGF1Qg" name="ChooseLattice">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_SGy3oLtbEeS-Ne1HNGF1Qg" name="format" visibility="public" type="_Kkb5cLtbEeS-Ne1HNGF1Qg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SSntILtbEeS-Ne1HNGF1Qg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SSo7QLtbEeS-Ne1HNGF1Qg" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_SSqJYLtbEeS-Ne1HNGF1Qg">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dJvAoLtbEeS-Ne1HNGF1Qg" name="lattice" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dQJxsLtbEeS-Ne1HNGF1Qg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dQKYwLtbEeS-Ne1HNGF1Qg" value="*"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_dQK_0LtbEeS-Ne1HNGF1Qg">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_l9LkgLthEeS-Ne1HNGF1Qg" name="solutions" visibility="public" type="_elrLcLthEeS-Ne1HNGF1Qg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mE5WELthEeS-Ne1HNGF1Qg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mE59ILthEeS-Ne1HNGF1Qg" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_mE6kMLthEeS-Ne1HNGF1Qg">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Realization" xmi:id="_Hf6xoKyLEeSAYN-eWA_Wkw" name="Realization2" client="_umVo8KyKEeSAYN-eWA_Wkw" supplier="_2RLR4KyDEeSAYN-eWA_Wkw"/>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_Kkb5cLtbEeS-Ne1HNGF1Qg" name="IndexingFormat">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_NudlcLtbEeS-Ne1HNGF1Qg" name="IDXREF"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_elrLcLthEeS-Ne1HNGF1Qg" name="IndexingOutput"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_gfG80LtiEeS-Ne1HNGF1Qg" name="IndexingSolution"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_WD50kJ-yEeORueP4RwNSuw" name="DomainTypes">
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_4Ycb0J-yEeORueP4RwNSuw" name="AbsorptionEdge">
@@ -606,6 +631,22 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__Tn-QKyNEeSAYN-eWA_Wkw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__Tn-QayNEeSAYN-eWA_Wkw" value="1"/>
         <defaultValue xmi:type="uml:LiteralString" xmi:id="__TolUKyNEeSAYN-eWA_Wkw">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_23f7ILtiEeS-Ne1HNGF1Qg" name="SelectedLattice">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_FIOOwLtjEeS-Ne1HNGF1Qg" name="format" visibility="public" type="_Kkb5cLtbEeS-Ne1HNGF1Qg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FZ8Q4LtjEeS-Ne1HNGF1Qg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FZ838LtjEeS-Ne1HNGF1Qg" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_FZ9fALtjEeS-Ne1HNGF1Qg">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_OBmDMLtjEeS-Ne1HNGF1Qg" name="solution" visibility="public" type="_gfG80LtiEeS-Ne1HNGF1Qg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OTTeQLtjEeS-Ne1HNGF1Qg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OTUFULtjEeS-Ne1HNGF1Qg" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_OTUsYLtjEeS-Ne1HNGF1Qg">
           <value xsi:nil="true"/>
         </defaultValue>
       </ownedAttribute>

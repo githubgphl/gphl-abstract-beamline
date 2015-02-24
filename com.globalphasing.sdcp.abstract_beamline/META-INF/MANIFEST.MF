@@ -7,5 +7,6 @@ Export-Package: co.gphl.beamline.v2_unstable,
  co.gphl.beamline.v2_unstable.data_collection,
  co.gphl.beamline.v2_unstable.domain_types,
  co.gphl.beamline.v2_unstable.information,
- co.gphl.beamline.v2_unstable.instrumentation
+ co.gphl.beamline.v2_unstable.instrumentation,
+ co.gphl.beamline.v2_unstable.ui
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
