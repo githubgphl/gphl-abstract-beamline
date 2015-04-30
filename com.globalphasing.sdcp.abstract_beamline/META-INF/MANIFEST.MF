@@ -4,6 +4,7 @@ Bundle-Name: com.globalphasing.sdcp.abstract_beamline
 Bundle-SymbolicName: com.globalphasing.sdcp.abstract_beamline
 Bundle-Version: 1.0.0.qualifier
 Export-Package: co.gphl.beamline.v2_unstable,
+ co.gphl.beamline.v2_unstable.control,
  co.gphl.beamline.v2_unstable.data_collection,
  co.gphl.beamline.v2_unstable.domain_types,
  co.gphl.beamline.v2_unstable.information,
