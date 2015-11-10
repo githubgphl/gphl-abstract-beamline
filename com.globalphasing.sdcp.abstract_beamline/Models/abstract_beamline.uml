@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_ImsGIJfeEeOQoP6u6l9OUQ" name="AbstractBeamline">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ImsGIJfeEeOQoP6u6l9OUQ" name="AbstractBeamline">
   <ownedComment xmi:type="uml:Comment" xmi:id="_rQFPsJ-4EeORueP4RwNSuw" annotatedElement="_s70jIChMEeSuSbp_QHtIcg">
     <body>For any GoniostatSettings provided to the beamline via a GeometricStrategy where the (X, Y, Z) translation settings were corrected by a centring operation or not specified, the beamline must return goniostat settings with populated (X, Y, Z) values.</body>
   </ownedComment>
@@ -79,17 +79,10 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         </defaultValue>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_uvZGEJffEeOQoP6u6l9OUQ" name="GoniostatSetting">
-      <generalization xmi:type="uml:Generalization" xmi:id="_hEC-IJfkEeOQoP6u6l9OUQ" general="_pJRyIJffEeOQoP6u6l9OUQ"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_uvZGEJffEeOQoP6u6l9OUQ" name="GoniostatSweepSetting">
+      <generalization xmi:type="uml:Generalization" xmi:id="_hEC-IJfkEeOQoP6u6l9OUQ" general="_BgW1sIcCEeWP89wnxV1F7g"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_C4eUMJfgEeOQoP6u6l9OUQ" name="scanAxis">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_s_1_ELa4EeSo_qAyh3XfjA" name="centringId" visibility="public" type="_-MC2wJfeEeOQoP6u6l9OUQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tPasILa4EeSo_qAyh3XfjA"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tPb6QLa4EeSo_qAyh3XfjA" value="1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_tPdIYLa4EeSo_qAyh3XfjA">
-          <value xsi:nil="true"/>
-        </defaultValue>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_2n2tcJ49EeO6a5RR8yLOUA" name="BeamstopSetting">
@@ -111,6 +104,20 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1oaaEJfkEeOQoP6u6l9OUQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1obBIJfkEeOQoP6u6l9OUQ" value="1"/>
         <defaultValue xmi:type="uml:LiteralString" xmi:id="_1oboMJfkEeOQoP6u6l9OUQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_xS1BsIcCEeWP89wnxV1F7g" name="GoniostatTranslationSetting">
+      <generalization xmi:type="uml:Generalization" xmi:id="_LfI9kIcDEeWP89wnxV1F7g" general="_pJRyIJffEeOQoP6u6l9OUQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_AGfDQIcDEeWP89wnxV1F7g" name="rotationId" type="_-MC2wJfeEeOQoP6u6l9OUQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_BgW1sIcCEeWP89wnxV1F7g" name="GoniostatRotationSetting">
+      <generalization xmi:type="uml:Generalization" xmi:id="_s7P9cIcCEeWP89wnxV1F7g" general="_pJRyIJffEeOQoP6u6l9OUQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_s_1_ELa4EeSo_qAyh3XfjA" name="centringId" visibility="public" type="_-MC2wJfeEeOQoP6u6l9OUQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tPasILa4EeSo_qAyh3XfjA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tPb6QLa4EeSo_qAyh3XfjA" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_tPdIYLa4EeSo_qAyh3XfjA">
           <value xsi:nil="true"/>
         </defaultValue>
       </ownedAttribute>
@@ -371,6 +378,14 @@ Further subdirectories relative to relativeImageDir for the images produced by i
     </packagedElement>
     <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_elrLcLthEeS-Ne1HNGF1Qg" name="IndexingOutput"/>
     <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_gfG80LtiEeS-Ne1HNGF1Qg" name="IndexingSolution"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Uug6YIcHEeWP89wnxV1F7g" name="RequestCentring">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_pbijEIcHEeWP89wnxV1F7g" name="currentSettingNo" type="_3sNd0JfkEeOQoP6u6l9OUQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_wGW1QIcHEeWP89wnxV1F7g" name="totalRotations" type="_3sNd0JfkEeOQoP6u6l9OUQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_RbvsoIcIEeWP89wnxV1F7g" name="goniostatRotationSetting" type="_BgW1sIcCEeWP89wnxV1F7g" association="_RbwTsIcIEeWP89wnxV1F7g">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RbvsoYcIEeWP89wnxV1F7g" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RbvsoocIEeWP89wnxV1F7g" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_WD50kJ-yEeORueP4RwNSuw" name="DomainTypes">
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_4Ycb0J-yEeORueP4RwNSuw" name="AbsorptionEdge">
@@ -651,6 +666,17 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         </defaultValue>
       </ownedAttribute>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZqEOYIcHEeWP89wnxV1F7g" name="CentringDone">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_uuq0IIcIEeWP89wnxV1F7g" name="goniostatTranslationSetting" type="_xS1BsIcCEeWP89wnxV1F7g" association="_uurbMIcIEeWP89wnxV1F7g">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uuq0IYcIEeWP89wnxV1F7g"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uuq0IocIEeWP89wnxV1F7g" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_XA5h0IcJEeWP89wnxV1F7g" name="status" type="_-CWZkIcIEeWP89wnxV1F7g"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_-CWZkIcIEeWP89wnxV1F7g" name="CentringStatus">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_F3cGgIcJEeWP89wnxV1F7g" name="NEXT"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_HBhUAIcJEeWP89wnxV1F7g" name="DONE"/>
+    </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_sR8kgJflEeOQoP6u6l9OUQ" name="IdentifiedElement" isAbstract="true">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_9_tYkJ-tEeORueP4RwNSuw" name="id" visibility="public" type="_-MC2wJfeEeOQoP6u6l9OUQ">
@@ -660,5 +686,19 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         <value xsi:nil="true"/>
       </defaultValue>
     </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_RbwTsIcIEeWP89wnxV1F7g" memberEnd="_RbwTsYcIEeWP89wnxV1F7g _RbvsoIcIEeWP89wnxV1F7g">
+    <name xsi:nil="true"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_RbwTsYcIEeWP89wnxV1F7g" name="requestCentring" type="_Uug6YIcHEeWP89wnxV1F7g" association="_RbwTsIcIEeWP89wnxV1F7g">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RbwTsocIEeWP89wnxV1F7g"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RbwTs4cIEeWP89wnxV1F7g" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_uurbMIcIEeWP89wnxV1F7g" memberEnd="_uurbMYcIEeWP89wnxV1F7g _uuq0IIcIEeWP89wnxV1F7g">
+    <name xsi:nil="true"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_uurbMYcIEeWP89wnxV1F7g" name="centringDone" type="_ZqEOYIcHEeWP89wnxV1F7g" association="_uurbMIcIEeWP89wnxV1F7g">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uurbMocIEeWP89wnxV1F7g"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uurbM4cIEeWP89wnxV1F7g" value="*"/>
+    </ownedEnd>
   </packagedElement>
 </uml:Model>
