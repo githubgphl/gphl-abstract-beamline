@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ImsGIJfeEeOQoP6u6l9OUQ" name="AbstractBeamline">
   <ownedComment xmi:type="uml:Comment" xmi:id="_rQFPsJ-4EeORueP4RwNSuw" annotatedElement="_s70jIChMEeSuSbp_QHtIcg">
-    <body>For any GoniostatSettings provided to the beamline via a GeometricStrategy where the (X, Y, Z) translation settings were corrected by a centring operation or not specified, the beamline must return goniostat settings with populated (X, Y, Z) values.</body>
+    <body>For any GoniostatSweepSettings provided to the beamline via a GeometricStrategy where the (X, Y, Z) translation settings were corrected by a centring operation or not specified, the beamline must return a GoniostatTranslationSettings instance with populated (X, Y, Z) values and the id of the corresponding GoniostatSweepSetting.</body>
   </ownedComment>
   <ownedComment xmi:type="uml:Comment" xmi:id="_o9wa8LjWEeOB9q44TOrPvQ" annotatedElement="_AqMaIJ-0EeORueP4RwNSuw">
     <body> Either scatterer(s) or phasingWavelengths must be specified or the workflow cannot be started</body>
@@ -243,7 +243,7 @@ Further subdirectories relative to relativeImageDir for the images produced by i
           <value xsi:nil="true"/>
         </defaultValue>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_vJeyUJflEeOQoP6u6l9OUQ" name="goniostatSetting" visibility="public" type="_uvZGEJffEeOQoP6u6l9OUQ">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_vJeyUJflEeOQoP6u6l9OUQ" name="goniostatSweepSetting" visibility="public" type="_uvZGEJffEeOQoP6u6l9OUQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vZm5AJflEeOQoP6u6l9OUQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vZm5AZflEeOQoP6u6l9OUQ" value="1"/>
         <defaultValue xmi:type="uml:LiteralString" xmi:id="_vZoHIJflEeOQoP6u6l9OUQ">
@@ -553,7 +553,7 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ljJiEZ-4EeORueP4RwNSuw"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ljJiEp-4EeORueP4RwNSuw" value="1"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_s70jIShMEeSuSbp_QHtIcg" name="goniostatSetting" type="_uvZGEJffEeOQoP6u6l9OUQ" association="_s70jIChMEeSuSbp_QHtIcg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_s70jIShMEeSuSbp_QHtIcg" name="goniostattranslationsetting" type="_xS1BsIcCEeWP89wnxV1F7g" association="_s70jIChMEeSuSbp_QHtIcg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_s70jIihMEeSuSbp_QHtIcg"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_s70jIyhMEeSuSbp_QHtIcg" value="*"/>
       </ownedAttribute>
