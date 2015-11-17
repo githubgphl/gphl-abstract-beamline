@@ -18,11 +18,11 @@ import co.gphl.beamline.v2_unstable.IdentifiedElement;
 import co.gphl.beamline.v2_unstable.instrumentation.BeamSetting;
 import co.gphl.beamline.v2_unstable.instrumentation.BeamstopSetting;
 import co.gphl.beamline.v2_unstable.instrumentation.DetectorSetting;
-import co.gphl.beamline.v2_unstable.instrumentation.GoniostatSetting;
+import co.gphl.beamline.v2_unstable.instrumentation.GoniostatSweepSetting;
 
 public interface Sweep extends IdentifiedElement {
     
-    GoniostatSetting getGoniostatSetting();
+    GoniostatSweepSetting getGoniostatSweepSetting();
     DetectorSetting getDetectorSetting();
     BeamSetting getBeamSetting();
     BeamstopSetting getBeamstopSetting();

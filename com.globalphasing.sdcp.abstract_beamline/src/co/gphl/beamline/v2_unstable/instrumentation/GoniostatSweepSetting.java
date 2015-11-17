@@ -1,5 +1,5 @@
-/*
- * Copyright © 2014 by Global Phasing Ltd. All rights reserved
+/**
+ * Copyright © 2015 by Global Phasing Ltd. All rights reserved
  *
  * This software is proprietary to and embodies the confidential
  * technology of Global Phasing Limited (GPhL).
@@ -12,14 +12,12 @@
  */
 package co.gphl.beamline.v2_unstable.instrumentation;
 
-import java.util.UUID;
+/**
+ * @author pkeller
+ *
+ */
+public interface GoniostatSweepSetting extends GoniostatRotationSetting {
 
-public interface GoniostatSetting extends PositionerSetting {
-
-    SettingStatus getStatus();
-    void setStatus(SettingStatus status);
     String getScanAxis();
-    
-    UUID getCentringId();
     
 }

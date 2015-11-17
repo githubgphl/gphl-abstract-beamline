@@ -19,7 +19,7 @@ import java.util.UUID;
 
 import co.gphl.beamline.v2_unstable.data_collection.Scan;
 import co.gphl.beamline.v2_unstable.instrumentation.BeamstopSetting;
-import co.gphl.beamline.v2_unstable.instrumentation.GoniostatSetting;
+import co.gphl.beamline.v2_unstable.instrumentation.GoniostatTranslationSetting;
 
 /**
  * @author pkeller
@@ -40,7 +40,7 @@ public interface SampleCentred {
     double getExposure();
     double getAttenuation();
     BeamstopSetting getBeamstopSetting();
-    Map<UUID, GoniostatSetting> getGoniostatSetting();
+    Map<UUID, GoniostatTranslationSetting> getGoniostatTranslationSetting();
     
     /** 
      * A list of interleaving variables, from slowest-varying to
