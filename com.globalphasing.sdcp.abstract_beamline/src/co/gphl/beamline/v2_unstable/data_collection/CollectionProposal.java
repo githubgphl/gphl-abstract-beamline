@@ -12,13 +12,12 @@
  */
 package co.gphl.beamline.v2_unstable.data_collection;
 
-import java.io.Serializable;
 import java.util.List;
 import java.util.UUID;
 
 import co.gphl.beamline.v2_unstable.IdentifiedElement;
 
-public interface CollectionProposal extends Serializable, IdentifiedElement {
+public interface CollectionProposal extends IdentifiedElement {
 
     UUID getCollectionId();
     String getRelativeImageDir();

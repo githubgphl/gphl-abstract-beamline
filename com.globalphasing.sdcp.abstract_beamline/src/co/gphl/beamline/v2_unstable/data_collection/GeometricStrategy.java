@@ -13,7 +13,6 @@
 
 package co.gphl.beamline.v2_unstable.data_collection;
 
-import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
 
@@ -23,7 +22,7 @@ import co.gphl.beamline.v2_unstable.IdentifiedElement;
  * @author pkeller
  *
  */
-public interface GeometricStrategy extends Serializable, IdentifiedElement {
+public interface GeometricStrategy extends IdentifiedElement {
 
     Set<Sweep> getSweep();
     boolean isInterleave();
