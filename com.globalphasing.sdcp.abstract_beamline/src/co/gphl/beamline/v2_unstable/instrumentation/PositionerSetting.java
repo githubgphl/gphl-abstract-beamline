@@ -13,12 +13,20 @@
 package co.gphl.beamline.v2_unstable.instrumentation;
 
 import java.util.Map;
+import java.util.Set;
 
 import co.gphl.beamline.v2_unstable.IdentifiedElement;
 
 public interface PositionerSetting
-    extends IdentifiedElement, Map<String, Double> {
+    extends IdentifiedElement {
     
-    Map<String, Double> getSettings();
+    Map<String, Double> getAxisSettings();
     
+    // Map-like methods
+    boolean containsAxisSetting(String axis);
+    Double getAxisSetting(String axis);
+    boolean isAxisSettingsEmpty();
+    int axisSettingsSize();
+    Set<String> axisSettingsNames();
+    Set<Map.Entry<String, Double>> axisSettingsSet();
 }
