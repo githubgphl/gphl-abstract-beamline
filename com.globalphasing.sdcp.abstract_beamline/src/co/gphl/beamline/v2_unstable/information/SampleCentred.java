@@ -20,6 +20,7 @@ import java.util.UUID;
 import co.gphl.beamline.v2_unstable.data_collection.Scan;
 import co.gphl.beamline.v2_unstable.instrumentation.BeamstopSetting;
 import co.gphl.beamline.v2_unstable.instrumentation.GoniostatTranslationSetting;
+import co.gphl.beamline.v2_unstable.instrumentation.GoniostatRotationSetting;
 
 /**
  * @author pkeller
@@ -40,6 +41,13 @@ public interface SampleCentred {
     double getExposure();
     double getAttenuation();
     BeamstopSetting getBeamstopSetting();
+    
+    /**
+     * Returns a map of goniostat centring settings, keyed on the UUIDs of
+     * the corresponding {@link GoniostatRotationSetting} (or subtype thereof).
+     * 
+     * @return
+     */
     Map<UUID, GoniostatTranslationSetting> getGoniostatTranslationSetting();
     
     /** 
