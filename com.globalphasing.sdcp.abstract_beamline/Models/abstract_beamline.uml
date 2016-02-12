@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ImsGIJfeEeOQoP6u6l9OUQ" name="AbstractBeamline">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ImsGIJfeEeOQoP6u6l9OUQ" name="AbstractBeamline" URI="">
   <ownedComment xmi:type="uml:Comment" xmi:id="_rQFPsJ-4EeORueP4RwNSuw" annotatedElement="_s70jIChMEeSuSbp_QHtIcg">
     <body>For any GoniostatSweepSettings provided to the beamline via a GeometricStrategy where the (X, Y, Z) translation settings were corrected by a centring operation or not specified, the beamline must return a GoniostatTranslationSettings instance with populated (X, Y, Z) values and the id of the corresponding GoniostatSweepSetting.</body>
   </ownedComment>
@@ -22,6 +22,9 @@ Further subdirectories relative to relativeImageDir for the images produced by i
   </ownedComment>
   <ownedComment xmi:type="uml:Comment" xmi:id="_IKG2wKyOEeSAYN-eWA_Wkw" annotatedElement="_m-F90KyNEeSAYN-eWA_Wkw">
     <body>Message from beamline that a workflow-requested image collection has finished</body>
+  </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_W8frANGcEeW_N-wnpi-N6Q" annotatedElement="_m-F90KyNEeSAYN-eWA_Wkw">
+    <body> imageRoot (if specified) overrides PriorInformation::rootDirectory. imageRoot must be specified if PriorInformation::rootDirectory was not specified</body>
   </ownedComment>
   <packageImport xmi:type="uml:PackageImport" xmi:id="_ImsGIZfeEeOQoP6u6l9OUQ">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -458,6 +461,9 @@ Further subdirectories relative to relativeImageDir for the images produced by i
     <ownedComment xmi:type="uml:Comment" xmi:id="_1WZ5cKyIEeSAYN-eWA_Wkw" annotatedElement="_ff60IChLEeSuSbp_QHtIcg">
       <body>wedgeWidth is the number of images in a wedge. If GeometricStrategy::interleave is true it is required, otherwise not settable</body>
     </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_zSSpgNC4EeWoq59tXBFkgw" annotatedElement="_fDzNYNCsEeWoq59tXBFkgw">
+      <body> The rootDirectory is the absolute path to the fixed beamline run directory. Underneath this path, other directories are created, images written and input/output from other applications created. The workflow needs to create files and directories here.</body>
+    </ownedComment>
     <packagedElement xmi:type="uml:Class" xmi:id="_AqMaIJ-0EeORueP4RwNSuw" name="UserProvidedInformation">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_EQPTwJ-0EeORueP4RwNSuw" name="scatterer" visibility="public" type="_MNqSwJ-zEeORueP4RwNSuw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ehfb0J-0EeORueP4RwNSuw"/>
@@ -508,7 +514,7 @@ Further subdirectories relative to relativeImageDir for the images produced by i
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_HhTxAJ-2EeORueP4RwNSuw" name="priorInformation_userProvidedInformation_1" memberEnd="_HhTxAZ-2EeORueP4RwNSuw _HhTJ8J-2EeORueP4RwNSuw">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_HhTxAZ-2EeORueP4RwNSuw" name="priorInformation" type="_cc1WQChOEeSuSbp_QHtIcg" association="_HhTxAJ-2EeORueP4RwNSuw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_HhTxAZ-2EeORueP4RwNSuw" name="priorinformation" type="_fDzNYNCsEeWoq59tXBFkgw" association="_HhTxAJ-2EeORueP4RwNSuw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HhTxAp-2EeORueP4RwNSuw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HhTxA5-2EeORueP4RwNSuw" value="1"/>
       </ownedEnd>
@@ -583,34 +589,6 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_s70jJihMEeSuSbp_QHtIcg" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_cc1WQChOEeSuSbp_QHtIcg" name="PriorInformation">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_oaDlIJ-1EeORueP4RwNSuw" name="sampleId" visibility="public" type="_-MC2wJfeEeOQoP6u6l9OUQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_o57_EJ-1EeORueP4RwNSuw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_o58mIJ-1EeORueP4RwNSuw" value="1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_o590QJ-1EeORueP4RwNSuw">
-          <value xsi:nil="true"/>
-        </defaultValue>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_5GXxcJ-1EeORueP4RwNSuw" name="reflectionFile" visibility="public" type="_4YRf4J-2EeORueP4RwNSuw">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5XJYYJ-1EeORueP4RwNSuw"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5XJ_cJ-1EeORueP4RwNSuw" value="1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_5XKmgJ-1EeORueP4RwNSuw">
-          <value xsi:nil="true"/>
-        </defaultValue>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_r26tkJ-1EeORueP4RwNSuw" name="sampleName" visibility="public">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sUtc0J-1EeORueP4RwNSuw"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sUuD4J-1EeORueP4RwNSuw" value="1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_sUuq8J-1EeORueP4RwNSuw">
-          <value xsi:nil="true"/>
-        </defaultValue>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_HhTJ8J-2EeORueP4RwNSuw" name="userProvidedInformation" type="_AqMaIJ-0EeORueP4RwNSuw" association="_HhTxAJ-2EeORueP4RwNSuw">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HhTJ8Z-2EeORueP4RwNSuw"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HhTJ8p-2EeORueP4RwNSuw" value="1"/>
-      </ownedAttribute>
-    </packagedElement>
     <packagedElement xmi:type="uml:Realization" xmi:id="_6UDTEChNEeSuSbp_QHtIcg" name="Realization1">
       <client xmi:type="uml:Class" href="../../com.globalphasing.astra.messages/Models/model.uml#_KzsXoFwyEeOkrcjWKXiFbg"/>
       <supplier xmi:type="uml:Interface" href="../../com.globalphasing.astra.messages/Models/model.uml#_fgQaMDAoEeOkH44hMJVBzQ"/>
@@ -622,9 +600,6 @@ Further subdirectories relative to relativeImageDir for the images produced by i
       <client xmi:type="uml:Class" href="../../com.globalphasing.astra.messages/Models/model.uml#_95dooChPEeSuSbp_QHtIcg"/>
       <supplier xmi:type="uml:Interface" href="../../com.globalphasing.astra.messages/Models/model.uml#_fgQaMDAoEeOkH44hMJVBzQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Realization" xmi:id="_DH3xwChREeSuSbp_QHtIcg" name="Realization4" supplier="_cc1WQChOEeSuSbp_QHtIcg">
-      <client xmi:type="uml:Class" href="../../com.globalphasing.astra.messages/Models/model.uml#_95dooChPEeSuSbp_QHtIcg"/>
-    </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_VXZM4KyNEeSAYN-eWA_Wkw" name="WorkflowDone"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_m-F90KyNEeSAYN-eWA_Wkw" name="CollectionDone">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_1v4-MKyNEeSAYN-eWA_Wkw" name="proposalId" visibility="public" type="_-MC2wJfeEeOQoP6u6l9OUQ">
@@ -634,8 +609,9 @@ Further subdirectories relative to relativeImageDir for the images produced by i
           <value xsi:nil="true"/>
         </defaultValue>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_40zgsKyNEeSAYN-eWA_Wkw" name="imageRoot" visibility="public" type="_4YRf4J-2EeORueP4RwNSuw">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_49VxoKyNEeSAYN-eWA_Wkw" value="1"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_40zgsKyNEeSAYN-eWA_Wkw" name="imageRoot" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_49VxoKyNEeSAYN-eWA_Wkw"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_49WYsKyNEeSAYN-eWA_Wkw" value="1"/>
         <defaultValue xmi:type="uml:LiteralString" xmi:id="_49W_wKyNEeSAYN-eWA_Wkw">
           <value xsi:nil="true"/>
@@ -676,6 +652,33 @@ Further subdirectories relative to relativeImageDir for the images produced by i
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_-CWZkIcIEeWP89wnxV1F7g" name="CentringStatus">
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_F3cGgIcJEeWP89wnxV1F7g" name="NEXT"/>
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_HBhUAIcJEeWP89wnxV1F7g" name="DONE"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_fDzNYNCsEeWoq59tXBFkgw" name="PriorInformation">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_oaDlIJ-1EeORueP4RwNSuw" name="sampleId" visibility="public" type="_-MC2wJfeEeOQoP6u6l9OUQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_o57_EJ-1EeORueP4RwNSuw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_o58mIJ-1EeORueP4RwNSuw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_r26tkJ-1EeORueP4RwNSuw" name="sampleName" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sUtc0J-1EeORueP4RwNSuw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sUuD4J-1EeORueP4RwNSuw" value="1"/>
+        <defaultValue xmi:type="uml:LiteralNull" xmi:id="_KFOZUNC6EeWoq59tXBFkgw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5GXxcJ-1EeORueP4RwNSuw" name="reflectionFile" visibility="public" type="_4YRf4J-2EeORueP4RwNSuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5XJYYJ-1EeORueP4RwNSuw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5XJ_cJ-1EeORueP4RwNSuw" value="1"/>
+        <defaultValue xmi:type="uml:LiteralNull" xmi:id="_3yKRoNC5EeWoq59tXBFkgw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_HhTJ8J-2EeORueP4RwNSuw" name="userProvidedInformation" type="_AqMaIJ-0EeORueP4RwNSuw" association="_HhTxAJ-2EeORueP4RwNSuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HhTJ8Z-2EeORueP4RwNSuw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HhTJ8p-2EeORueP4RwNSuw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_gsY-ANC7EeWoq59tXBFkgw" name="rootDirectory" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ikV-INC7EeWoq59tXBFkgw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ikXMQNC7EeWoq59tXBFkgw" value="1"/>
+        <defaultValue xmi:type="uml:LiteralNull" xmi:id="_nGBZkNC7EeWoq59tXBFkgw"/>
+      </ownedAttribute>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_sR8kgJflEeOQoP6u6l9OUQ" name="IdentifiedElement" isAbstract="true">

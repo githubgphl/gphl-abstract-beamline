@@ -4,10 +4,10 @@ import java.util.UUID;
 
 public interface PriorInformation {
 
-	UUID getSampleId();
-	String getSampleName();
-	// For future use. 
-	// URL getReflectionFile();
-	UserProvidedInfo getUserProvidedInfo();
-	
+    UUID getSampleId();
+    String getSampleName();
+    // For future use. 
+    // URL getReflectionFile();
+    UserProvidedInfo getUserProvidedInfo();
+    String getRootDirectory();
 }

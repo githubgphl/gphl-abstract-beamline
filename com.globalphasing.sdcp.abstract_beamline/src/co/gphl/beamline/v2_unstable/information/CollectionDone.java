@@ -24,5 +24,5 @@ public interface CollectionDone {
     UUID getProposalId();
     String getImageRoot();
     int getStatus();
-
+    boolean isSetImageRoot();
 }
