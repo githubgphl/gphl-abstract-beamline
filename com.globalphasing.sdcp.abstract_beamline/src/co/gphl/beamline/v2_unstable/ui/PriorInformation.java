@@ -5,9 +5,12 @@ import java.util.UUID;
 public interface PriorInformation {
 
     UUID getSampleId();
+    boolean isSetSampleName();
     String getSampleName();
     // For future use. 
     // URL getReflectionFile();
+    boolean isSetUserProvidedInfo();
     UserProvidedInfo getUserProvidedInfo();
+    boolean isSetRootDirectory();
     String getRootDirectory();
 }
