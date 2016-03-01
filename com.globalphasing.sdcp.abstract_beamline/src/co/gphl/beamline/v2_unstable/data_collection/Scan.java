@@ -18,11 +18,17 @@ import co.gphl.beamline.v2_unstable.IdentifiedElement;
 import co.gphl.beamline.v2_unstable.instrumentation.ScanWidth;
 import co.gphl.beamline.v2_unstable.instrumentation.ScanExposure;
 
-public interface Scan extends IdentifiedElement, Map<String, String> {
+public interface Scan extends IdentifiedElement {
 
     ScanExposure getExposure();
     int getImageStartNum();
     ScanWidth getWidth();
     double getStart();
     Sweep getSweep();    
+    
+    Map<String, String> getFilenameParams();
+    String getFilenameParam(String key);
+    boolean isFilenameParamsEmpty();
+    int sizeOfFilenameParams();
+    boolean filenameParamsContainsKey(String key);
 }
