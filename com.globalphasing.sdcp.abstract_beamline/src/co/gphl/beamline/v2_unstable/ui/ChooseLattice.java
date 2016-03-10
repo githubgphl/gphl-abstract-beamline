@@ -6,8 +6,8 @@ import co.gphl.beamline.v2_unstable.domain_types.IndexingFormat;
 
 public interface ChooseLattice {
 
-	IndexingFormat getFormat();
-	List<String> getLattice();
-	String getSolutions();
-	
+    IndexingFormat getFormat();
+    List<String> getLattice();
+    String getSolutions();
+
 }

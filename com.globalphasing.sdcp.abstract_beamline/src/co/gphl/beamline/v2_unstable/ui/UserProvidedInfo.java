@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface UserProvidedInfo {
 
-	short getSpaceGroup();
-	float getExpectedResolution();
-	List<PhasingWavelength> getPhasingWavelength();
+    short getSpaceGroup();
+    float getExpectedResolution();
+    List<PhasingWavelength> getPhasingWavelength();
 }

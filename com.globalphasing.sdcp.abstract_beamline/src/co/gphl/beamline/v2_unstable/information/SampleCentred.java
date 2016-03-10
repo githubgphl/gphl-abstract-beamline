@@ -29,7 +29,7 @@ import co.gphl.beamline.v2_unstable.instrumentation.GoniostatRotationSetting;
 public interface SampleCentred {
 
     double getImageWidth();
-    
+
     /**
      * Return number of images in a wedge. May be {@code null}
      * for a non-interleaved strategy.
@@ -37,11 +37,11 @@ public interface SampleCentred {
      * @return
      */
     Integer getWedgeWidth();
-    
+
     double getExposure();
     double getAttenuation();
     BeamstopSetting getBeamstopSetting();
-    
+
     /**
      * Returns a map of goniostat centring settings, keyed on the UUIDs of
      * the corresponding {@link GoniostatRotationSetting} (or subtype thereof).
@@ -49,7 +49,7 @@ public interface SampleCentred {
      * @return
      */
     Map<UUID, GoniostatTranslationSetting> getGoniostatTranslationSetting();
-    
+
     /** 
      * A list of interleaving variables, from slowest-varying to
      * fastest varying. The characters are selected from the

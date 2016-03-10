@@ -6,7 +6,7 @@ import co.gphl.beamline.v2_unstable.domain_types.IndexingFormat;
 
 public interface SelectedLattice {
 
-	IndexingFormat getFormat();
-	List<String> getIndexingSolution();
-	
+    IndexingFormat getFormat();
+    List<String> getIndexingSolution();
+
 }
