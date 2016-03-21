@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ImsGIJfeEeOQoP6u6l9OUQ" name="AbstractBeamline" URI="">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ImsGIJfeEeOQoP6u6l9OUQ" name="AbstractBeamline" URI="">
   <ownedComment xmi:type="uml:Comment" xmi:id="_rQFPsJ-4EeORueP4RwNSuw" annotatedElement="_s70jIChMEeSuSbp_QHtIcg">
     <body>For any GoniostatSweepSettings provided to the beamline via a GeometricStrategy where the (X, Y, Z) translation settings were corrected by a centring operation or not specified, the beamline must return a GoniostatTranslationSettings instance with populated (X, Y, Z) values and the id of the corresponding GoniostatSweepSetting.</body>
   </ownedComment>
@@ -18,7 +18,7 @@ Further subdirectories relative to relativeImageDir for the images produced by i
 </body>
   </ownedComment>
   <ownedComment xmi:type="uml:Comment" xmi:id="_fwgVwKyNEeSAYN-eWA_Wkw" annotatedElement="_VXZM4KyNEeSAYN-eWA_Wkw">
-    <body>Signal to beamline/UI that workflow has finished</body>
+    <body>Signal to beamline/UI that workflow has finished. &quot;Aborted&quot; means that the beamline or UI requested the workflow to terminate. &quot;Failed&quot; means that the workflow encountered a severe error that prevented it from continuing</body>
   </ownedComment>
   <ownedComment xmi:type="uml:Comment" xmi:id="_IKG2wKyOEeSAYN-eWA_Wkw" annotatedElement="_m-F90KyNEeSAYN-eWA_Wkw">
     <body>Message from beamline that a workflow-requested image collection has finished</body>
@@ -600,7 +600,12 @@ Further subdirectories relative to relativeImageDir for the images produced by i
       <client xmi:type="uml:Class" href="../../com.globalphasing.astra.messages/Models/model.uml#_95dooChPEeSuSbp_QHtIcg"/>
       <supplier xmi:type="uml:Interface" href="../../com.globalphasing.astra.messages/Models/model.uml#_fgQaMDAoEeOkH44hMJVBzQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_VXZM4KyNEeSAYN-eWA_Wkw" name="WorkflowDone"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_VXZM4KyNEeSAYN-eWA_Wkw" name="WorkflowDone" isAbstract="true">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_fu_m4OrAEeWDoJaz4B-PEA" name="issues" type="_UI9-8OrAEeWDoJaz4B-PEA" isOrdered="true">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_m8iysOrAEeWDoJaz4B-PEA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_m8jZwOrAEeWDoJaz4B-PEA" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_m-F90KyNEeSAYN-eWA_Wkw" name="CollectionDone">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_1v4-MKyNEeSAYN-eWA_Wkw" name="proposalId" visibility="public" type="_-MC2wJfeEeOQoP6u6l9OUQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_199PYKyNEeSAYN-eWA_Wkw" value="1"/>
@@ -680,6 +685,25 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         <defaultValue xmi:type="uml:LiteralNull" xmi:id="_nGBZkNC7EeWoq59tXBFkgw"/>
       </ownedAttribute>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_AsVnIOrAEeWDoJaz4B-PEA" name="WorkflowCompleted">
+      <generalization xmi:type="uml:Generalization" xmi:id="_LvPecOrBEeWDoJaz4B-PEA" general="_VXZM4KyNEeSAYN-eWA_Wkw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_UI9-8OrAEeWDoJaz4B-PEA" name="Issue">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Z2XxMOrBEeWDoJaz4B-PEA" name="component">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_nlxgcOrBEeWDoJaz4B-PEA" name="code" type="_LXRoUJfnEeOQoP6u6l9OUQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_rEzMEOrBEeWDoJaz4B-PEA" name="message">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_1MMvUOrAEeWDoJaz4B-PEA" name="WorkflowFailed">
+      <generalization xmi:type="uml:Generalization" xmi:id="_MJNdoOrBEeWDoJaz4B-PEA" general="_VXZM4KyNEeSAYN-eWA_Wkw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__M-QsOrAEeWDoJaz4B-PEA" name="reason" type="_UI9-8OrAEeWDoJaz4B-PEA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_EXLEsOrBEeWDoJaz4B-PEA" name="WorkflowAborted">
+      <generalization xmi:type="uml:Generalization" xmi:id="_Mp-oYOrBEeWDoJaz4B-PEA" general="_VXZM4KyNEeSAYN-eWA_Wkw"/>
+    </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_sR8kgJflEeOQoP6u6l9OUQ" name="IdentifiedElement" isAbstract="true">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_9_tYkJ-tEeORueP4RwNSuw" name="id" visibility="public" type="_-MC2wJfeEeOQoP6u6l9OUQ">
@@ -704,4 +728,10 @@ Further subdirectories relative to relativeImageDir for the images produced by i
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uurbM4cIEeWP89wnxV1F7g" value="*"/>
     </ownedEnd>
   </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ggbD0OrAEeWDoJaz4B-PEA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ghHnYOrAEeWDoJaz4B-PEA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
 </uml:Model>

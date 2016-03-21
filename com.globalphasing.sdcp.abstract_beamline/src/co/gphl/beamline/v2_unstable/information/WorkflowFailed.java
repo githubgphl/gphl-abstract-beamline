@@ -1,5 +1,5 @@
-/*
- * Copyright © 2015 by Global Phasing Ltd. All rights reserved
+/**
+ * Copyright © 2016 by Global Phasing Ltd. All rights reserved
  *
  * This software is proprietary to and embodies the confidential
  * technology of Global Phasing Limited (GPhL).
@@ -10,17 +10,14 @@
  * use is in force.
  *
  */
-
 package co.gphl.beamline.v2_unstable.information;
-
-import java.util.List;
 
 /**
  * @author pkeller
  *
  */
-public interface WorkflowDone {
+public interface WorkflowFailed extends WorkflowDone {
 
-    List<Issue> getIssues();
+    Issue getReason();
     
 }
