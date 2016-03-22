@@ -19,6 +19,7 @@ package co.gphl.beamline.v2_unstable.instrumentation;
 public interface CentringDone {
 
     CentringStatus getStatus();
+    Long getTimestamp();
     GoniostatTranslationSetting getGoniostatTranslationSetting();
     
 }

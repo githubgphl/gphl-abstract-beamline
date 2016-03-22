@@ -26,6 +26,9 @@ Further subdirectories relative to relativeImageDir for the images produced by i
   <ownedComment xmi:type="uml:Comment" xmi:id="_W8frANGcEeW_N-wnpi-N6Q" annotatedElement="_m-F90KyNEeSAYN-eWA_Wkw">
     <body> imageRoot (if specified) overrides PriorInformation::rootDirectory. imageRoot must be specified if PriorInformation::rootDirectory was not specified</body>
   </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_KYVAkO98EeW8ubjbpxEycg" annotatedElement="_ZqEOYIcHEeWP89wnxV1F7g">
+    <body>timestamp is the number of milliseconds since midnight, January 1, 1970 UTC</body>
+  </ownedComment>
   <packageImport xmi:type="uml:PackageImport" xmi:id="_ImsGIZfeEeOQoP6u6l9OUQ">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
@@ -653,6 +656,10 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uuq0IocIEeWP89wnxV1F7g" value="1"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_XA5h0IcJEeWP89wnxV1F7g" name="status" type="_-CWZkIcIEeWP89wnxV1F7g"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ACDJQO98EeW8ubjbpxEycg" name="timestamp" type="_3sNd0JfkEeOQoP6u6l9OUQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GoSdcO98EeW8ubjbpxEycg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GoTrkO98EeW8ubjbpxEycg" value="1"/>
+      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_-CWZkIcIEeWP89wnxV1F7g" name="CentringStatus">
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_F3cGgIcJEeWP89wnxV1F7g" name="NEXT"/>
