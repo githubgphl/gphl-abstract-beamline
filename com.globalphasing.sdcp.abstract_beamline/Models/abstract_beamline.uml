@@ -467,6 +467,10 @@ Further subdirectories relative to relativeImageDir for the images produced by i
     <ownedComment xmi:type="uml:Comment" xmi:id="_zSSpgNC4EeWoq59tXBFkgw" annotatedElement="_fDzNYNCsEeWoq59tXBFkgw">
       <body> The rootDirectory is the absolute path to the fixed beamline run directory. Underneath this path, other directories are created, images written and input/output from other applications created. The workflow needs to create files and directories here.</body>
     </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_1x514PwCEeWgLOd_tUeI6A" annotatedElement="__YhK0PwCEeWgLOd_tUeI6A">
+      <body> The ids of Issue instances emitted by the workflow will be timestamped (variant 1) UUIDs
+</body>
+    </ownedComment>
     <packagedElement xmi:type="uml:Class" xmi:id="_AqMaIJ-0EeORueP4RwNSuw" name="UserProvidedInformation">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_EQPTwJ-0EeORueP4RwNSuw" name="scatterer" visibility="public" type="_MNqSwJ-zEeORueP4RwNSuw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ehfb0J-0EeORueP4RwNSuw"/>
@@ -604,9 +608,9 @@ Further subdirectories relative to relativeImageDir for the images produced by i
       <supplier xmi:type="uml:Interface" href="../../com.globalphasing.astra.messages/Models/model.uml#_fgQaMDAoEeOkH44hMJVBzQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_VXZM4KyNEeSAYN-eWA_Wkw" name="WorkflowDone" isAbstract="true">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_fu_m4OrAEeWDoJaz4B-PEA" name="issues" type="_UI9-8OrAEeWDoJaz4B-PEA" isOrdered="true">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_m8iysOrAEeWDoJaz4B-PEA"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_m8jZwOrAEeWDoJaz4B-PEA" value="*"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_cuxdsPwEEeWgLOd_tUeI6A" name="issue" type="__YhK0PwCEeWgLOd_tUeI6A" association="_cuyr0PwEEeWgLOd_tUeI6A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cuxdsfwEEeWgLOd_tUeI6A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cuxdsvwEEeWgLOd_tUeI6A" value="*"/>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_m-F90KyNEeSAYN-eWA_Wkw" name="CollectionDone">
@@ -695,7 +699,18 @@ Further subdirectories relative to relativeImageDir for the images produced by i
     <packagedElement xmi:type="uml:Class" xmi:id="_AsVnIOrAEeWDoJaz4B-PEA" name="WorkflowCompleted">
       <generalization xmi:type="uml:Generalization" xmi:id="_LvPecOrBEeWDoJaz4B-PEA" general="_VXZM4KyNEeSAYN-eWA_Wkw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:DataType" xmi:id="_UI9-8OrAEeWDoJaz4B-PEA" name="Issue">
+    <packagedElement xmi:type="uml:Class" xmi:id="_1MMvUOrAEeWDoJaz4B-PEA" name="WorkflowFailed">
+      <generalization xmi:type="uml:Generalization" xmi:id="_MJNdoOrBEeWDoJaz4B-PEA" general="_VXZM4KyNEeSAYN-eWA_Wkw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_to3nUPwEEeWgLOd_tUeI6A" name="reason" type="__YhK0PwCEeWgLOd_tUeI6A" association="_to4OYPwEEeWgLOd_tUeI6A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_to3nUfwEEeWgLOd_tUeI6A" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_to3nUvwEEeWgLOd_tUeI6A" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_EXLEsOrBEeWDoJaz4B-PEA" name="WorkflowAborted">
+      <generalization xmi:type="uml:Generalization" xmi:id="_Mp-oYOrBEeWDoJaz4B-PEA" general="_VXZM4KyNEeSAYN-eWA_Wkw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="__YhK0PwCEeWgLOd_tUeI6A" name="Issue">
+      <generalization xmi:type="uml:Generalization" xmi:id="_cExT4PwDEeWgLOd_tUeI6A" general="_sR8kgJflEeOQoP6u6l9OUQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_Z2XxMOrBEeWDoJaz4B-PEA" name="component">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
@@ -703,13 +718,21 @@ Further subdirectories relative to relativeImageDir for the images produced by i
       <ownedAttribute xmi:type="uml:Property" xmi:id="_rEzMEOrBEeWDoJaz4B-PEA" name="message">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_yPKnYEKtEeamANVCSA-JgA" name="milliTimestamp" type="_3sNd0JfkEeOQoP6u6l9OUQ" isDerived="true"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_1MMvUOrAEeWDoJaz4B-PEA" name="WorkflowFailed">
-      <generalization xmi:type="uml:Generalization" xmi:id="_MJNdoOrBEeWDoJaz4B-PEA" general="_VXZM4KyNEeSAYN-eWA_Wkw"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="__M-QsOrAEeWDoJaz4B-PEA" name="reason" type="_UI9-8OrAEeWDoJaz4B-PEA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_cuyr0PwEEeWgLOd_tUeI6A" memberEnd="_cuyr0fwEEeWgLOd_tUeI6A _cuxdsPwEEeWgLOd_tUeI6A">
+      <name xsi:nil="true"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_cuyr0fwEEeWgLOd_tUeI6A" name="workflowDone" type="_VXZM4KyNEeSAYN-eWA_Wkw" association="_cuyr0PwEEeWgLOd_tUeI6A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cuyr0vwEEeWgLOd_tUeI6A" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cuyr0_wEEeWgLOd_tUeI6A" value="1"/>
+      </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_EXLEsOrBEeWDoJaz4B-PEA" name="WorkflowAborted">
-      <generalization xmi:type="uml:Generalization" xmi:id="_Mp-oYOrBEeWDoJaz4B-PEA" general="_VXZM4KyNEeSAYN-eWA_Wkw"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_to4OYPwEEeWgLOd_tUeI6A" memberEnd="_to4OYfwEEeWgLOd_tUeI6A _to3nUPwEEeWgLOd_tUeI6A">
+      <name xsi:nil="true"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_to4OYfwEEeWgLOd_tUeI6A" name="workflowFailed" type="_1MMvUOrAEeWDoJaz4B-PEA" association="_to4OYPwEEeWgLOd_tUeI6A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_to4OYvwEEeWgLOd_tUeI6A" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_to4OY_wEEeWgLOd_tUeI6A" value="1"/>
+      </ownedEnd>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_sR8kgJflEeOQoP6u6l9OUQ" name="IdentifiedElement" isAbstract="true">
