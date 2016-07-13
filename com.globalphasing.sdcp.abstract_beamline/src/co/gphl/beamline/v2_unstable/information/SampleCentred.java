@@ -39,7 +39,7 @@ public interface SampleCentred {
     Integer getWedgeWidth();
 
     double getExposure();
-    double getAttenuation();
+    double getTransmission();
     BeamstopSetting getBeamstopSetting();
 
     /**
