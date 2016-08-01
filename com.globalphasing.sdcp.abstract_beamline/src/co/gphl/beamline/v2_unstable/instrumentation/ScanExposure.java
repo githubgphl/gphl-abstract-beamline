@@ -18,5 +18,5 @@ import co.gphl.beamline.v2_unstable.IdentifiedElement;
 public interface ScanExposure extends IdentifiedElement {
 
     double getTime();
-    double getIntensity();
+    double getTransmission();
 }
