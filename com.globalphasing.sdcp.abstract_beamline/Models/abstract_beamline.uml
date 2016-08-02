@@ -734,6 +734,12 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_to4OY_wEEeWgLOd_tUeI6A" value="1"/>
       </ownedEnd>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_EP-cUFf1EeaosO-niOKXAw" name="SubprocessStarted">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Jps6EFf1EeaosO-niOKXAw" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_UrqLoFf1EeaosO-niOKXAw" name="SubprocessStopped"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_sR8kgJflEeOQoP6u6l9OUQ" name="IdentifiedElement" isAbstract="true">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_9_tYkJ-tEeORueP4RwNSuw" name="id" visibility="public" type="_-MC2wJfeEeOQoP6u6l9OUQ">
