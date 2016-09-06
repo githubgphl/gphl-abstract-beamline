@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ImsGIJfeEeOQoP6u6l9OUQ" name="AbstractBeamline" URI="">
   <ownedComment xmi:type="uml:Comment" xmi:id="_rQFPsJ-4EeORueP4RwNSuw" annotatedElement="_s70jIChMEeSuSbp_QHtIcg">
-    <body>For any GoniostatSweepSettings provided to the beamline via a GeometricStrategy where the (X, Y, Z) translation settings were corrected by a centring operation or not specified, the beamline must return a GoniostatTranslationSettings instance with populated (X, Y, Z) values and the id of the corresponding GoniostatSweepSetting.</body>
+    <body>For any GoniostatSweepSettings provided to the beamline via a GeometricStrategy where the (X, Y, Z) translation settings were corrected by a centring operation or not specified, the beamline must return a GoniostatTranslationSettings instance with populated (X, Y, Z) values and the id of the corresponding GoniostatSweepSetting.
+
+If AbstractBeamline::Instructions::GeometricStrategy::userModifiable == true, new values for the rotation axis settings may also be specified. If a new setting for the scanning axis is provided, the scans will be offset with respect to the first scan of the resulting data collection. If user-modified rotation axis settings are provided, newRotationId must be set</body>
   </ownedComment>
   <ownedComment xmi:type="uml:Comment" xmi:id="_o9wa8LjWEeOB9q44TOrPvQ" annotatedElement="_AqMaIJ-0EeORueP4RwNSuw">
     <body> Either scatterer(s) or phasingWavelengths must be specified or the workflow cannot be started</body>
@@ -117,6 +119,10 @@ Further subdirectories relative to relativeImageDir for the images produced by i
     <packagedElement xmi:type="uml:Class" xmi:id="_xS1BsIcCEeWP89wnxV1F7g" name="GoniostatTranslationSetting">
       <generalization xmi:type="uml:Generalization" xmi:id="_LfI9kIcDEeWP89wnxV1F7g" general="_pJRyIJffEeOQoP6u6l9OUQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_AGfDQIcDEeWP89wnxV1F7g" name="rotationId" type="_-MC2wJfeEeOQoP6u6l9OUQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_HE3dAHDnEeaYj-DGzyuo3A" name="newRotationId" type="_-MC2wJfeEeOQoP6u6l9OUQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LVC4wHDnEeaYj-DGzyuo3A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LVDf0HDnEeaYj-DGzyuo3A" value="1"/>
+      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_BgW1sIcCEeWP89wnxV1F7g" name="GoniostatRotationSetting">
       <generalization xmi:type="uml:Generalization" xmi:id="_s7P9cIcCEeWP89wnxV1F7g" general="_pJRyIJffEeOQoP6u6l9OUQ"/>
@@ -325,7 +331,7 @@ Further subdirectories relative to relativeImageDir for the images produced by i
           <value xsi:nil="true"/>
         </defaultValue>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_4sSh0LIHEeSDifNhU1GYbw" name="allowedWidths" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4sSh0LIHEeSDifNhU1GYbw" name="allowedWidths" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ" isOrdered="true">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5HVfELIHEeSDifNhU1GYbw"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5HWGILIHEeSDifNhU1GYbw" value="*"/>
         <defaultValue xmi:type="uml:LiteralString" xmi:id="_5HXUQLIHEeSDifNhU1GYbw">
@@ -352,6 +358,9 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         <defaultValue xmi:type="uml:LiteralString" xmi:id="_KcIwMLLjEeSkZ-QD4g8g_A">
           <value xsi:nil="true"/>
         </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_wpomEHDmEeaYj-DGzyuo3A" name="userModifiable">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_umVo8KyKEeSAYN-eWA_Wkw" name="GeometricStrategy"/>
@@ -461,7 +470,7 @@ Further subdirectories relative to relativeImageDir for the images produced by i
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_2wXOQJ-zEeORueP4RwNSuw" name="Information">
-    <ownedComment xmi:type="uml:Comment" xmi:id="_1WZ5cKyIEeSAYN-eWA_Wkw" annotatedElement="_ff60IChLEeSuSbp_QHtIcg">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_1WZ5cKyIEeSAYN-eWA_Wkw" annotatedElement="_9y1JkHDpEeaYj-DGzyuo3A">
       <body>wedgeWidth is the number of images in a wedge. If GeometricStrategy::interleave is true it is required, otherwise not settable</body>
     </ownedComment>
     <ownedComment xmi:type="uml:Comment" xmi:id="_zSSpgNC4EeWoq59tXBFkgw" annotatedElement="_fDzNYNCsEeWoq59tXBFkgw">
@@ -556,42 +565,13 @@ Further subdirectories relative to relativeImageDir for the images produced by i
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_ljKJIJ-4EeORueP4RwNSuw" name="sampleCentred_beamstopSetting_1" memberEnd="_ljKJIZ-4EeORueP4RwNSuw _ljJiEJ-4EeORueP4RwNSuw">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_ljKJIZ-4EeORueP4RwNSuw" name="sampleCentred" type="_ff60IChLEeSuSbp_QHtIcg" association="_ljKJIJ-4EeORueP4RwNSuw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ljKJIZ-4EeORueP4RwNSuw" name="samplecentred" type="_9y1JkHDpEeaYj-DGzyuo3A" association="_ljKJIJ-4EeORueP4RwNSuw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ljKJIp-4EeORueP4RwNSuw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ljKJI5-4EeORueP4RwNSuw" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_ff60IChLEeSuSbp_QHtIcg" name="SampleCentred">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_ljJiEJ-4EeORueP4RwNSuw" name="beamstopSetting" type="_2n2tcJ49EeO6a5RR8yLOUA" association="_ljKJIJ-4EeORueP4RwNSuw">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ljJiEZ-4EeORueP4RwNSuw"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ljJiEp-4EeORueP4RwNSuw" value="1"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_s70jIShMEeSuSbp_QHtIcg" name="goniostattranslationsetting" type="_xS1BsIcCEeWP89wnxV1F7g" association="_s70jIChMEeSuSbp_QHtIcg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_s70jIihMEeSuSbp_QHtIcg"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_s70jIyhMEeSuSbp_QHtIcg" value="*"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_oX_XsKyHEeSAYN-eWA_Wkw" name="imageWidth" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ou9tQKyHEeSAYN-eWA_Wkw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ou-UUKyHEeSAYN-eWA_Wkw" value="1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_ou_icKyHEeSAYN-eWA_Wkw">
-          <value xsi:nil="true"/>
-        </defaultValue>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_w7ebsKyHEeSAYN-eWA_Wkw" name="wedgeWidth" type="_3sNd0JfkEeOQoP6u6l9OUQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1HrWYKyHEeSAYN-eWA_Wkw"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1HrWYayHEeSAYN-eWA_Wkw" value="1"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_36ifkKyHEeSAYN-eWA_Wkw" name="exposure" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4Cqg0KyHEeSAYN-eWA_Wkw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4CrH4KyHEeSAYN-eWA_Wkw" value="1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_4Cru8KyHEeSAYN-eWA_Wkw">
-          <value xsi:nil="true"/>
-        </defaultValue>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_7UeP0KyHEeSAYN-eWA_Wkw" name="transmission" type="_UWanMJffEeOQoP6u6l9OUQ"/>
-    </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_s70jIChMEeSuSbp_QHtIcg" name="sampleCentred_goniostatSetting_1" memberEnd="_s70jJChMEeSuSbp_QHtIcg _s70jIShMEeSuSbp_QHtIcg">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_s70jJChMEeSuSbp_QHtIcg" name="sampleCentred" type="_ff60IChLEeSuSbp_QHtIcg" association="_s70jIChMEeSuSbp_QHtIcg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_s70jJChMEeSuSbp_QHtIcg" name="samplecentred" type="_9y1JkHDpEeaYj-DGzyuo3A" association="_s70jIChMEeSuSbp_QHtIcg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_s70jJShMEeSuSbp_QHtIcg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_s70jJihMEeSuSbp_QHtIcg" value="1"/>
       </ownedEnd>
@@ -599,9 +579,6 @@ Further subdirectories relative to relativeImageDir for the images produced by i
     <packagedElement xmi:type="uml:Realization" xmi:id="_6UDTEChNEeSuSbp_QHtIcg" name="Realization1">
       <client xmi:type="uml:Class" href="../../com.globalphasing.astra.messages/Models/model.uml#_KzsXoFwyEeOkrcjWKXiFbg"/>
       <supplier xmi:type="uml:Interface" href="../../com.globalphasing.astra.messages/Models/model.uml#_fgQaMDAoEeOkH44hMJVBzQ"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Realization" xmi:id="_7SsFkChNEeSuSbp_QHtIcg" name="Realization2" supplier="_ff60IChLEeSuSbp_QHtIcg">
-      <client xmi:type="uml:Class" href="../../com.globalphasing.astra.messages/Models/model.uml#_KzsXoFwyEeOkrcjWKXiFbg"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Realization" xmi:id="_Zq_14ChQEeSuSbp_QHtIcg" name="Realization3">
       <client xmi:type="uml:Class" href="../../com.globalphasing.astra.messages/Models/model.uml#_95dooChPEeSuSbp_QHtIcg"/>
@@ -740,6 +717,35 @@ Further subdirectories relative to relativeImageDir for the images produced by i
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_UrqLoFf1EeaosO-niOKXAw" name="SubprocessStopped"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_9y1JkHDpEeaYj-DGzyuo3A" name="SampleCentred">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_oX_XsKyHEeSAYN-eWA_Wkw" name="imageWidth" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ou9tQKyHEeSAYN-eWA_Wkw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ou-UUKyHEeSAYN-eWA_Wkw" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_ou_icKyHEeSAYN-eWA_Wkw">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_7UeP0KyHEeSAYN-eWA_Wkw" name="transmission" type="_UWanMJffEeOQoP6u6l9OUQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_36ifkKyHEeSAYN-eWA_Wkw" name="exposure" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4Cqg0KyHEeSAYN-eWA_Wkw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4CrH4KyHEeSAYN-eWA_Wkw" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_4Cru8KyHEeSAYN-eWA_Wkw">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_w7ebsKyHEeSAYN-eWA_Wkw" name="wedgeWidth" type="_3sNd0JfkEeOQoP6u6l9OUQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1HrWYKyHEeSAYN-eWA_Wkw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1HrWYayHEeSAYN-eWA_Wkw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ljJiEJ-4EeORueP4RwNSuw" name="beamstopSetting" type="_2n2tcJ49EeO6a5RR8yLOUA" association="_ljKJIJ-4EeORueP4RwNSuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ljJiEZ-4EeORueP4RwNSuw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ljJiEp-4EeORueP4RwNSuw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_s70jIShMEeSuSbp_QHtIcg" name="goniostaTtranslationSetting" type="_xS1BsIcCEeWP89wnxV1F7g" association="_s70jIChMEeSuSbp_QHtIcg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_s70jIihMEeSuSbp_QHtIcg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_s70jIyhMEeSuSbp_QHtIcg" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_sR8kgJflEeOQoP6u6l9OUQ" name="IdentifiedElement" isAbstract="true">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_9_tYkJ-tEeORueP4RwNSuw" name="id" visibility="public" type="_-MC2wJfeEeOQoP6u6l9OUQ">

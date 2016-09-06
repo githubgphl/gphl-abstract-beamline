@@ -28,4 +28,5 @@ public interface GeometricStrategy extends IdentifiedElement {
     boolean isInterleave();
     List<Double> getAllowedWidths();
     int getDefaultWidthIdx();
+    boolean isUserModifiable();
 }
