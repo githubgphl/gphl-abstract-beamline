@@ -13,6 +13,7 @@
 
 package co.gphl.beamline.v2_unstable.information;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -47,9 +48,23 @@ public interface SampleCentred {
      * the corresponding {@link GoniostatRotationSetting} (or subtype thereof).
      * 
      * @return
+     * 
+     * @deprecated Use {@link #getGoniostatTranslationSettings()} instead
      */
+    @Deprecated
     Map<UUID, GoniostatTranslationSetting> getGoniostatTranslationSetting();
 
+    /**
+     * Gets all the translation settings for this sample centring.
+     * If the user modified any of the orientations, the settings of the
+     * rotation axes will be present as well as the translation axes,
+     * and {@link GoniostatTranslationSetting#getNewRotationId()} will
+     * return a non-null value.
+     * 
+     * @return translation settings
+     */
+    Collection<GoniostatTranslationSetting> getGoniostatTranslationSettings();
+    
     /** 
      * A list of interleaving variables, from slowest-varying to
      * fastest varying. The characters are selected from the
