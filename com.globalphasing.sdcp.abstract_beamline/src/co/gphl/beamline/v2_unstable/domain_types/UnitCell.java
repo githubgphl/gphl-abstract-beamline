@@ -12,27 +12,10 @@
  */
 package co.gphl.beamline.v2_unstable.domain_types;
 
-import java.io.Serializable;
-import java.util.Arrays;
-
 //This class implements a DataType. Keep it immutable!
 
-public class UnitCell implements Serializable {
-
-    private double[] lengths, angles;
+public interface UnitCell {
     
-    public UnitCell(double a, double b, double c,
-            double alpha, double beta, double gamma) {
-        this.lengths = new double[] {a,b,c};
-        this.angles  = new double[] {alpha, beta, gamma};
-    }
-    
-    public double[] getLengths() {
-        return Arrays.copyOf(this.lengths, 3);
-    }
-    
-    public double[] getAngles() {
-        return Arrays.copyOf(this.angles, 3);
-    }
-    
+    double[] getLengths();
+    public double[] getAngles();
 }

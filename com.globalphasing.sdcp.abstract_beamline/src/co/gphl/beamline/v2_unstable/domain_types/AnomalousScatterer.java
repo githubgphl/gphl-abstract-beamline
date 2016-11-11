@@ -12,30 +12,10 @@
  */
 package co.gphl.beamline.v2_unstable.domain_types;
 
-import java.io.Serializable;
-
 //This class implements a DataType. Keep it immutable!
 
-public class AnomalousScatterer implements Serializable {
+public interface AnomalousScatterer {
 
-    private final ChemicalElement element;
-    private final AbsorptionEdge edge;
-    
-    // TODO: write a constructor that takes string arguments
-    
-    public AnomalousScatterer(ChemicalElement element, AbsorptionEdge edge) {
-        this.element = element;
-        this.edge = edge;
-    }
-
-    public ChemicalElement getElement() {
-        return element;
-    }
-
-    public AbsorptionEdge getEdge() {
-        return edge;
-    }
-    
-
-    
+    public ChemicalElement getElement();
+    public AbsorptionEdge getEdge();
 }

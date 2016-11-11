@@ -12,10 +12,6 @@
  */
 package co.gphl.beamline.v2_unstable.domain_types;
 
-import java.io.Serializable;
-
-// TODO figure out how we are going to implement this
-
-public class OrientationMatrix implements Serializable {
+public interface OrientationMatrix  {
 
 }
