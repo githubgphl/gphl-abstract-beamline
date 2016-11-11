@@ -13,10 +13,12 @@
 
 package co.gphl.beamline.v2_unstable.information;
 
+import co.gphl.beamline.v2_unstable.Payload;
+
 /**
  * @author pkeller
  *
  */
-public interface WorkflowReady {
+public interface WorkflowReady extends Payload {
 
 }

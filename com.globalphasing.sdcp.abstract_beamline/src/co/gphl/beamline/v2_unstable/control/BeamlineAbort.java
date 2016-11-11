@@ -13,10 +13,12 @@
 
 package co.gphl.beamline.v2_unstable.control;
 
+import co.gphl.beamline.v2_unstable.Payload;
+
 /**
  * @author pkeller
  *
  */
-public interface BeamlineAbort {
+public interface BeamlineAbort extends Payload {
 
 }

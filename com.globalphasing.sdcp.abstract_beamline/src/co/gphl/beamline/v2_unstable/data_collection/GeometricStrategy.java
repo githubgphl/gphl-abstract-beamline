@@ -17,12 +17,13 @@ import java.util.List;
 import java.util.Set;
 
 import co.gphl.beamline.v2_unstable.IdentifiedElement;
+import co.gphl.beamline.v2_unstable.Payload;
 
 /**
  * @author pkeller
  *
  */
-public interface GeometricStrategy extends IdentifiedElement {
+public interface GeometricStrategy extends IdentifiedElement, Payload {
 
     Set<Sweep> getSweep();
     boolean isInterleave();

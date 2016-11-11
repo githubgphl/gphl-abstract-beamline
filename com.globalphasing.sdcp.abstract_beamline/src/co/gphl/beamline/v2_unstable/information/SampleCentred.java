@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+import co.gphl.beamline.v2_unstable.Payload;
 import co.gphl.beamline.v2_unstable.data_collection.Scan;
 import co.gphl.beamline.v2_unstable.instrumentation.BeamstopSetting;
 import co.gphl.beamline.v2_unstable.instrumentation.GoniostatTranslationSetting;
@@ -27,7 +28,7 @@ import co.gphl.beamline.v2_unstable.instrumentation.GoniostatRotationSetting;
  * @author pkeller
  *
  */
-public interface SampleCentred {
+public interface SampleCentred extends Payload {
 
     double getImageWidth();
 

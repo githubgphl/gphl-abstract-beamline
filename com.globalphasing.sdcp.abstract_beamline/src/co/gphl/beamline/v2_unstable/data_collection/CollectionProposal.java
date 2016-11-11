@@ -16,8 +16,9 @@ import java.util.List;
 import java.util.UUID;
 
 import co.gphl.beamline.v2_unstable.IdentifiedElement;
+import co.gphl.beamline.v2_unstable.Payload;
 
-public interface CollectionProposal extends IdentifiedElement {
+public interface CollectionProposal extends IdentifiedElement, Payload {
 
     UUID getCollectionId();
     String getRelativeImageDir();

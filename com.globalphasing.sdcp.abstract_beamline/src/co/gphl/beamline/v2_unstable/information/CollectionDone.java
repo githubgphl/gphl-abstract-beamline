@@ -15,11 +15,13 @@ package co.gphl.beamline.v2_unstable.information;
 
 import java.util.UUID;
 
+import co.gphl.beamline.v2_unstable.Payload;
+
 /**
  * @author pkeller
  *
  */
-public interface CollectionDone {
+public interface CollectionDone extends Payload {
 
     UUID getProposalId();
     String getImageRoot();

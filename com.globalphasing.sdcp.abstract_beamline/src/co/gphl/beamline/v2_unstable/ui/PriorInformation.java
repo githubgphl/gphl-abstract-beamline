@@ -2,7 +2,9 @@ package co.gphl.beamline.v2_unstable.ui;
 
 import java.util.UUID;
 
-public interface PriorInformation {
+import co.gphl.beamline.v2_unstable.Payload;
+
+public interface PriorInformation extends Payload {
 
     UUID getSampleId();
     boolean isSetSampleName();

@@ -15,11 +15,13 @@ package co.gphl.beamline.v2_unstable.instrumentation;
 
 import java.net.URL;
 
+import co.gphl.beamline.v2_unstable.Payload;
+
 /**
  * @author pkeller
  *
  */
-public interface ConfigurationData {
+public interface ConfigurationData extends Payload {
 
     URL getLocation();
     

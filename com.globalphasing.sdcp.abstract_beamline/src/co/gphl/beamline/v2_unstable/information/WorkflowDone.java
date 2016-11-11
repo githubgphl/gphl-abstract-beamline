@@ -15,11 +15,13 @@ package co.gphl.beamline.v2_unstable.information;
 
 import java.util.List;
 
+import co.gphl.beamline.v2_unstable.Payload;
+
 /**
  * @author pkeller
  *
  */
-public interface WorkflowDone {
+public interface WorkflowDone extends Payload {
 
     List<Issue> getIssues();
     

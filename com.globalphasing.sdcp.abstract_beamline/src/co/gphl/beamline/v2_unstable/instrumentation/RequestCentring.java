@@ -12,11 +12,13 @@
  */
 package co.gphl.beamline.v2_unstable.instrumentation;
 
+import co.gphl.beamline.v2_unstable.Payload;
+
 /**
  * @author pkeller
  *
  */
-public interface RequestCentring {
+public interface RequestCentring extends Payload {
 
     int getCurrentSettingNo();
     int getTotalRotations();
