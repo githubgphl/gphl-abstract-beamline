@@ -27,9 +27,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>GitHub_README.md</name>
+			<name>GitHub_README.adoc</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/README.md</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/README.adoc</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
