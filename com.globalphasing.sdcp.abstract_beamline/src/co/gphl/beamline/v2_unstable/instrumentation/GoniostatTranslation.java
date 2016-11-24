@@ -18,8 +18,10 @@ import java.util.UUID;
  * @author pkeller
  *
  */
-public interface GoniostatRotationSetting extends PositionerSetting {
+public interface GoniostatTranslation extends PositionerSetting {
 
-    UUID getCentringId();
+    UUID getRotationId();
+    UUID getNewRotationId();
+    boolean isSetNewRotationId();
     
 }

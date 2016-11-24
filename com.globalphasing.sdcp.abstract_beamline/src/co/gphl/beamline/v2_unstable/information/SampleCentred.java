@@ -21,8 +21,8 @@ import java.util.UUID;
 import co.gphl.beamline.v2_unstable.Payload;
 import co.gphl.beamline.v2_unstable.data_collection.Scan;
 import co.gphl.beamline.v2_unstable.instrumentation.BeamstopSetting;
-import co.gphl.beamline.v2_unstable.instrumentation.GoniostatTranslationSetting;
-import co.gphl.beamline.v2_unstable.instrumentation.GoniostatRotationSetting;
+import co.gphl.beamline.v2_unstable.instrumentation.GoniostatTranslation;
+import co.gphl.beamline.v2_unstable.instrumentation.GoniostatRotation;
 
 /**
  * @author pkeller
@@ -46,25 +46,25 @@ public interface SampleCentred extends Payload {
 
     /**
      * Returns a map of goniostat centring settings, keyed on the UUIDs of
-     * the corresponding {@link GoniostatRotationSetting} (or subtype thereof).
+     * the corresponding {@link GoniostatRotation} (or subtype thereof).
      * 
      * @return
      * 
-     * @deprecated Use {@link #getGoniostatTranslationSettings()} instead
+     * @deprecated Use {@link #getGoniostatTranslations()} instead
      */
     @Deprecated
-    Map<UUID, GoniostatTranslationSetting> getGoniostatTranslationSetting();
+    Map<UUID, GoniostatTranslation> getGoniostatTranslationSetting();
 
     /**
      * Gets all the translation settings for this sample centring.
      * If the user modified any of the orientations, the settings of the
      * rotation axes will be present as well as the translation axes,
-     * and {@link GoniostatTranslationSetting#getNewRotationId()} will
+     * and {@link GoniostatTranslation#getNewRotationId()} will
      * return a non-null value.
      * 
      * @return translation settings
      */
-    Collection<GoniostatTranslationSetting> getGoniostatTranslationSettings();
+    Collection<GoniostatTranslation> getGoniostatTranslations();
     
     /** 
      * A list of interleaving variables, from slowest-varying to

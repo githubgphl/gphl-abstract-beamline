@@ -22,6 +22,6 @@ public interface CentringDone extends Payload{
 
     CentringStatus getStatus();
     Long getTimestamp();
-    GoniostatTranslationSetting getGoniostatTranslationSetting();
+    GoniostatTranslation getGoniostatTranslation();
     
 }

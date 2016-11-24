@@ -31,6 +31,9 @@ Further subdirectories relative to relativeImageDir for the images produced by i
   <ownedComment xmi:type="uml:Comment" xmi:id="_KYVAkO98EeW8ubjbpxEycg" annotatedElement="_ZqEOYIcHEeWP89wnxV1F7g">
     <body>timestamp is the number of milliseconds since midnight, January 1, 1970 UTC</body>
   </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_VIwJsLC9EeaYp_aYafRm9Q" annotatedElement="_CcFSQLtbEeS-Ne1HNGF1Qg">
+    <body> ChooseLattice::lattices is the lattice character(s) implied by the user-specified crystal symmetry in UserProvidedInformation (if any). When this field is populated, it is almost always with one value, however in the special case of C2 (space group number 5) it will be Set { 'mC', 'mI' }.</body>
+  </ownedComment>
   <packageImport xmi:type="uml:PackageImport" xmi:id="_ImsGIZfeEeOQoP6u6l9OUQ">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
@@ -116,7 +119,7 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         </defaultValue>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_xS1BsIcCEeWP89wnxV1F7g" name="GoniostatTranslationSetting">
+    <packagedElement xmi:type="uml:Class" xmi:id="_xS1BsIcCEeWP89wnxV1F7g" name="GoniostatTranslation">
       <generalization xmi:type="uml:Generalization" xmi:id="_LfI9kIcDEeWP89wnxV1F7g" general="_pJRyIJffEeOQoP6u6l9OUQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_AGfDQIcDEeWP89wnxV1F7g" name="rotationId" type="_-MC2wJfeEeOQoP6u6l9OUQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_HE3dAHDnEeaYj-DGzyuo3A" name="newRotationId" type="_-MC2wJfeEeOQoP6u6l9OUQ">
@@ -124,9 +127,9 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LVDf0HDnEeaYj-DGzyuo3A" value="1"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_BgW1sIcCEeWP89wnxV1F7g" name="GoniostatRotationSetting">
+    <packagedElement xmi:type="uml:Class" xmi:id="_BgW1sIcCEeWP89wnxV1F7g" name="GoniostatRotation">
       <generalization xmi:type="uml:Generalization" xmi:id="_s7P9cIcCEeWP89wnxV1F7g" general="_pJRyIJffEeOQoP6u6l9OUQ"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_s_1_ELa4EeSo_qAyh3XfjA" name="centringId" visibility="public" type="_-MC2wJfeEeOQoP6u6l9OUQ">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_s_1_ELa4EeSo_qAyh3XfjA" name="translationId" visibility="public" type="_-MC2wJfeEeOQoP6u6l9OUQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tPasILa4EeSo_qAyh3XfjA"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tPb6QLa4EeSo_qAyh3XfjA" value="1"/>
         <defaultValue xmi:type="uml:LiteralString" xmi:id="_tPdIYLa4EeSo_qAyh3XfjA">
@@ -189,6 +192,9 @@ Further subdirectories relative to relativeImageDir for the images produced by i
     <ownedComment xmi:type="uml:Comment" xmi:id="_JyHtcJ4_EeO6a5RR8yLOUA" annotatedElement="_Xu3QEJfnEeOQoP6u6l9OUQ">
       <body>A set of one or more sweeps define an overall data collection without going into execution-level specifics such as: interleaving, exposure, image width etc. They can be used for presentation purposes or to summarise a data collection that is decomposed in a way that would be otherwise hard to understand
 </body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_IMSVcLDMEeaI25CbZmY3oA" annotatedElement="_ywaIEFhIEeSONvFHwpw1ng">
+      <body>Should scans be {ordered, unique}? </body>
     </ownedComment>
     <packagedElement xmi:type="uml:Class" xmi:id="_hjJDAJfmEeOQoP6u6l9OUQ" name="Scan">
       <generalization xmi:type="uml:Generalization" xmi:id="_jm0K8JfmEeOQoP6u6l9OUQ" general="_sR8kgJflEeOQoP6u6l9OUQ"/>
@@ -292,7 +298,7 @@ Further subdirectories relative to relativeImageDir for the images produced by i
     <packagedElement xmi:type="uml:Association" xmi:id="_ZOfeABMxEeSP4pLtdegIlQ" name="collectionSweep_geometricSweep_1" memberEnd="_ZOfeARMxEeSP4pLtdegIlQ _ZOe28BMxEeSP4pLtdegIlQ"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_ywaIEFhIEeSONvFHwpw1ng" name="CollectionProposal">
       <generalization xmi:type="uml:Generalization" xmi:id="_GOhGkFhJEeSONvFHwpw1ng" general="_sR8kgJflEeOQoP6u6l9OUQ"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_JFaogJfpEeOQoP6u6l9OUQ" name="collection" visibility="public" type="_hjJDAJfmEeOQoP6u6l9OUQ" isOrdered="true" isUnique="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_JFaogJfpEeOQoP6u6l9OUQ" name="scans" visibility="public" type="_hjJDAJfmEeOQoP6u6l9OUQ" isOrdered="true" isUnique="false">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JYt_AJfpEeOQoP6u6l9OUQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JYumEJfpEeOQoP6u6l9OUQ" value="*"/>
         <defaultValue xmi:type="uml:LiteralString" xmi:id="_JYvNIJfpEeOQoP6u6l9OUQ">
@@ -317,14 +323,14 @@ Further subdirectories relative to relativeImageDir for the images produced by i
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_2RLR4KyDEeSAYN-eWA_Wkw" name="GeometricStrategy">
       <generalization xmi:type="uml:Generalization" xmi:id="_frawgKyEEeSAYN-eWA_Wkw" general="_sR8kgJflEeOQoP6u6l9OUQ"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_DANwUKyEEeSAYN-eWA_Wkw" name="sweep" visibility="public" type="_Xu3QEJfnEeOQoP6u6l9OUQ">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_DANwUKyEEeSAYN-eWA_Wkw" name="sweeps" visibility="public" type="_Xu3QEJfnEeOQoP6u6l9OUQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DMn0oKyEEeSAYN-eWA_Wkw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DMpCwKyEEeSAYN-eWA_Wkw" value="*"/>
         <defaultValue xmi:type="uml:LiteralString" xmi:id="_DMpp0KyEEeSAYN-eWA_Wkw">
           <value xsi:nil="true"/>
         </defaultValue>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_GyOskKyIEeSAYN-eWA_Wkw" name="interleave" visibility="public" type="_lmMwEKyIEeSAYN-eWA_Wkw">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_GyOskKyIEeSAYN-eWA_Wkw" name="interleaved" visibility="public" type="_lmMwEKyIEeSAYN-eWA_Wkw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_G645UKyIEeSAYN-eWA_Wkw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_G66HcKyIEeSAYN-eWA_Wkw" value="1"/>
         <defaultValue xmi:type="uml:LiteralString" xmi:id="_G66ugKyIEeSAYN-eWA_Wkw">
@@ -372,10 +378,10 @@ Further subdirectories relative to relativeImageDir for the images produced by i
           <value xsi:nil="true"/>
         </defaultValue>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_dJvAoLtbEeS-Ne1HNGF1Qg" name="lattice" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dJvAoLtbEeS-Ne1HNGF1Qg" name="lattices" visibility="public">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dQJxsLtbEeS-Ne1HNGF1Qg" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dQKYwLtbEeS-Ne1HNGF1Qg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dQJxsLtbEeS-Ne1HNGF1Qg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dQKYwLtbEeS-Ne1HNGF1Qg" value="2"/>
         <defaultValue xmi:type="uml:LiteralString" xmi:id="_dQK_0LtbEeS-Ne1HNGF1Qg">
           <value xsi:nil="true"/>
         </defaultValue>
@@ -396,7 +402,7 @@ Further subdirectories relative to relativeImageDir for the images produced by i
     <packagedElement xmi:type="uml:Class" xmi:id="_Uug6YIcHEeWP89wnxV1F7g" name="RequestCentring">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_pbijEIcHEeWP89wnxV1F7g" name="currentSettingNo" type="_3sNd0JfkEeOQoP6u6l9OUQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_wGW1QIcHEeWP89wnxV1F7g" name="totalRotations" type="_3sNd0JfkEeOQoP6u6l9OUQ"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_RbvsoIcIEeWP89wnxV1F7g" name="goniostatRotationSetting" type="_BgW1sIcCEeWP89wnxV1F7g" association="_RbwTsIcIEeWP89wnxV1F7g">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_RbvsoIcIEeWP89wnxV1F7g" name="goniostatRotation" type="_BgW1sIcCEeWP89wnxV1F7g" association="_RbwTsIcIEeWP89wnxV1F7g">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RbvsoYcIEeWP89wnxV1F7g" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RbvsoocIEeWP89wnxV1F7g" value="1"/>
       </ownedAttribute>
@@ -481,7 +487,7 @@ Further subdirectories relative to relativeImageDir for the images produced by i
 </body>
     </ownedComment>
     <packagedElement xmi:type="uml:Class" xmi:id="_AqMaIJ-0EeORueP4RwNSuw" name="UserProvidedInformation">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_EQPTwJ-0EeORueP4RwNSuw" name="scatterer" visibility="public" type="_MNqSwJ-zEeORueP4RwNSuw">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_EQPTwJ-0EeORueP4RwNSuw" name="scatterers" visibility="public" type="_MNqSwJ-zEeORueP4RwNSuw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ehfb0J-0EeORueP4RwNSuw"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EhgC4J-0EeORueP4RwNSuw" value="*"/>
         <defaultValue xmi:type="uml:LiteralString" xmi:id="_Ehgp8J-0EeORueP4RwNSuw">
@@ -632,7 +638,7 @@ Further subdirectories relative to relativeImageDir for the images produced by i
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_ZqEOYIcHEeWP89wnxV1F7g" name="CentringDone">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_uuq0IIcIEeWP89wnxV1F7g" name="goniostatTranslationSetting" type="_xS1BsIcCEeWP89wnxV1F7g" association="_uurbMIcIEeWP89wnxV1F7g">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_uuq0IIcIEeWP89wnxV1F7g" name="goniostatTranslation" type="_xS1BsIcCEeWP89wnxV1F7g" association="_uurbMIcIEeWP89wnxV1F7g">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uuq0IYcIEeWP89wnxV1F7g"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uuq0IocIEeWP89wnxV1F7g" value="1"/>
       </ownedAttribute>

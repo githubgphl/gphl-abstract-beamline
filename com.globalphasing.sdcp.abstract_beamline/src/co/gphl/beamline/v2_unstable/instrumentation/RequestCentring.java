@@ -22,5 +22,5 @@ public interface RequestCentring extends Payload {
 
     int getCurrentSettingNo();
     int getTotalRotations();
-    GoniostatRotationSetting getGoniostatRotationSetting();   
+    GoniostatRotation getGoniostatRotation();   
 }

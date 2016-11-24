@@ -20,9 +20,23 @@ import co.gphl.beamline.v2_unstable.Payload;
 
 public interface CollectionProposal extends IdentifiedElement, Payload {
 
-    UUID getCollectionId();
     String getRelativeImageDir();
-    List<? extends Scan> getCollection();
+    
+    // LinkedHashSet<Scan> might be better, if CollectionProposal::scans is
+    // changed to {unique, ordered} (which it probably ought to be)
+    List<? extends Scan> getScans();
     GeometricStrategy getStrategy();
 
+    /**
+     * @deprecated use {@link #getScans()}
+     */
+    @Deprecated
+    List<? extends Scan> getCollection();
+
+    /**
+     * @deprecated use {@link #getId()}
+     */
+    @Deprecated
+    UUID getCollectionId();
+    
 }

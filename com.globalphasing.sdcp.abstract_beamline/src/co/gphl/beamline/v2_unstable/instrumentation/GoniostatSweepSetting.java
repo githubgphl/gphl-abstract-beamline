@@ -16,7 +16,7 @@ package co.gphl.beamline.v2_unstable.instrumentation;
  * @author pkeller
  *
  */
-public interface GoniostatSweepSetting extends GoniostatRotationSetting {
+public interface GoniostatSweepSetting extends GoniostatRotation {
 
     String getScanAxis();
     

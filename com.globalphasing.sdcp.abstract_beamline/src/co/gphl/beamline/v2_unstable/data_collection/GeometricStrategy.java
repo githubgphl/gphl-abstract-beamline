@@ -25,9 +25,22 @@ import co.gphl.beamline.v2_unstable.Payload;
  */
 public interface GeometricStrategy extends IdentifiedElement, Payload {
 
-    Set<Sweep> getSweep();
-    boolean isInterleave();
+    Set<Sweep> getSweeps();
+    boolean isInterleaved();
     List<Double> getAllowedWidths();
     int getDefaultWidthIdx();
     boolean isUserModifiable();
+    
+    /**
+     * @deprecated use {@link #getSweeps()}
+     */
+    @Deprecated
+    Set<Sweep> getSweep();
+    
+    /**
+     * @deprecated use {@link #isInterleaved()}
+     */
+    @Deprecated
+    boolean isInterleave();
+    
 }
