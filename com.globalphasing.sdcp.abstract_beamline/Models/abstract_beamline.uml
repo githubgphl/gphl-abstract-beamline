@@ -458,6 +458,20 @@ Further subdirectories relative to relativeImageDir for the images produced by i
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zlzU8-LkEeaSMtPPLb0UtQ" value="*"/>
         </ownedEnd>
       </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_uurbMIcIEeWP89wnxV1F7g" memberEnd="_uurbMYcIEeWP89wnxV1F7g _uuq0IIcIEeWP89wnxV1F7g">
+        <name xsi:nil="true"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_uurbMYcIEeWP89wnxV1F7g" name="centringDone" type="_ZqEOYIcHEeWP89wnxV1F7g" association="_uurbMIcIEeWP89wnxV1F7g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uurbMocIEeWP89wnxV1F7g"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uurbM4cIEeWP89wnxV1F7g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_RbwTsIcIEeWP89wnxV1F7g" memberEnd="_RbwTsYcIEeWP89wnxV1F7g _RbvsoIcIEeWP89wnxV1F7g">
+        <name xsi:nil="true"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_RbwTsYcIEeWP89wnxV1F7g" name="requestCentring" type="_Uug6YIcHEeWP89wnxV1F7g" association="_RbwTsIcIEeWP89wnxV1F7g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RbwTsocIEeWP89wnxV1F7g"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RbwTs4cIEeWP89wnxV1F7g" value="*"/>
+        </ownedEnd>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_WD50kJ-yEeORueP4RwNSuw" name="DomainTypes">
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_4Ycb0J-yEeORueP4RwNSuw" name="AbsorptionEdge">
@@ -795,20 +809,7 @@ Further subdirectories relative to relativeImageDir for the images produced by i
           </defaultValue>
         </ownedAttribute>
       </packagedElement>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_RbwTsIcIEeWP89wnxV1F7g" memberEnd="_RbwTsYcIEeWP89wnxV1F7g _RbvsoIcIEeWP89wnxV1F7g">
-      <name xsi:nil="true"/>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_RbwTsYcIEeWP89wnxV1F7g" name="requestCentring" type="_Uug6YIcHEeWP89wnxV1F7g" association="_RbwTsIcIEeWP89wnxV1F7g">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RbwTsocIEeWP89wnxV1F7g"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RbwTs4cIEeWP89wnxV1F7g" value="*"/>
-      </ownedEnd>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_uurbMIcIEeWP89wnxV1F7g" memberEnd="_uurbMYcIEeWP89wnxV1F7g _uuq0IIcIEeWP89wnxV1F7g">
-      <name xsi:nil="true"/>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_uurbMYcIEeWP89wnxV1F7g" name="centringDone" type="_ZqEOYIcHEeWP89wnxV1F7g" association="_uurbMIcIEeWP89wnxV1F7g">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uurbMocIEeWP89wnxV1F7g"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uurbM4cIEeWP89wnxV1F7g" value="*"/>
-      </ownedEnd>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bazbMBuoEeeqLcUAXJQF7A" name="ObtainPriorInformation"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_M6oMAOLhEeaSMtPPLb0UtQ" name="IdentifiedElement">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_dn6osOLhEeaSMtPPLb0UtQ" name="id" type="_-MC2wJfeEeOQoP6u6l9OUQ" isUnique="false" isReadOnly="true"/>
@@ -818,6 +819,8 @@ Further subdirectories relative to relativeImageDir for the images produced by i
     <packagedElement xmi:type="uml:Realization" xmi:id="_9wUTEOLiEeaSMtPPLb0UtQ" client="_M6oMAOLhEeaSMtPPLb0UtQ" supplier="_2RLR4KyDEeSAYN-eWA_Wkw"/>
     <packagedElement xmi:type="uml:Realization" xmi:id="_CBZtwOLjEeaSMtPPLb0UtQ" client="_M6oMAOLhEeaSMtPPLb0UtQ" supplier="_Xu3QEJfnEeOQoP6u6l9OUQ"/>
     <packagedElement xmi:type="uml:Realization" xmi:id="_uqc4cOLoEeaSMtPPLb0UtQ" client="_M6oMAOLhEeaSMtPPLb0UtQ" supplier="_8pRr8LW4EeOZTslGMEIgsw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TBTHsBuqEeeqLcUAXJQF7A" name="ReadyForCentring"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZzMnYBusEeeqLcUAXJQF7A" name="PrepareForCentring"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ggbD0OrAEeWDoJaz4B-PEA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KFv8gOonEea--9z_SZYCpg" source="PapyrusVersion">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KFv8geonEea--9z_SZYCpg" key="Version" value="0.1.1"/>
@@ -853,10 +856,13 @@ Further subdirectories relative to relativeImageDir for the images produced by i
   <Profile:Payload xmi:id="_0CkvwOJQEeaKwNbMHjJZMA" base_Classifier="_UrqLoFf1EeaosO-niOKXAw"/>
   <Profile:Payload xmi:id="_3SFYsOJQEeaKwNbMHjJZMA" intent="INSTRUCTION" base_Classifier="_ywaIEFhIEeSONvFHwpw1ng"/>
   <Profile:Payload xmi:id="_5DDnEOJQEeaKwNbMHjJZMA" intent="INSTRUCTION" base_Classifier="_2RLR4KyDEeSAYN-eWA_Wkw"/>
-  <Profile:Payload xmi:id="_76uXwOJQEeaKwNbMHjJZMA" intent="INSTRUCTION" base_Classifier="_fDzNYNCsEeWoq59tXBFkgw"/>
+  <Profile:Payload xmi:id="_76uXwOJQEeaKwNbMHjJZMA" intent="RESPONSE" base_Classifier="_fDzNYNCsEeWoq59tXBFkgw"/>
   <Profile:Payload xmi:id="_-L2s4OJQEeaKwNbMHjJZMA" intent="RESPONSE" base_Classifier="_9y1JkHDpEeaYj-DGzyuo3A"/>
   <Profile:Payload xmi:id="_YVr8gOJREeaKwNbMHjJZMA" intent="INSTRUCTION" base_Classifier="_IhOlQOJREeaKwNbMHjJZMA"/>
   <Profile:Payload xmi:id="_FjwSEOJSEeaKwNbMHjJZMA" intent="RESPONSE" base_Classifier="_1mzGIOJREeaKwNbMHjJZMA"/>
   <Profile:Payload xmi:id="_MAzOAOJSEeaKwNbMHjJZMA" intent="INSTRUCTION" base_Classifier="_Uug6YIcHEeWP89wnxV1F7g"/>
   <Profile:Payload xmi:id="_NPxikOJSEeaKwNbMHjJZMA" intent="RESPONSE" base_Classifier="_ZqEOYIcHEeWP89wnxV1F7g"/>
+  <Profile:Payload xmi:id="_eAtbkBuqEeeqLcUAXJQF7A" intent="RESPONSE" base_Classifier="_TBTHsBuqEeeqLcUAXJQF7A"/>
+  <Profile:Payload xmi:id="_rytL0BuqEeeqLcUAXJQF7A" intent="INSTRUCTION" base_Classifier="_bazbMBuoEeeqLcUAXJQF7A"/>
+  <Profile:Payload xmi:id="_jeaIcBusEeeqLcUAXJQF7A" intent="INSTRUCTION" base_Classifier="_ZzMnYBusEeeqLcUAXJQF7A"/>
 </xmi:XMI>
