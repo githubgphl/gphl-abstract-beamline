@@ -20,9 +20,7 @@ package co.gphl.beamline.v2_unstable;
 
 public enum MessageIntent {
 
-    INSTRUCTION,
-    QUERY,
-    RESPONSE,
-    ACKNOWLEDGEMENT,
-    INFO;
+    DOCUMENT,
+    COMMAND,
+    EVENT
 }
