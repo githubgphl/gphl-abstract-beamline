@@ -20,8 +20,21 @@ import java.util.UUID;
  */
 public interface GoniostatTranslation extends PositionerSetting {
 
+    @Deprecated
     UUID getRotationId();
+    @Deprecated
     UUID getNewRotationId();
+    @Deprecated
     boolean isSetNewRotationId();
+    
+    GoniostatRotation getActualRotation();
+    UUID getActualRotationId();
+    UUID getRequestedRotationId();
+    
+    /** Check to see if this instance contains a beamline-updated orientation.
+     * 
+     * @return {@code true} if the actual rotation is different from the requested rotation.
+     */
+    boolean isRotationModified();
     
 }
