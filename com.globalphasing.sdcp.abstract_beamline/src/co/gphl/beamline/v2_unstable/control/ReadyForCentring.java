@@ -1,5 +1,5 @@
-/*
- * Copyright © 2015 by Global Phasing Ltd. All rights reserved
+/**
+ * Copyright © 2017 by Global Phasing Ltd. All rights reserved
  *
  * This software is proprietary to and embodies the confidential
  * technology of Global Phasing Limited (GPhL).
@@ -10,8 +10,7 @@
  * use is in force.
  *
  */
-
-package co.gphl.beamline.v2_unstable.information;
+package co.gphl.beamline.v2_unstable.control;
 
 import co.gphl.beamline.v2_unstable.Payload;
 
@@ -19,6 +18,6 @@ import co.gphl.beamline.v2_unstable.Payload;
  * @author pkeller
  *
  */
-public interface WorkflowReady extends Payload {
+public interface ReadyForCentring extends Payload {
 
 }
