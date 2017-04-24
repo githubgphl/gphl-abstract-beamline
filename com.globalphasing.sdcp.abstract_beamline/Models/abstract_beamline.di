@@ -62,6 +62,9 @@
         <children>
           <emfPageIdentifier href="abstract_beamline.notation#_TaKWkIcHEeWP89wnxV1F7g"/>
         </children>
+        <children>
+          <emfPageIdentifier href="abstract_beamline.notation#_QtMWMCjTEeezA761iS43gg"/>
+        </children>
       </children>
     </windows>
   </sashModel>

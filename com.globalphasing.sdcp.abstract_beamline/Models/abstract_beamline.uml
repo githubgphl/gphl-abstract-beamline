@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Profile="http:///schemas/Profile/_0BX44CQaEeeGLLlFAAGuVQ/14" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/Profile/_0BX44CQaEeeGLLlFAAGuVQ/14 id.profile.uml#_0BX44SQaEeeGLLlFAAGuVQ">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Profile="http:///schemas/Profile/_wTZcACjgEeezA761iS43gg/16" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/Profile/_wTZcACjgEeezA761iS43gg/16 id.profile.uml#_wTaDECjgEeezA761iS43gg">
   <uml:Model xmi:id="_ImsGIJfeEeOQoP6u6l9OUQ" name="AbstractBeamline" URI="">
     <ownedComment xmi:type="uml:Comment" xmi:id="_rQFPsJ-4EeORueP4RwNSuw" annotatedElement="_2wXOQJ-zEeORueP4RwNSuw _xS1BsIcCEeWP89wnxV1F7g">
       <body>For any GoniostatSweepSetting instance provided to the beamline via a GeometricStrategy where the (X, Y, Z) translation settings were corrected by a centring operation or not specified, the beamline must return a GoniostatTranslationSettings instance with populated (X, Y, Z) values. The beamline must also set GoniostatTranslation::requestedRotation to the id of the corresponding GoniostatSweepSetting instance sent from the workflow. 
@@ -48,6 +48,7 @@ Further subdirectories relative to relativeImageDir for the images produced by i
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_rUZzMJ-xEeORueP4RwNSuw" name="Instrumentation">
       <packagedElement xmi:type="uml:Class" xmi:id="_QgrrwJffEeOQoP6u6l9OUQ" name="BeamSetting">
+        <generalization xmi:type="uml:Generalization" xmi:id="_4PnXkCjTEeezA761iS43gg" general="_hfUPkCjTEeezA761iS43gg"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_cDSMQJffEeOQoP6u6l9OUQ" name="wavelength" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fPOj0JffEeOQoP6u6l9OUQ" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fPPx8JffEeOQoP6u6l9OUQ" value="1"/>
@@ -57,6 +58,7 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_pJRyIJffEeOQoP6u6l9OUQ" name="PositionerSetting" isAbstract="true">
+        <generalization xmi:type="uml:Generalization" xmi:id="_3vyoACjTEeezA761iS43gg" general="_hfUPkCjTEeezA761iS43gg"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_5Gv0QCQ7EeefdrvV5nw7mA" name="axisSetting" type="_i169sJffEeOQoP6u6l9OUQ" association="_5GtYACQ7EeefdrvV5nw7mA">
           <qualifier xmi:type="uml:Property" xmi:id="_1OzK8eJTEeai2PtO_Y6L5A" name="axis: String">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -115,20 +117,25 @@ Further subdirectories relative to relativeImageDir for the images produced by i
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZSVd4eJEEeaKwNbMHjJZMA" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZSVd4uJEEeaKwNbMHjJZMA" value="1"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_7G-9weI8EeaKwNbMHjJZMA" name="actualRotation" type="_BgW1sIcCEeWP89wnxV1F7g" isUnique="false" association="_7G-9wOI8EeaKwNbMHjJZMA">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7G-9wuI8EeaKwNbMHjJZMA" value="1"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_7G-9weI8EeaKwNbMHjJZMA" name="newRotation" type="_BgW1sIcCEeWP89wnxV1F7g" isUnique="false" association="_7G-9wOI8EeaKwNbMHjJZMA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7G-9wuI8EeaKwNbMHjJZMA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7G-9w-I8EeaKwNbMHjJZMA" value="1"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_NaxtwCjUEeezA761iS43gg" name="requestedRotationId" type="_-MC2wJfeEeOQoP6u6l9OUQ" isUnique="false"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_BgW1sIcCEeWP89wnxV1F7g" name="GoniostatRotation">
         <generalization xmi:type="uml:Generalization" xmi:id="_s7P9cIcCEeWP89wnxV1F7g" general="_pJRyIJffEeOQoP6u6l9OUQ"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_7G76cOI8EeaKwNbMHjJZMA" name="translation" type="_xS1BsIcCEeWP89wnxV1F7g" isUnique="false" association="_7G-9wOI8EeaKwNbMHjJZMA">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7G76ceI8EeaKwNbMHjJZMA"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7G76cuI8EeaKwNbMHjJZMA" value="1"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_K1tTgCjVEeezA761iS43gg" name="translation" type="_xS1BsIcCEeWP89wnxV1F7g" association="_K1q3QCjVEeezA761iS43gg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e1gOgCjwEeezA761iS43gg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e1m8MCjwEeezA761iS43gg" value="1"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_7G-9wOI8EeaKwNbMHjJZMA" memberEnd="_7G-9weI8EeaKwNbMHjJZMA _7G76cOI8EeaKwNbMHjJZMA">
         <name xsi:nil="true"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_7G76cOI8EeaKwNbMHjJZMA" name="goniostatTranslation" type="_xS1BsIcCEeWP89wnxV1F7g" isUnique="false" association="_7G-9wOI8EeaKwNbMHjJZMA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7G76ceI8EeaKwNbMHjJZMA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7G76cuI8EeaKwNbMHjJZMA" value="1"/>
+        </ownedEnd>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_ZSWE8OJEEeaKwNbMHjJZMA" memberEnd="_ZSWE8eJEEeaKwNbMHjJZMA _ZSVd4OJEEeaKwNbMHjJZMA">
         <name xsi:nil="true"/>
@@ -137,15 +144,20 @@ Further subdirectories relative to relativeImageDir for the images produced by i
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZSWE8-JEEeaKwNbMHjJZMA" value="1"/>
         </ownedEnd>
       </packagedElement>
-      <packagedElement xmi:type="uml:Realization" xmi:id="_pa_1MOLhEeaSMtPPLb0UtQ" client="_QgrrwJffEeOQoP6u6l9OUQ" supplier="_M6oMAOLhEeaSMtPPLb0UtQ"/>
-      <packagedElement xmi:type="uml:Realization" xmi:id="_p61y4OLhEeaSMtPPLb0UtQ" client="_pJRyIJffEeOQoP6u6l9OUQ" supplier="_M6oMAOLhEeaSMtPPLb0UtQ"/>
-      <packagedElement xmi:type="uml:Realization" xmi:id="_3oKzoOLjEeaSMtPPLb0UtQ" client="_-plxkJfiEeOQoP6u6l9OUQ" supplier="_M6oMAOLhEeaSMtPPLb0UtQ"/>
-      <packagedElement xmi:type="uml:Realization" xmi:id="_Jk_lkOLkEeaSMtPPLb0UtQ" client="_r2aUgJfkEeOQoP6u6l9OUQ" supplier="_M6oMAOLhEeaSMtPPLb0UtQ"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_5GtYACQ7EeefdrvV5nw7mA" memberEnd="_5Gv0QCQ7EeefdrvV5nw7mA _5Gv0QSQ7EeefdrvV5nw7mA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5GumICQ7EeefdrvV5nw7mA" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5GvNMCQ7EeefdrvV5nw7mA" key="nature" value="UML_Nature"/>
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_5Gv0QSQ7EeefdrvV5nw7mA" name="positionersetting" type="_pJRyIJffEeOQoP6u6l9OUQ" association="_5GtYACQ7EeefdrvV5nw7mA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_K1q3QCjVEeezA761iS43gg" name="A_translation_goniostatRotation" memberEnd="_K1tTgCjVEeezA761iS43gg _K1t6kCjVEeezA761iS43gg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_K1sscCjVEeezA761iS43gg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_K1sscSjVEeezA761iS43gg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_K1t6kCjVEeezA761iS43gg" name="goniostatrotation" type="_BgW1sIcCEeWP89wnxV1F7g" association="_K1q3QCjVEeezA761iS43gg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SJj7oCjVEeezA761iS43gg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SJmX4CjVEeezA761iS43gg" value="2"/>
+        </ownedEnd>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_BFgIAJ-yEeORueP4RwNSuw" name="Types">
@@ -653,13 +665,6 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_m-F90KyNEeSAYN-eWA_Wkw" name="CollectionDone">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_1v4-MKyNEeSAYN-eWA_Wkw" name="proposalId" visibility="public" type="_-MC2wJfeEeOQoP6u6l9OUQ">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_199PYKyNEeSAYN-eWA_Wkw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_199PYayNEeSAYN-eWA_Wkw" value="1"/>
-          <defaultValue xmi:type="uml:LiteralString" xmi:id="_1992cKyNEeSAYN-eWA_Wkw">
-            <value xsi:nil="true"/>
-          </defaultValue>
-        </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_40zgsKyNEeSAYN-eWA_Wkw" name="imageRoot" visibility="public">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_49VxoKyNEeSAYN-eWA_Wkw"/>
@@ -676,6 +681,7 @@ Further subdirectories relative to relativeImageDir for the images produced by i
             <value xsi:nil="true"/>
           </defaultValue>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_PWnwkijuEeezA761iS43gg" name="proposal" type="_ywaIEFhIEeSONvFHwpw1ng" association="_PWnJgCjuEeezA761iS43gg"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_ZqEOYIcHEeWP89wnxV1F7g" name="CentringDone">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_uuq0IIcIEeWP89wnxV1F7g" name="goniostatTranslation" type="_xS1BsIcCEeWP89wnxV1F7g" association="_uurbMIcIEeWP89wnxV1F7g">
@@ -808,17 +814,19 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_bazbMBuoEeeqLcUAXJQF7A" name="ObtainPriorInformation"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_PWnJgCjuEeezA761iS43gg" memberEnd="_PWnwkijuEeezA761iS43gg _PWnwkyjuEeezA761iS43gg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PWnwkCjuEeezA761iS43gg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PWnwkSjuEeezA761iS43gg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_PWnwkyjuEeezA761iS43gg" name="collectiondone" type="_m-F90KyNEeSAYN-eWA_Wkw" association="_PWnJgCjuEeezA761iS43gg"/>
+      </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_M6oMAOLhEeaSMtPPLb0UtQ" name="IdentifiedElement">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_dn6osOLhEeaSMtPPLb0UtQ" name="id" type="_-MC2wJfeEeOQoP6u6l9OUQ" isUnique="false" isReadOnly="true"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Realization" xmi:id="_aBT48OLiEeaSMtPPLb0UtQ" client="_M6oMAOLhEeaSMtPPLb0UtQ" supplier="_ywaIEFhIEeSONvFHwpw1ng"/>
     <packagedElement xmi:type="uml:Realization" xmi:id="_5ET28OLiEeaSMtPPLb0UtQ" client="_JPTgsJ-yEeORueP4RwNSuw" supplier="_hjJDAJfmEeOQoP6u6l9OUQ"/>
-    <packagedElement xmi:type="uml:Realization" xmi:id="_9wUTEOLiEeaSMtPPLb0UtQ" client="_M6oMAOLhEeaSMtPPLb0UtQ" supplier="_2RLR4KyDEeSAYN-eWA_Wkw"/>
-    <packagedElement xmi:type="uml:Realization" xmi:id="_CBZtwOLjEeaSMtPPLb0UtQ" client="_M6oMAOLhEeaSMtPPLb0UtQ" supplier="_JPTgsJ-yEeORueP4RwNSuw"/>
-    <packagedElement xmi:type="uml:Realization" xmi:id="_uqc4cOLoEeaSMtPPLb0UtQ" client="_M6oMAOLhEeaSMtPPLb0UtQ" supplier="_8pRr8LW4EeOZTslGMEIgsw"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_TBTHsBuqEeeqLcUAXJQF7A" name="ReadyForCentring"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_ZzMnYBusEeeqLcUAXJQF7A" name="PrepareForCentring"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hfUPkCjTEeezA761iS43gg" name="IdentifiedElement" isAbstract="true">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_trn0YCjTEeezA761iS43gg" name="id" type="_-MC2wJfeEeOQoP6u6l9OUQ" isUnique="false" isReadOnly="true"/>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ggbD0OrAEeWDoJaz4B-PEA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KFv8gOonEea--9z_SZYCpg" source="PapyrusVersion">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KFv8geonEea--9z_SZYCpg" key="Version" value="0.1.1"/>
@@ -833,20 +841,19 @@ Further subdirectories relative to relativeImageDir for the images produced by i
       <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
     </profileApplication>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_6WxgcOJKEeaKwNbMHjJZMA">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8KRSoCQaEeeGLLlFAAGuVQ" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8KRSoSQaEeeGLLlFAAGuVQ" key="Version" value="0.2.3"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8KRSoiQaEeeGLLlFAAGuVQ" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8KRSoyQaEeeGLLlFAAGuVQ" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8KRSpCQaEeeGLLlFAAGuVQ" key="Date" value="2017-04-18"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8KRSpSQaEeeGLLlFAAGuVQ" key="Author" value=""/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_y6QwkCjgEeezA761iS43gg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_y6QwkSjgEeezA761iS43gg" key="Version" value="0.2.5"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_y6QwkijgEeezA761iS43gg" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_y6QwkyjgEeezA761iS43gg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_y6QwlCjgEeezA761iS43gg" key="Date" value="2017-04-24"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_y6QwlSjgEeezA761iS43gg" key="Author" value=""/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6XfSIOJKEeaKwNbMHjJZMA" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="id.profile.uml#_0BX44SQaEeeGLLlFAAGuVQ"/>
+        <references xmi:type="ecore:EPackage" href="id.profile.uml#_wTaDECjgEeezA761iS43gg"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="id.profile.uml#_BF8GILGCEeak3rj-C-pKhA"/>
     </profileApplication>
   </uml:Model>
-  <Profile:IdRef xmi:id="_qUwyMOJGEeaKwNbMHjJZMA" base_Association="_7G-9wOI8EeaKwNbMHjJZMA"/>
   <Profile:IdRef xmi:id="_rZMqsOJGEeaKwNbMHjJZMA" base_Association="_ZSWE8OJEEeaKwNbMHjJZMA"/>
   <Profile:Payload xmi:id="_vFRIQOJQEeaKwNbMHjJZMA" intent="EVENT" base_Classifier="_VXZM4KyNEeSAYN-eWA_Wkw"/>
   <Profile:Payload xmi:id="_wvP90OJQEeaKwNbMHjJZMA" base_Classifier="_m-F90KyNEeSAYN-eWA_Wkw"/>
@@ -863,4 +870,14 @@ Further subdirectories relative to relativeImageDir for the images produced by i
   <Profile:Payload xmi:id="_eAtbkBuqEeeqLcUAXJQF7A" base_Classifier="_TBTHsBuqEeeqLcUAXJQF7A"/>
   <Profile:Payload xmi:id="_rytL0BuqEeeqLcUAXJQF7A" intent="COMMAND" base_Classifier="_bazbMBuoEeeqLcUAXJQF7A"/>
   <Profile:Payload xmi:id="_jeaIcBusEeeqLcUAXJQF7A" intent="COMMAND" base_Classifier="_ZzMnYBusEeeqLcUAXJQF7A"/>
+  <Profile:Identifiable xmi:id="_HPvrsCjQEeezA761iS43gg" base_Classifier="_QgrrwJffEeOQoP6u6l9OUQ" base_Class="_QgrrwJffEeOQoP6u6l9OUQ"/>
+  <Profile:Identifiable xmi:id="_I9_9QCjQEeezA761iS43gg" base_Classifier="_pJRyIJffEeOQoP6u6l9OUQ" base_Class="_pJRyIJffEeOQoP6u6l9OUQ"/>
+  <Profile:Identifiable xmi:id="_G-NmECjsEeezA761iS43gg" base_Classifier="_ywaIEFhIEeSONvFHwpw1ng" base_Class="_ywaIEFhIEeSONvFHwpw1ng"/>
+  <Profile:Identifiable xmi:id="_IkBGQCjsEeezA761iS43gg" base_Classifier="_2RLR4KyDEeSAYN-eWA_Wkw" base_Class="_2RLR4KyDEeSAYN-eWA_Wkw"/>
+  <Profile:Identifiable xmi:id="_KBmekCjsEeezA761iS43gg" base_Classifier="_hjJDAJfmEeOQoP6u6l9OUQ" base_Class="_hjJDAJfmEeOQoP6u6l9OUQ"/>
+  <Profile:Identifiable xmi:id="_Ue3HoCjsEeezA761iS43gg" base_Classifier="_Xu3QEJfnEeOQoP6u6l9OUQ" base_Class="_Xu3QEJfnEeOQoP6u6l9OUQ"/>
+  <Profile:Identifiable xmi:id="_Xu1qoCjsEeezA761iS43gg" base_Classifier="_-plxkJfiEeOQoP6u6l9OUQ" base_Class="_-plxkJfiEeOQoP6u6l9OUQ"/>
+  <Profile:Identifiable xmi:id="_ZHgGsCjsEeezA761iS43gg" base_Classifier="_r2aUgJfkEeOQoP6u6l9OUQ" base_Class="_r2aUgJfkEeOQoP6u6l9OUQ"/>
+  <Profile:Identifiable xmi:id="_WpldUCjtEeezA761iS43gg" base_Classifier="_8pRr8LW4EeOZTslGMEIgsw" base_Class="_8pRr8LW4EeOZTslGMEIgsw"/>
+  <Profile:IdRef xmi:id="_ffRPICjuEeezA761iS43gg" base_Association="_PWnJgCjuEeezA761iS43gg"/>
 </xmi:XMI>
