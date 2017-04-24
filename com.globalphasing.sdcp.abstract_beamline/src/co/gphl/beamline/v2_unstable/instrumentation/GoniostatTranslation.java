@@ -27,14 +27,8 @@ public interface GoniostatTranslation extends PositionerSetting {
     @Deprecated
     boolean isSetNewRotationId();
     
-    GoniostatRotation getActualRotation();
-    UUID getActualRotationId();
+    GoniostatRotation getNewRotation();
+    boolean isSetNewRotation();
     UUID getRequestedRotationId();
-    
-    /** Check to see if this instance contains a beamline-updated orientation.
-     * 
-     * @return {@code true} if the actual rotation is different from the requested rotation.
-     */
-    boolean isRotationModified();
     
 }
