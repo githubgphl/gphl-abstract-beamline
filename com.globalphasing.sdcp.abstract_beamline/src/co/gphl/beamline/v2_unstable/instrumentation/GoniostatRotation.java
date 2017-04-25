@@ -21,6 +21,8 @@ import java.util.UUID;
 public interface GoniostatRotation extends PositionerSetting {
 
     UUID getTranslationId();
+    GoniostatTranslation getTranslation();
+    boolean isSetTranslation();
     
     /**
      * @deprecated use {@link #getTranslationId()}
