@@ -1,0 +1,4 @@
+// FIXME! move source directory and delete this file.
+compileJava {
+    source = file('src')
+}
