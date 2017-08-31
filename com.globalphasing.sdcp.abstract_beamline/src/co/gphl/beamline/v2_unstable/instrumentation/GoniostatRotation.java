@@ -24,10 +24,4 @@ public interface GoniostatRotation extends PositionerSetting {
     GoniostatTranslation getTranslation();
     boolean isSetTranslation();
     
-    /**
-     * @deprecated use {@link #getTranslationId()}
-     */
-    @Deprecated
-    UUID getCentringId();
-    
 }

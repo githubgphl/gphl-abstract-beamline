@@ -13,8 +13,6 @@
 package co.gphl.beamline.v2_unstable.data_collection;
 
 import java.util.List;
-import java.util.UUID;
-
 import co.gphl.beamline.v2_unstable.IdentifiedElement;
 import co.gphl.beamline.v2_unstable.Payload;
 
@@ -27,16 +25,4 @@ public interface CollectionProposal extends IdentifiedElement, Payload {
     List<? extends Scan> getScans();
     GeometricStrategy getStrategy();
 
-    /**
-     * @deprecated use {@link #getScans()}
-     */
-    @Deprecated
-    List<? extends Scan> getCollection();
-
-    /**
-     * @deprecated use {@link #getId()}
-     */
-    @Deprecated
-    UUID getCollectionId();
-    
 }

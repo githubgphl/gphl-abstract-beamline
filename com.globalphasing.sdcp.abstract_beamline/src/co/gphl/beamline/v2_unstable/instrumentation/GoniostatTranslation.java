@@ -20,13 +20,6 @@ import java.util.UUID;
  */
 public interface GoniostatTranslation extends PositionerSetting {
 
-    @Deprecated
-    UUID getRotationId();
-    @Deprecated
-    UUID getNewRotationId();
-    @Deprecated
-    boolean isSetNewRotationId();
-    
     GoniostatRotation getNewRotation();
     boolean isSetNewRotation();
     UUID getRequestedRotationId();

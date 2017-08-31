@@ -15,14 +15,10 @@ package co.gphl.beamline.v2_unstable.information;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.Map;
-import java.util.UUID;
-
 import co.gphl.beamline.v2_unstable.Payload;
 import co.gphl.beamline.v2_unstable.data_collection.Scan;
 import co.gphl.beamline.v2_unstable.instrumentation.BeamstopSetting;
 import co.gphl.beamline.v2_unstable.instrumentation.GoniostatTranslation;
-import co.gphl.beamline.v2_unstable.instrumentation.GoniostatRotation;
 
 /**
  * @author pkeller
@@ -43,17 +39,6 @@ public interface SampleCentred extends Payload {
     double getExposure();
     double getTransmission();
     BeamstopSetting getBeamstopSetting();
-
-    /**
-     * Returns a map of goniostat centring settings, keyed on the UUIDs of
-     * the corresponding {@link GoniostatRotation} (or subtype thereof).
-     * 
-     * @return
-     * 
-     * @deprecated Use {@link #getGoniostatTranslations()} instead
-     */
-    @Deprecated
-    Map<UUID, GoniostatTranslation> getGoniostatTranslationSetting();
 
     /**
      * Gets all the translation settings for this sample centring.

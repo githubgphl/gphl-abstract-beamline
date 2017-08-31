@@ -31,16 +31,4 @@ public interface GeometricStrategy extends IdentifiedElement, Payload {
     int getDefaultWidthIdx();
     boolean isUserModifiable();
     
-    /**
-     * @deprecated use {@link #getSweeps()}
-     */
-    @Deprecated
-    Set<Sweep> getSweep();
-    
-    /**
-     * @deprecated use {@link #isInterleaved()}
-     */
-    @Deprecated
-    boolean isInterleave();
-    
 }

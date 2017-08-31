@@ -1,6 +1,5 @@
 package co.gphl.beamline.v2_unstable.ui;
 
-import java.util.List;
 import java.util.Set;
 
 import co.gphl.beamline.v2_unstable.Payload;
@@ -12,9 +11,4 @@ public interface ChooseLattice extends Payload {
     Set<String> getLattices();
     String getSolutions();
 
-    /**
-     * @deprecated use {@link #getLattices()}
-     */
-    @Deprecated
-    List<String> getLattice();
 }
