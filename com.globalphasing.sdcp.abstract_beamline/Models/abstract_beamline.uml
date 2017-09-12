@@ -31,6 +31,10 @@ Further subdirectories relative to relativeImageDir for the images produced by i
     <ownedComment xmi:type="uml:Comment" xmi:id="_KYVAkO98EeW8ubjbpxEycg" annotatedElement="_ZqEOYIcHEeWP89wnxV1F7g">
       <body>timestamp is the number of milliseconds since midnight, January 1, 1970 UTC</body>
     </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_hfnqgJfBEeeD5tw4nEPrXA" annotatedElement="_BBdLgJfAEeeD5tw4nEPrXA">
+      <body>The PointGroup enumeration is for user interface purposes only, and is not crystallographically complete. Centrosymmetric point groups are omitted. 32 includes 321 and 312, since making a choice from the three trigonal point groups specifies the space group (apart from screw axes, but they are never required in the context of the Abstract Beamline Interface).
+</body>
+    </ownedComment>
     <packageImport xmi:type="uml:PackageImport" xmi:id="_ImsGIZfeEeOQoP6u6l9OUQ">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
     </packageImport>
@@ -547,6 +551,22 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_o3NikJ-yEeORueP4RwNSuw" name="HIGHREMOTE"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_b2McYJRqEee1t7LzyGKH_w" name="CrystalFamily"/>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_BBdLgJfAEeeD5tw4nEPrXA" name="PointGroup">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_x0_y8JfAEeeD5tw4nEPrXA" name="crystalsystem" type="_aN03UJ-yEeORueP4RwNSuw" association="_x08IkJfAEeeD5tw4nEPrXA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_x1AaAJfAEeeD5tw4nEPrXA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_x1AaAZfAEeeD5tw4nEPrXA" value="1"/>
+        </ownedAttribute>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_ESvWEJfAEeeD5tw4nEPrXA" name="1"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_GLluEJfAEeeD5tw4nEPrXA" name="2"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_HUTCkJfAEeeD5tw4nEPrXA" name="222"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_JviV8JfAEeeD5tw4nEPrXA" name="4"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_K9Cq4JfAEeeD5tw4nEPrXA" name="422"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Ma8MQJfAEeeD5tw4nEPrXA" name="6"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_NQG5sJfAEeeD5tw4nEPrXA" name="622"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_O7Qz8JfAEeeD5tw4nEPrXA" name="32"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_ZNdcgJfAEeeD5tw4nEPrXA" name="23"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_bBdJsJfAEeeD5tw4nEPrXA" name="432"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_2wXOQJ-zEeORueP4RwNSuw" name="Information">
       <ownedComment xmi:type="uml:Comment" xmi:id="_1WZ5cKyIEeSAYN-eWA_Wkw" annotatedElement="_9y1JkHDpEeaYj-DGzyuo3A">
@@ -606,6 +626,10 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         <ownedAttribute xmi:type="uml:Property" xmi:id="_VBMl4LjWEeOB9q44TOrPvQ" name="phasingWavelength" type="_8pRr8LW4EeOZTslGMEIgsw" association="_VBNM8LjWEeOB9q44TOrPvQ">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VBMl4bjWEeOB9q44TOrPvQ"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VBMl4rjWEeOB9q44TOrPvQ" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Y5UUUJfHEeeD5tw4nEPrXA" name="pointGroup" type="_BBdLgJfAEeeD5tw4nEPrXA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_b8tM0JfHEeeD5tw4nEPrXA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_b81vsJfHEeeD5tw4nEPrXA" value="1"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_HhTxAJ-2EeORueP4RwNSuw" name="priorInformation_userProvidedInformation_1" memberEnd="_HhTxAZ-2EeORueP4RwNSuw _HhTJ8J-2EeORueP4RwNSuw">
@@ -823,6 +847,15 @@ Further subdirectories relative to relativeImageDir for the images produced by i
     <packagedElement xmi:type="uml:Realization" xmi:id="_5ET28OLiEeaSMtPPLb0UtQ" client="_JPTgsJ-yEeORueP4RwNSuw" supplier="_hjJDAJfmEeOQoP6u6l9OUQ"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_hfUPkCjTEeezA761iS43gg" name="IdentifiedElement" isAbstract="true">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_trn0YCjTEeezA761iS43gg" name="id" type="_-MC2wJfeEeOQoP6u6l9OUQ" isUnique="false" isReadOnly="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_x08IkJfAEeeD5tw4nEPrXA" memberEnd="_x0_y8JfAEeeD5tw4nEPrXA _x1AaApfAEeeD5tw4nEPrXA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_x0-k0JfAEeeD5tw4nEPrXA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_x0-k0ZfAEeeD5tw4nEPrXA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_x1AaApfAEeeD5tw4nEPrXA" name="pointgroup" type="_BBdLgJfAEeeD5tw4nEPrXA" association="_x08IkJfAEeeD5tw4nEPrXA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6iJwUJfAEeeD5tw4nEPrXA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6iMzoJfAEeeD5tw4nEPrXA" value="*"/>
+      </ownedEnd>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ggbD0OrAEeWDoJaz4B-PEA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KFv8gOonEea--9z_SZYCpg" source="PapyrusVersion">
