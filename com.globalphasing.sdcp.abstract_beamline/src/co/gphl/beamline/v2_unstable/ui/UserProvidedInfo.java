@@ -9,7 +9,8 @@ import co.gphl.beamline.v2_unstable.domain_types.UnitCell;
 
 public interface UserProvidedInfo {
 
-    short getSpaceGroup();
+    Short getSpaceGroup();
+    boolean isSetSpaceGroup();
     UnitCell getCell();
     boolean isSetCell();
     float getExpectedResolution();
