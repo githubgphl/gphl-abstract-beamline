@@ -58,4 +58,62 @@ public enum PointGroup {
     public short getPrimitiveSpaceGroup() {
         return this.primitiveSpaceGroup;
     }
+    
+    /**
+     * Returns point group specified by name.
+     * 
+     * @param name point group name, with or without {@code "PG"} prefix.
+     * @return PointGroup value
+     */
+    public static PointGroup getByName(String name) {
+        if ( name.startsWith("PG") )
+            return PointGroup.valueOf(name);
+        else
+            return PointGroup.valueOf("PG" + name);
+    }
+    
+    /**
+     * Return the point group to which a space group belongs. Only
+     * non-centrosymmetric space groups for now
+     * 
+     * @param spacegroupNumber
+     * @return point group
+     */
+    public static PointGroup pointGroup(int spacegroupNumber) {
+        if (spacegroupNumber < 1 || spacegroupNumber >= sg2pg.length)
+            throw new IllegalArgumentException(
+                    "There is no space group number " + spacegroupNumber);
+        if (sg2pg[spacegroupNumber] == null)
+            throw new IllegalArgumentException(
+                    "We don't handle centrosymmetric space groups such as "
+                            + spacegroupNumber);
+
+        return sg2pg[spacegroupNumber];
+    }
+    
+    private static final PointGroup[] sg2pg = { null, // 0 is null: we use 1-based SG numbers
+            PG1, null, PG2, PG2, PG2, null, null, null, null, null, // 1-10
+            null, null, null, null, null, PG222, PG222, PG222, PG222, PG222, // 11-20
+            PG222, PG222, PG222, PG222, null, null, null, null, null, null, // 21-30
+            null, null, null, null, null, null, null, null, null, null, // 31-40
+            null, null, null, null, null, null, null, null, null, null, // 41-50
+            null, null, null, null, null, null, null, null, null, null, // 51-60
+            null, null, null, null, null, null, null, null, null, null, // 61-70
+            null, null, null, null, PG4, PG4, PG4, PG4, PG4, PG4, // 71-80
+            null, null, null, null, null, null, null, null, PG422, PG422, // 81-90
+            PG422, PG422, PG422, PG422, PG422, PG422, PG422, PG422, null, null, // 91-100
+            null, null, null, null, null, null, null, null, null, null, // 101-110
+            null, null, null, null, null, null, null, null, null, null, // 111-120
+            null, null, null, null, null, null, null, null, null, null, // 121-130
+            null, null, null, null, null, null, null, null, null, null, // 131-140
+            null, null, PG3, PG3, PG3, PG3, null, null, PG32, PG32, // 141-150
+            PG32, PG32, PG32, PG32, PG32, null, null, null, null, null, // 151-160
+            null, null, null, null, null, null, null, PG6, PG6, PG6, // 161-170
+            PG6, PG6, PG6, null, null, null, PG622, PG622, PG622, PG622, // 171-180
+            PG622, PG622, null, null, null, null, null, null, null, null, // 181-190
+            null, null, null, null, PG23, PG23, PG23, PG23, PG23, null, // 191-200
+            null, null, null, null, null, null, PG432, PG432, PG432, PG432, // 201-210
+            PG432, PG432, PG432, PG432, null, null, null, null, null, null, // 211-220
+            null, null, null, null, null, null, null, null, null, null };
+    
 }
