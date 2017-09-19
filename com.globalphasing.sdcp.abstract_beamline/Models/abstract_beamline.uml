@@ -453,6 +453,11 @@ Further subdirectories relative to relativeImageDir for the images produced by i
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aQ-gIJRsEee1t7LzyGKH_w"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aRLUcJRsEee1t7LzyGKH_w" value="1"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_efxVIJ0aEeeneKIkSABvtA" name="lattices">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_skGLgJ0aEeeneKIkSABvtA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_skQjkJ0aEeeneKIkSABvtA" value="2"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_VcLO8OLkEeaSMtPPLb0UtQ" memberEnd="_VcLO8eLkEeaSMtPPLb0UtQ __2a0QJfmEeOQoP6u6l9OUQ">
         <name xsi:nil="true"/>
