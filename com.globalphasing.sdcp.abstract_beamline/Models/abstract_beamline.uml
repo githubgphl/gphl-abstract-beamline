@@ -207,6 +207,7 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         <generalization xmi:type="uml:Generalization" xmi:id="_SvJxAChDEeSuSbp_QHtIcg" general="_i169sJffEeOQoP6u6l9OUQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_lmMwEKyIEeSAYN-eWA_Wkw" name="Boolean"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_U3N2kLpSEeeYTqtFdXaPuQ" name="Character"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_JPTgsJ-yEeORueP4RwNSuw" name="Instructions">
       <ownedComment xmi:type="uml:Comment" xmi:id="_ljidQJ-wEeORueP4RwNSuw" annotatedElement="_Xu3QEJfnEeOQoP6u6l9OUQ">
@@ -822,6 +823,10 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         <ownedAttribute xmi:type="uml:Property" xmi:id="_s70jIShMEeSuSbp_QHtIcg" name="goniostatTranslations" type="_xS1BsIcCEeWP89wnxV1F7g" association="_s70jIChMEeSuSbp_QHtIcg">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_s70jIihMEeSuSbp_QHtIcg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_s70jIyhMEeSuSbp_QHtIcg" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_tzoGQLpREeeYTqtFdXaPuQ" name="interleaveOrder" visibility="public" type="_U3N2kLpSEeeYTqtFdXaPuQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_v-ATILpREeeYTqtFdXaPuQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_v-O8oLpREeeYTqtFdXaPuQ" value="*"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_1mzGIOJREeaKwNbMHjJZMA" name="SelectedLattice">
