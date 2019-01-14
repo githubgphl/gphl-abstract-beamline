@@ -6,7 +6,7 @@
 If AbstractBeamline::Instructions::GeometricStrategy::userModifiable == true and the user has specified new rotation axis settings, a new GoniostatSweepSetting instance should be used to populate GoniostatTranslation::actualRotation. </body>
     </ownedComment>
     <ownedComment xmi:type="uml:Comment" xmi:id="_o9wa8LjWEeOB9q44TOrPvQ" annotatedElement="_AqMaIJ-0EeORueP4RwNSuw">
-      <body> Either scatterer(s) or phasingWavelengths must be specified or the workflow cannot be started</body>
+      <body> Either scatterer(s) or phasingWavelengths must be specified now or PhasingWavelengths later on.</body>
     </ownedComment>
     <ownedComment xmi:type="uml:Comment" xmi:id="_NLHdgCg_EeSuSbp_QHtIcg" annotatedElement="_4Ycb0J-yEeORueP4RwNSuw _ED0d0J-zEeORueP4RwNSuw _MNqSwJ-zEeORueP4RwNSuw">
       <body> Many combinations of element and edge will be disallowed, depending on basic scientific criteria and/or the capabilities of the beamline</body>
@@ -48,6 +48,9 @@ Further subdirectories relative to relativeImageDir for the images produced by i
       <ownedOperation xmi:type="uml:Operation" xmi:id="_f7qxEJf1EeOQoP6u6l9OUQ" name="getBeamlineStatus"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_rUZzMJ-xEeORueP4RwNSuw" name="Instrumentation">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_dTUOIBQZEem84ubf8V2GOQ" annotatedElement="_VzzP8BQWEem84ubf8V2GOQ">
+        <body>Detector setting instantiated BCS-side, including a BCS-specific calculation of the resolution corresponding to the distance and (where available) distance-dependent values of ORGX/ORGY. The wavelength of the resolution/distance conversion is implied by context for now, but will be modelled explicitly in the future.</body>
+      </ownedComment>
       <packagedElement xmi:type="uml:Class" xmi:id="_QgrrwJffEeOQoP6u6l9OUQ" name="BeamSetting">
         <generalization xmi:type="uml:Generalization" xmi:id="_4PnXkCjTEeezA761iS43gg" general="_hfUPkCjTEeezA761iS43gg"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_cDSMQJffEeOQoP6u6l9OUQ" name="wavelength" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ">
@@ -159,6 +162,17 @@ Further subdirectories relative to relativeImageDir for the images produced by i
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SJj7oCjVEeezA761iS43gg" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SJmX4CjVEeezA761iS43gg" value="2"/>
         </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_VzzP8BQWEem84ubf8V2GOQ" name="BcsDetectorSetting">
+        <generalization xmi:type="uml:Generalization" xmi:id="_AXU1YBQYEem84ubf8V2GOQ" general="_7pD_0JfiEeOQoP6u6l9OUQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_NBhFgBQXEem84ubf8V2GOQ" name="resolution" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rXdwQBQXEem84ubf8V2GOQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rXlsEBQXEem84ubf8V2GOQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_eKfYoBQXEem84ubf8V2GOQ" name="orgxy" visibility="public" type="_i169sJffEeOQoP6u6l9OUQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6BAzkBQXEem84ubf8V2GOQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6BFsEBQXEem84ubf8V2GOQ" value="2"/>
+        </ownedAttribute>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_BFgIAJ-yEeORueP4RwNSuw" name="Types">
@@ -396,6 +410,8 @@ Further subdirectories relative to relativeImageDir for the images produced by i
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NKYpEeJOEeaKwNbMHjJZMA" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NKYpEuJOEeaKwNbMHjJZMA" value="1"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_CXYIgBlxEem0i70TBtgiSQ" name="defaultDetectorSetting" type="_7pD_0JfiEeOQoP6u6l9OUQ" isDerived="true"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_OE8i4BlxEem0i70TBtgiSQ" name="defaultBeamSetting" type="_QgrrwJffEeOQoP6u6l9OUQ" isDerived="true"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_umVo8KyKEeSAYN-eWA_Wkw" name="GeometricStrategy"/>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_Kkb5cLtbEeS-Ne1HNGF1Qg" name="IndexingFormat">
@@ -629,10 +645,6 @@ Further subdirectories relative to relativeImageDir for the images produced by i
             <value xsi:nil="true"/>
           </defaultValue>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_VBMl4LjWEeOB9q44TOrPvQ" name="phasingWavelength" type="_8pRr8LW4EeOZTslGMEIgsw" association="_VBNM8LjWEeOB9q44TOrPvQ">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VBMl4bjWEeOB9q44TOrPvQ"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VBMl4rjWEeOB9q44TOrPvQ" value="*"/>
-        </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_Y5UUUJfHEeeD5tw4nEPrXA" name="pointGroup" type="_BBdLgJfAEeeD5tw4nEPrXA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_b8tM0JfHEeeD5tw4nEPrXA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_b81vsJfHEeeD5tw4nEPrXA" value="1"/>
@@ -659,12 +671,6 @@ Further subdirectories relative to relativeImageDir for the images produced by i
             <value xsi:nil="true"/>
           </defaultValue>
         </ownedAttribute>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_VBNM8LjWEeOB9q44TOrPvQ" name="userProvidedInformation_phasingWavelength_1" memberEnd="_VBNM8bjWEeOB9q44TOrPvQ _VBMl4LjWEeOB9q44TOrPvQ">
-        <ownedEnd xmi:type="uml:Property" xmi:id="_VBNM8bjWEeOB9q44TOrPvQ" name="userProvidedInformation" type="_AqMaIJ-0EeORueP4RwNSuw" association="_VBNM8LjWEeOB9q44TOrPvQ">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VBNM8rjWEeOB9q44TOrPvQ" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VBNM87jWEeOB9q44TOrPvQ" value="1"/>
-        </ownedEnd>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_ljKJIJ-4EeORueP4RwNSuw" name="sampleCentred_beamstopSetting_1" memberEnd="_ljKJIZ-4EeORueP4RwNSuw _ljJiEJ-4EeORueP4RwNSuw">
         <ownedEnd xmi:type="uml:Property" xmi:id="_ljKJIZ-4EeORueP4RwNSuw" name="samplecentred" type="_9y1JkHDpEeaYj-DGzyuo3A" association="_ljKJIJ-4EeORueP4RwNSuw">
@@ -828,6 +834,14 @@ Further subdirectories relative to relativeImageDir for the images produced by i
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_v-ATILpREeeYTqtFdXaPuQ" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_v-O8oLpREeeYTqtFdXaPuQ" value="*"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_72rnYxmLEem0i70TBtgiSQ" name="detectorSetting" type="_VzzP8BQWEem84ubf8V2GOQ" association="_72rnYBmLEem0i70TBtgiSQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_72sOcBmLEem0i70TBtgiSQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_72sOcRmLEem0i70TBtgiSQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_iWJhgBmNEemCf5Wr_V-IVQ" name="wavelength" type="_8pRr8LW4EeOZTslGMEIgsw" isOrdered="true" association="_iWF3IBmNEemCf5Wr_V-IVQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iWKIkBmNEemCf5Wr_V-IVQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iWKIkRmNEemCf5Wr_V-IVQ" value="*"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_1mzGIOJREeaKwNbMHjJZMA" name="SelectedLattice">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_FIOOwLtjEeS-Ne1HNGF1Qg" name="format" visibility="public" type="_Kkb5cLtbEeS-Ne1HNGF1Qg">
@@ -844,6 +858,10 @@ Further subdirectories relative to relativeImageDir for the images produced by i
             <value xsi:nil="true"/>
           </defaultValue>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_MhxC4hQhEemCC-9NJG7mSw" name="detectorSetting" type="_VzzP8BQWEem84ubf8V2GOQ" association="_Mhwb0BQhEemCC-9NJG7mSw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Mhxp8BQhEemCC-9NJG7mSw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Mhxp8RQhEemCC-9NJG7mSw" value="1"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_bazbMBuoEeeqLcUAXJQF7A" name="ObtainPriorInformation"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_PWnJgCjuEeezA761iS43gg" memberEnd="_PWnwkijuEeezA761iS43gg _PWnwkyjuEeezA761iS43gg">
@@ -853,6 +871,20 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         <ownedEnd xmi:type="uml:Property" xmi:id="_PWnwkyjuEeezA761iS43gg" name="collectiondone" type="_m-F90KyNEeSAYN-eWA_Wkw" association="_PWnJgCjuEeezA761iS43gg"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_TBTHsBuqEeeqLcUAXJQF7A" name="ReadyForCentring"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_72rnYBmLEem0i70TBtgiSQ" memberEnd="_72rnYxmLEem0i70TBtgiSQ _72sOchmLEem0i70TBtgiSQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_72rnYRmLEem0i70TBtgiSQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_72rnYhmLEem0i70TBtgiSQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_72sOchmLEem0i70TBtgiSQ" name="samplecentred" type="_9y1JkHDpEeaYj-DGzyuo3A" association="_72rnYBmLEem0i70TBtgiSQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_iWF3IBmNEemCf5Wr_V-IVQ" memberEnd="_iWJhgBmNEemCf5Wr_V-IVQ _iWKIkhmNEemCf5Wr_V-IVQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iWITYBmNEemCf5Wr_V-IVQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iWI6cBmNEemCf5Wr_V-IVQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_iWKIkhmNEemCf5Wr_V-IVQ" name="samplecentred" type="_9y1JkHDpEeaYj-DGzyuo3A" association="_iWF3IBmNEemCf5Wr_V-IVQ">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3plC4BmNEemCf5Wr_V-IVQ" value="*"/>
+        </ownedEnd>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Realization" xmi:id="_5ET28OLiEeaSMtPPLb0UtQ" client="_JPTgsJ-yEeORueP4RwNSuw" supplier="_hjJDAJfmEeOQoP6u6l9OUQ"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_hfUPkCjTEeezA761iS43gg" name="IdentifiedElement" isAbstract="true">
@@ -865,6 +897,15 @@ Further subdirectories relative to relativeImageDir for the images produced by i
       <ownedEnd xmi:type="uml:Property" xmi:id="_x1AaApfAEeeD5tw4nEPrXA" name="pointgroup" type="_BBdLgJfAEeeD5tw4nEPrXA" association="_x08IkJfAEeeD5tw4nEPrXA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6iJwUJfAEeeD5tw4nEPrXA" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6iMzoJfAEeeD5tw4nEPrXA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Mhwb0BQhEemCC-9NJG7mSw" memberEnd="_MhxC4hQhEemCC-9NJG7mSw _Mhxp8hQhEemCC-9NJG7mSw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MhxC4BQhEemCC-9NJG7mSw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MhxC4RQhEemCC-9NJG7mSw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Mhxp8hQhEemCC-9NJG7mSw" name="selectedlattice" type="_1mzGIOJREeaKwNbMHjJZMA" association="_Mhwb0BQhEemCC-9NJG7mSw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TnUJQBQhEemCC-9NJG7mSw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TnZBwBQhEemCC-9NJG7mSw" value="*"/>
       </ownedEnd>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ggbD0OrAEeWDoJaz4B-PEA">

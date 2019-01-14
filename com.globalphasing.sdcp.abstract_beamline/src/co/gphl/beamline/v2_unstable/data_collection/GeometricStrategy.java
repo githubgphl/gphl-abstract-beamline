@@ -18,6 +18,8 @@ import java.util.Set;
 
 import co.gphl.beamline.v2_unstable.IdentifiedElement;
 import co.gphl.beamline.v2_unstable.Payload;
+import co.gphl.beamline.v2_unstable.instrumentation.BeamSetting;
+import co.gphl.beamline.v2_unstable.instrumentation.DetectorSetting;
 
 /**
  * @author pkeller
@@ -30,5 +32,8 @@ public interface GeometricStrategy extends IdentifiedElement, Payload {
     List<Double> getAllowedWidths();
     int getDefaultWidthIdx();
     boolean isUserModifiable();
+    
+    DetectorSetting getDefaultDetectorSetting();
+    BeamSetting getDefaultBeamSetting();
     
 }

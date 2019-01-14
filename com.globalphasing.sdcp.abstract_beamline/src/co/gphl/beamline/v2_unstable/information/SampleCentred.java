@@ -15,10 +15,13 @@ package co.gphl.beamline.v2_unstable.information;
 
 import java.util.Collection;
 import java.util.List;
+
 import co.gphl.beamline.v2_unstable.Payload;
 import co.gphl.beamline.v2_unstable.data_collection.Scan;
+import co.gphl.beamline.v2_unstable.instrumentation.BcsDetectorSetting;
 import co.gphl.beamline.v2_unstable.instrumentation.BeamstopSetting;
 import co.gphl.beamline.v2_unstable.instrumentation.GoniostatTranslation;
+import co.gphl.beamline.v2_unstable.ui.PhasingWavelength;
 
 /**
  * @author pkeller
@@ -73,4 +76,10 @@ public interface SampleCentred extends Payload {
      * the data collection has been derived from it.</p> 
      */
     List<Character> getInterleaveOrder();
+    
+    Collection<PhasingWavelength> getWavelengths();
+    
+    BcsDetectorSetting getDetectorSetting();
+    boolean isSetDetectorSetting();
+    
 }

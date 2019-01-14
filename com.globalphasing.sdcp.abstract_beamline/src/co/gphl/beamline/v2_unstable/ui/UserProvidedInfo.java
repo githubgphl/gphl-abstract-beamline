@@ -14,12 +14,11 @@ public interface UserProvidedInfo {
     UnitCell getCell();
     boolean isSetCell();
     float getExpectedResolution();
-    Set<PhasingWavelength> getPhasingWavelengths();
     boolean isSetLattice();
-	CrystalSystem getLattice();
-	boolean isSetPointGroup();
-	PointGroup getPointGroup();
-	Set<AnomalousScatterer> getScatterers();
-	Boolean isAnisotropic();
-	
+    CrystalSystem getLattice();
+    boolean isSetPointGroup();
+    PointGroup getPointGroup();
+    Set<AnomalousScatterer> getScatterers();
+    Boolean isAnisotropic();
+    
 }
