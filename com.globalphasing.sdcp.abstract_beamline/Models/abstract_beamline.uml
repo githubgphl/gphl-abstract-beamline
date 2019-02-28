@@ -858,10 +858,6 @@ Further subdirectories relative to relativeImageDir for the images produced by i
             <value xsi:nil="true"/>
           </defaultValue>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_MhxC4hQhEemCC-9NJG7mSw" name="detectorSetting" type="_VzzP8BQWEem84ubf8V2GOQ" association="_Mhwb0BQhEemCC-9NJG7mSw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Mhxp8BQhEemCC-9NJG7mSw"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Mhxp8RQhEemCC-9NJG7mSw" value="1"/>
-        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_bazbMBuoEeeqLcUAXJQF7A" name="ObtainPriorInformation"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_PWnJgCjuEeezA761iS43gg" memberEnd="_PWnwkijuEeezA761iS43gg _PWnwkyjuEeezA761iS43gg">
@@ -897,15 +893,6 @@ Further subdirectories relative to relativeImageDir for the images produced by i
       <ownedEnd xmi:type="uml:Property" xmi:id="_x1AaApfAEeeD5tw4nEPrXA" name="pointgroup" type="_BBdLgJfAEeeD5tw4nEPrXA" association="_x08IkJfAEeeD5tw4nEPrXA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6iJwUJfAEeeD5tw4nEPrXA" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6iMzoJfAEeeD5tw4nEPrXA" value="*"/>
-      </ownedEnd>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_Mhwb0BQhEemCC-9NJG7mSw" memberEnd="_MhxC4hQhEemCC-9NJG7mSw _Mhxp8hQhEemCC-9NJG7mSw">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MhxC4BQhEemCC-9NJG7mSw" source="org.eclipse.papyrus">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MhxC4RQhEemCC-9NJG7mSw" key="nature" value="UML_Nature"/>
-      </eAnnotations>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_Mhxp8hQhEemCC-9NJG7mSw" name="selectedlattice" type="_1mzGIOJREeaKwNbMHjJZMA" association="_Mhwb0BQhEemCC-9NJG7mSw">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TnUJQBQhEemCC-9NJG7mSw"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TnZBwBQhEemCC-9NJG7mSw" value="*"/>
       </ownedEnd>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ggbD0OrAEeWDoJaz4B-PEA">
