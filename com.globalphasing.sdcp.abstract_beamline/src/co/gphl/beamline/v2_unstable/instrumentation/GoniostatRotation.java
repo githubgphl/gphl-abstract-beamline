@@ -24,4 +24,6 @@ public interface GoniostatRotation extends PositionerSetting {
     GoniostatTranslation getTranslation();
     boolean isSetTranslation();
     
+    String getScanAxis();
+    boolean isSetScanAxis();
 }

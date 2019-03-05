@@ -51,6 +51,9 @@ Further subdirectories relative to relativeImageDir for the images produced by i
       <ownedComment xmi:type="uml:Comment" xmi:id="_dTUOIBQZEem84ubf8V2GOQ" annotatedElement="_VzzP8BQWEem84ubf8V2GOQ">
         <body>Detector setting instantiated BCS-side, including a BCS-specific calculation of the resolution corresponding to the distance and (where available) distance-dependent values of ORGX/ORGY. The wavelength of the resolution/distance conversion is implied by context for now, but will be modelled explicitly in the future.</body>
       </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_y_FrED5rEemDn5u_Aq8WVQ" annotatedElement="_BgW1sIcCEeWP89wnxV1F7g _uvZGEJffEeOQoP6u6l9OUQ">
+        <body>When scanAxis is set, no value for the setting of that axis will appear in axisSetting</body>
+      </ownedComment>
       <packagedElement xmi:type="uml:Class" xmi:id="_QgrrwJffEeOQoP6u6l9OUQ" name="BeamSetting">
         <generalization xmi:type="uml:Generalization" xmi:id="_4PnXkCjTEeezA761iS43gg" general="_hfUPkCjTEeezA761iS43gg"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_cDSMQJffEeOQoP6u6l9OUQ" name="wavelength" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ">
@@ -89,7 +92,7 @@ Further subdirectories relative to relativeImageDir for the images produced by i
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_uvZGEJffEeOQoP6u6l9OUQ" name="GoniostatSweepSetting">
         <generalization xmi:type="uml:Generalization" xmi:id="_hEC-IJfkEeOQoP6u6l9OUQ" general="_BgW1sIcCEeWP89wnxV1F7g"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_C4eUMJfgEeOQoP6u6l9OUQ" name="scanAxis">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_C4eUMJfgEeOQoP6u6l9OUQ" name="scanAxis" isUnique="false" redefinedProperty="_NWdc4D5rEemDn5u_Aq8WVQ">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
       </packagedElement>
@@ -132,6 +135,10 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         <ownedAttribute xmi:type="uml:Property" xmi:id="_K1tTgCjVEeezA761iS43gg" name="translation" type="_xS1BsIcCEeWP89wnxV1F7g" association="_K1q3QCjVEeezA761iS43gg">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e1gOgCjwEeezA761iS43gg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e1m8MCjwEeezA761iS43gg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_NWdc4D5rEemDn5u_Aq8WVQ" name="scanAxis">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RPWaAD5rEemDn5u_Aq8WVQ"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_7G-9wOI8EeaKwNbMHjJZMA" memberEnd="_7G-9weI8EeaKwNbMHjJZMA _7G76cOI8EeaKwNbMHjJZMA">
