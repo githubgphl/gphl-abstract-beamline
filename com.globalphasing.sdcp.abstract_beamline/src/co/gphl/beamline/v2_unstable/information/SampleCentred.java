@@ -35,7 +35,7 @@ public interface SampleCentred extends Payload {
      * Return number of images in a wedge. May be {@code null}
      * for a non-interleaved strategy.
      * 
-     * @return
+     * @return number of images in wedge
      */
     Integer getWedgeWidth();
 
@@ -47,7 +47,7 @@ public interface SampleCentred extends Payload {
      * Gets all the translation settings for this sample centring.
      * If the user modified any of the orientations, the settings of the
      * rotation axes will be present as well as the translation axes,
-     * and {@link GoniostatTranslation#getNewRotationId()} will
+     * and {@link GoniostatTranslation#getNewRotation()} will
      * return a non-null value.
      * 
      * @return translation settings

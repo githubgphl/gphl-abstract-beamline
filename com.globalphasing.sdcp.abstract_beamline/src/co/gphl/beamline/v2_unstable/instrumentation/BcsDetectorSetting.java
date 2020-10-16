@@ -12,8 +12,6 @@
  */
 package co.gphl.beamline.v2_unstable.instrumentation;
 
-import java.util.List;
-
 /**
  * Detector setting that is created BCS-side. This allows a BCS-specific
  * calculation of resolution and distance-specific values of ORGX/ORGY
