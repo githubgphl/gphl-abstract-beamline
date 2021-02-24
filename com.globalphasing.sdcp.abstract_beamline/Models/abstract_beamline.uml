@@ -241,6 +241,10 @@ Further subdirectories relative to relativeImageDir for the images produced by i
       <ownedComment xmi:type="uml:Comment" xmi:id="_IMSVcLDMEeaI25CbZmY3oA" annotatedElement="_ywaIEFhIEeSONvFHwpw1ng">
         <body>Should scans be {ordered, unique}? </body>
       </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_mDBj4HatEeu0TYbpq51OEg" annotatedElement="_2RLR4KyDEeSAYN-eWA_Wkw">
+        <body>When a single-orientation strategy has been constructed by repeating a single sweep with an offset between the values of Sweep::start, the sweepRepeat and sweepOffset attributes specify how this was done.
+</body>
+      </ownedComment>
       <packagedElement xmi:type="uml:Class" xmi:id="_hjJDAJfmEeOQoP6u6l9OUQ" name="Scan">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_ljG4gJfmEeOQoP6u6l9OUQ" name="width" visibility="public" type="_r2aUgJfkEeOQoP6u6l9OUQ" isUnique="false" association="_zlzU8OLkEeaSMtPPLb0UtQ">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_l2EQwJfmEeOQoP6u6l9OUQ" value="1"/>
@@ -419,6 +423,12 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_CXYIgBlxEem0i70TBtgiSQ" name="defaultDetectorSetting" type="_7pD_0JfiEeOQoP6u6l9OUQ" isDerived="true"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_OE8i4BlxEem0i70TBtgiSQ" name="defaultBeamSetting" type="_QgrrwJffEeOQoP6u6l9OUQ" isDerived="true"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qk0JgHasEeu0TYbpq51OEg" name="sweepRepeat" type="_3sNd0JfkEeOQoP6u6l9OUQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AnuAAHatEeu0TYbpq51OEg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_tj_3cHasEeu0TYbpq51OEg" name="sweepOffset" type="_UWanMJffEeOQoP6u6l9OUQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Hprm4HatEeu0TYbpq51OEg"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_umVo8KyKEeSAYN-eWA_Wkw" name="GeometricStrategy"/>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_Kkb5cLtbEeS-Ne1HNGF1Qg" name="IndexingFormat">

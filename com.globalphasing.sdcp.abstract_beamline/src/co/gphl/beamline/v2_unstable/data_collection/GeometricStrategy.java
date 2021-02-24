@@ -1,5 +1,5 @@
 /*
- * Copyright © 2015 by Global Phasing Ltd. All rights reserved
+ * Copyright © 2015, 2021 by Global Phasing Ltd. All rights reserved
  *
  * This software is proprietary to and embodies the confidential
  * technology of Global Phasing Limited (GPhL).
@@ -32,6 +32,10 @@ public interface GeometricStrategy extends IdentifiedElement, Payload {
     List<Double> getAllowedWidths();
     int getDefaultWidthIdx();
     boolean isUserModifiable();
+    boolean isSetSweepRepeat();
+    Integer getSweepRepeat();
+    boolean isSetSweepOffset();
+    Double getSweepOffset();    
     
     DetectorSetting getDefaultDetectorSetting();
     BeamSetting getDefaultBeamSetting();
