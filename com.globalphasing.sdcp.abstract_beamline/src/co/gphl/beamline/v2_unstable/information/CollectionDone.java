@@ -1,5 +1,5 @@
 /*
- * Copyright © 2015 by Global Phasing Ltd. All rights reserved
+ * Copyright © 2015, 2022 by Global Phasing Ltd. All rights reserved
  *
  * This software is proprietary to and embodies the confidential
  * technology of Global Phasing Limited (GPhL).
@@ -27,4 +27,5 @@ public interface CollectionDone extends Payload {
     String getImageRoot();
     int getStatus();
     boolean isSetImageRoot();
+    boolean getProcWithLatticeParams();
 }

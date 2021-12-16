@@ -621,6 +621,9 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         <body> The ids of Issue instances emitted by the workflow will be timestamped (variant 1) UUIDs
 </body>
       </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_twJa4HSFEeyf7P2fvXWfvw" annotatedElement="_m-F90KyNEeSAYN-eWA_Wkw">
+        <body>procWithLatticeParams == True means that the processing of this image collection should be provided with unit cell and symmetry information that was provided or specified upstream. Otherwise, the processing should be run without providing any initial lattice parameters</body>
+      </ownedComment>
       <packagedElement xmi:type="uml:Class" xmi:id="_AqMaIJ-0EeORueP4RwNSuw" name="UserProvidedInformation">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_EQPTwJ-0EeORueP4RwNSuw" name="scatterers" visibility="public" type="_MNqSwJ-zEeORueP4RwNSuw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ehfb0J-0EeORueP4RwNSuw"/>
@@ -736,6 +739,10 @@ Further subdirectories relative to relativeImageDir for the images produced by i
           </defaultValue>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_PWnwkijuEeezA761iS43gg" name="proposal" type="_ywaIEFhIEeSONvFHwpw1ng" association="_PWnJgCjuEeezA761iS43gg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_WhUj0HSFEeyf7P2fvXWfvw" name="procWithLatticeParams" type="_lmMwEKyIEeSAYN-eWA_Wkw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ln8KAHSGEeyf7P2fvXWfvw"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_e2UqcHSGEeyf7P2fvXWfvw"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_ZqEOYIcHEeWP89wnxV1F7g" name="CentringDone">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_uuq0IIcIEeWP89wnxV1F7g" name="goniostatTranslation" type="_xS1BsIcCEeWP89wnxV1F7g" association="_uurbMIcIEeWP89wnxV1F7g">
