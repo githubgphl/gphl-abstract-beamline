@@ -12,7 +12,7 @@
  */
 package co.gphl.beamline.v2_unstable.domain_types;
 
-import static co.gphl.beamline.v2_unstable.domain_types.CrystalSystem.*;
+import static co.gphl.beamline.v2_unstable.domain_types.CrystalFamily.*;
 
 /**
  * Enumeration of the point groups needed to allow for user specification.
@@ -32,18 +32,18 @@ public enum PointGroup {
     PG2(MONOCLINIC, 3),
     PG222(ORTHORHOMBIC, 16),
     PG4(TETRAGONAL, 75), PG422(TETRAGONAL, 89),
-    PG3(TRIGONAL, 143), 
+    PG3(HEXAGONAL, 143), 
     /* There is no reason to prefer P 3 1 2 (149) over P 3 2 1 (150) here,
      * but we have to specify one */
-    PG32(TRIGONAL, 149),
+    PG32(HEXAGONAL, 149),
     PG6(HEXAGONAL, 168), PG622(HEXAGONAL, 177),
     PG23(CUBIC, 195), PG432(CUBIC, 207);
     
-    private final CrystalSystem crystalSystem;
+    private final CrystalFamily crystalFamily;
     private final short primitiveSpaceGroup;
     
-    PointGroup(CrystalSystem crystalSystem, int primitiveSpaceGroup) {
-        this.crystalSystem = crystalSystem;
+    PointGroup(CrystalFamily crystalFamily, int primitiveSpaceGroup) {
+        this.crystalFamily = crystalFamily;
         this.primitiveSpaceGroup = (short) primitiveSpaceGroup;
     }
     
@@ -51,8 +51,8 @@ public enum PointGroup {
         return this.name().substring(2);
     }
     
-    public CrystalSystem getCrystalSystem() {
-        return this.crystalSystem;
+    public CrystalFamily getCrystalFamily() {
+        return this.crystalFamily;
     }
     
     public short getPrimitiveSpaceGroup() {

@@ -22,7 +22,7 @@ package co.gphl.beamline.v2_unstable.ui;
 import java.util.Set;
 
 import co.gphl.beamline.v2_unstable.Payload;
-import co.gphl.beamline.v2_unstable.domain_types.CrystalSystem;
+import co.gphl.beamline.v2_unstable.domain_types.CrystalFamily;
 import co.gphl.beamline.v2_unstable.domain_types.IndexingFormat;
 
 public interface ChooseLattice extends Payload {
@@ -35,9 +35,9 @@ public interface ChooseLattice extends Payload {
      * crystal system the set will be {mC, mI}.
      * 
      * N.B. The behaviour of this method has changed compared to previous versions.
-     * The instance may have been instantiated specifying the crystal system, in
+     * The instance may have been instantiated specifying the crystal family, in
      * which case this method will return an empty set. In this case, the crystal
-     * system is available by using the {@link #getCrystalSystem()} method.
+     * family is available by using the {@link #getCrystalFamily()} method.
      * 
      * @return a set of 1 or 2 strings representing the Bravais Lattice, or the empty
      * set if a spacegroup for the sample was not provided at the start of the workflow.
@@ -48,13 +48,13 @@ public interface ChooseLattice extends Payload {
     boolean isSetLattices();
     
     /**
-     * Get the crystal system implied by the user's choice of crystal symmetry.
+     * Get the crystal family implied by the user's choice of crystal symmetry.
      * 
-     * @return crystal system or {@code null} if the user did not specify any crystal symmetry.
+     * @return crystal family or {@code null} if the user did not specify any crystal symmetry.
      */
-    CrystalSystem getCrystalSystem();
+    CrystalFamily getCrystalFamily();
     
-    boolean isSetCrystalSystem();
+    boolean isSetCrystalFamily();
     String getSolutions();
 
 }

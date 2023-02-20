@@ -470,7 +470,7 @@ Further subdirectories relative to relativeImageDir for the images produced by i
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_IhOlQOJREeaKwNbMHjJZMA" name="ChooseLattice">
         <ownedComment xmi:type="uml:Comment" xmi:id="_eYhu4JRtEeex6JH7_cl3mw" annotatedElement="_IhOlQOJREeaKwNbMHjJZMA">
-          <body>crystalSystem is that which is implied by the user-specified symmetry (if any) from UserProvided Information. This is provided to enable filtering or markup of the contents of the solutions property.. Note that in the case of XDS format, CrystalSystem::TRIGONAL will be changed to CrystalSystem::HEXAGONAL, since XDS uses the character 'h' for both</body>
+          <body>crystalFamily is that which is implied by the user-specified symmetry (if any) from UserProvided Information. This is provided to enable filtering or markup of the contents of the solutions property.</body>
         </ownedComment>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_SGy3oLtbEeS-Ne1HNGF1Qg" name="format" visibility="public" type="_Kkb5cLtbEeS-Ne1HNGF1Qg">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SSntILtbEeS-Ne1HNGF1Qg" value="1"/>
@@ -486,7 +486,7 @@ Further subdirectories relative to relativeImageDir for the images produced by i
             <value xsi:nil="true"/>
           </defaultValue>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_IX0GMJRsEee1t7LzyGKH_w" name="crystalSystem" type="_aN03UJ-yEeORueP4RwNSuw">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_IX0GMJRsEee1t7LzyGKH_w" name="crystalFamily" type="_aN03UJ-yEeORueP4RwNSuw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aQ-gIJRsEee1t7LzyGKH_w"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aRLUcJRsEee1t7LzyGKH_w" value="1"/>
         </ownedAttribute>
@@ -559,12 +559,11 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_I0eJYJ-zEeORueP4RwNSuw" name="Se"/>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_KQ5rIJ-zEeORueP4RwNSuw" name="..."/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Enumeration" xmi:id="_aN03UJ-yEeORueP4RwNSuw" name="CrystalSystem">
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_aN03UJ-yEeORueP4RwNSuw" name="CrystalFamily">
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_baQ1QJ-yEeORueP4RwNSuw" name="TRICLINIC"/>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_ch3WgJ-yEeORueP4RwNSuw" name="MONOCLINIC"/>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_duMmwJ-yEeORueP4RwNSuw" name="ORTHORHOMBIC"/>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_fQaAYJ-yEeORueP4RwNSuw" name="TETRAGONAL"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_gEehoJ-yEeORueP4RwNSuw" name="TRIGONAL"/>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_g1cEgJ-yEeORueP4RwNSuw" name="HEXAGONAL"/>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_hgArgJ-yEeORueP4RwNSuw" name="CUBIC"/>
       </packagedElement>
@@ -592,7 +591,6 @@ Further subdirectories relative to relativeImageDir for the images produced by i
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_ndxDYJ-yEeORueP4RwNSuw" name="FALLINGINFLECTION"/>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_o3NikJ-yEeORueP4RwNSuw" name="HIGHREMOTE"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Enumeration" xmi:id="_b2McYJRqEee1t7LzyGKH_w" name="CrystalFamily"/>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_BBdLgJfAEeeD5tw4nEPrXA" name="PointGroup">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_x0_y8JfAEeeD5tw4nEPrXA" name="crystalsystem" type="_aN03UJ-yEeORueP4RwNSuw" association="_x08IkJfAEeeD5tw4nEPrXA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_x1AaAJfAEeeD5tw4nEPrXA" value="1"/>
