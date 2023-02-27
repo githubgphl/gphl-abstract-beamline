@@ -14,6 +14,10 @@ package co.gphl.beamline.v2_unstable.domain_types;
 
 import static co.gphl.beamline.v2_unstable.domain_types.CrystalFamily.*;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Enumeration of the point groups needed to allow for user specification.
  * This enumeration is for user interface purposes only, and
@@ -80,40 +84,46 @@ public enum PointGroup {
      * @return point group
      */
     public static PointGroup pointGroup(int spacegroupNumber) {
-        if (spacegroupNumber < 1 || spacegroupNumber >= sg2pg.length)
+        PointGroup retval;
+        try {
+            retval = pointGroupBySpaceGroup.get(spacegroupNumber);
+        }
+        catch ( IndexOutOfBoundsException e ) {
+            throw new IllegalArgumentException("There is no space group number " + spacegroupNumber, e);
+        }
+        
+        if (retval == null)
             throw new IllegalArgumentException(
-                    "There is no space group number " + spacegroupNumber);
-        if (sg2pg[spacegroupNumber] == null)
-            throw new IllegalArgumentException(
-                    "We don't handle centrosymmetric space groups such as "
-                            + spacegroupNumber);
+                    spacegroupNumber == 0 ?
+                            "There is no space group number 0" :
+                            "We don't handle centrosymmetric space groups such as "
+                                + spacegroupNumber
+                      );
 
-        return sg2pg[spacegroupNumber];
+        return retval;
     }
     
-    private static final PointGroup[] sg2pg = { null, // 0 is null: we use 1-based SG numbers
-            PG1, null, PG2, PG2, PG2, null, null, null, null, null, // 1-10
-            null, null, null, null, null, PG222, PG222, PG222, PG222, PG222, // 11-20
-            PG222, PG222, PG222, PG222, null, null, null, null, null, null, // 21-30
-            null, null, null, null, null, null, null, null, null, null, // 31-40
-            null, null, null, null, null, null, null, null, null, null, // 41-50
-            null, null, null, null, null, null, null, null, null, null, // 51-60
-            null, null, null, null, null, null, null, null, null, null, // 61-70
-            null, null, null, null, PG4, PG4, PG4, PG4, PG4, PG4, // 71-80
-            null, null, null, null, null, null, null, null, PG422, PG422, // 81-90
-            PG422, PG422, PG422, PG422, PG422, PG422, PG422, PG422, null, null, // 91-100
-            null, null, null, null, null, null, null, null, null, null, // 101-110
-            null, null, null, null, null, null, null, null, null, null, // 111-120
-            null, null, null, null, null, null, null, null, null, null, // 121-130
-            null, null, null, null, null, null, null, null, null, null, // 131-140
-            null, null, PG3, PG3, PG3, PG3, null, null, PG32, PG32, // 141-150
-            PG32, PG32, PG32, PG32, PG32, null, null, null, null, null, // 151-160
-            null, null, null, null, null, null, null, PG6, PG6, PG6, // 161-170
-            PG6, PG6, PG6, null, null, null, PG622, PG622, PG622, PG622, // 171-180
-            PG622, PG622, null, null, null, null, null, null, null, null, // 181-190
-            null, null, null, null, PG23, PG23, PG23, PG23, PG23, null, // 191-200
-            null, null, null, null, null, null, PG432, PG432, PG432, PG432, // 201-210
-            PG432, PG432, PG432, PG432, null, null, null, null, null, null, // 211-220
-            null, null, null, null, null, null, null, null, null, PG432 }; // 221-230
+    private static final List<PointGroup> pointGroupBySpaceGroup;
     
+    static {
+        // 231 not 230 because we are using the index of the array as the spacegroup 
+        // without applying any offset, so we need an extra element for sg2pg[0]
+        final PointGroup[] sg2pg = new PointGroup[231];
+        sg2pg[1] = PG1;
+        // Parameters 2 and three of Arrays.fill are:
+        //   fromIndex inclusive
+        //   toIndex   exclusive
+        Arrays.fill(sg2pg, 3, 6, PG2);
+        Arrays.fill(sg2pg, 16, 25, PG222);
+        Arrays.fill(sg2pg, 75, 81, PG4);
+        Arrays.fill(sg2pg, 89, 99, PG422);
+        Arrays.fill(sg2pg, 143, 147, PG3);
+        Arrays.fill(sg2pg, 149, 156, PG32);
+        Arrays.fill(sg2pg, 168, 174, PG6);
+        Arrays.fill(sg2pg, 177, 183, PG622);
+        Arrays.fill(sg2pg,  195, 200, PG23);
+        Arrays.fill(sg2pg,  207, 215, PG432);
+        
+        pointGroupBySpaceGroup = Collections.unmodifiableList(Arrays.asList(sg2pg));
+    }
 }
