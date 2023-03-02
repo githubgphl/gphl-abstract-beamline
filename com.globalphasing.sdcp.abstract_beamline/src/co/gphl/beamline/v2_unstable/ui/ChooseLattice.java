@@ -1,5 +1,5 @@
 /*
- * Copyright © 2015, 2017 by Global Phasing Ltd. and Diamond Light Source.
+ * Copyright © 2015, 2023 by Global Phasing Ltd. and Diamond Light Source.
  * All rights reserved.
  * 
  * Author(s): Peter Keller.
@@ -55,6 +55,6 @@ public interface ChooseLattice extends Payload {
     CrystalFamily getCrystalFamily();
     
     boolean isSetCrystalFamily();
-    String getSolutions();
+    IndexingSolutions getSolutions();
 
 }
