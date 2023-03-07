@@ -82,4 +82,10 @@ public interface SampleCentred extends Payload {
     BcsDetectorSetting getDetectorSetting();
     boolean isSetDetectorSetting();
     
+    /**
+     * The number of times the basic data collection derived from the strategy
+     * should be repeated (e.g. for a dose-series collection)
+     */
+    int getRepeat();
+    
 }
