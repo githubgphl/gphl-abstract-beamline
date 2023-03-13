@@ -646,6 +646,9 @@ At most one of these two properties will be populated. lattices will be an empty
       <ownedComment xmi:type="uml:Comment" xmi:id="_twJa4HSFEeyf7P2fvXWfvw" annotatedElement="_m-F90KyNEeSAYN-eWA_Wkw">
         <body>procWithLatticeParams == True means that the processing of this image collection should be provided with unit cell and symmetry information that was provided or specified upstream. Otherwise, the processing should be run without providing any initial lattice parameters</body>
       </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_rEmzQMGhEe2zyqd9G6GiAA" annotatedElement="_9y1JkHDpEeaYj-DGzyuo3A">
+        <body>repeat is the number of times the subsequent data collection should be repeated in its entireity. The run-number of the collected images will be incremented for each repeat</body>
+      </ownedComment>
       <packagedElement xmi:type="uml:Class" xmi:id="_AqMaIJ-0EeORueP4RwNSuw" name="UserProvidedInformation">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_EQPTwJ-0EeORueP4RwNSuw" name="scatterers" visibility="public" type="_MNqSwJ-zEeORueP4RwNSuw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ehfb0J-0EeORueP4RwNSuw"/>
@@ -891,6 +894,7 @@ At most one of these two properties will be populated. lattices will be an empty
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iWKIkBmNEemCf5Wr_V-IVQ"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iWKIkRmNEemCf5Wr_V-IVQ" value="*"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_fE3q0MGhEe2zyqd9G6GiAA" name="repeat" type="_3sNd0JfkEeOQoP6u6l9OUQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_1mzGIOJREeaKwNbMHjJZMA" name="SelectedLattice">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_mURnoKG9EeuL7aQOvquN8Q" name="strategyControl">
