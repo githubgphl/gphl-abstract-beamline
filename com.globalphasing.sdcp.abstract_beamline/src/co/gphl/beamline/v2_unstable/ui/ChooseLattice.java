@@ -19,11 +19,13 @@
 
 package co.gphl.beamline.v2_unstable.ui;
 
+import java.util.List;
 import java.util.Set;
 
 import co.gphl.beamline.v2_unstable.Payload;
 import co.gphl.beamline.v2_unstable.domain_types.CrystalFamily;
 import co.gphl.beamline.v2_unstable.domain_types.IndexingFormat;
+import co.gphl.beamline.v2_unstable.domain_types.UnitCell;
 
 public interface ChooseLattice extends Payload {
 
@@ -44,7 +46,6 @@ public interface ChooseLattice extends Payload {
      * 
      */
     Set<String> getLattices();
-    
     boolean isSetLattices();
     
     /**
@@ -53,8 +54,17 @@ public interface ChooseLattice extends Payload {
      * @return crystal family or {@code null} if the user did not specify any crystal symmetry.
      */
     CrystalFamily getCrystalFamily();
-    
     boolean isSetCrystalFamily();
-    IndexingSolutions getSolutions();
+    
+    UnitCell getUserProvidedCell();
+    boolean isSetUserProvidedCell();
+    
+    String getIndexingHeader();
+    boolean isSetIndexingHeader();
+    
+    List<IndexingSolution> getIndexingSolutions();
+    
+    @Deprecated
+    String getIndexingSolutionsAsIdxrefString();
 
 }

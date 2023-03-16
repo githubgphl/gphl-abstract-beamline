@@ -454,16 +454,6 @@ userPointGroup is a user-specified point group that can be used to distinguish b
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_Kkb5cLtbEeS-Ne1HNGF1Qg" name="IndexingFormat">
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_NudlcLtbEeS-Ne1HNGF1Qg" name="IDXREF"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_F-oA8LLAEe26yp3G31lE3g" name="IndexingSolutions">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_xstVALLBEe26yp3G31lE3g" name="header">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6_kAcLLBEe26yp3G31lE3g"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_7lLZgLLCEe26yp3G31lE3g" name="format" type="_Kkb5cLtbEeS-Ne1HNGF1Qg"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_Y4GDYrbIEe2xYrekTPGWsA" name="solutions" type="_MR6ckLLDEe26yp3G31lE3g" isOrdered="true" isUnique="false" association="_Y4E1QLbIEe2xYrekTPGWsA">
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Y4GqcbbIEe2xYrekTPGWsA" value="*"/>
-        </ownedAttribute>
-      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_Uug6YIcHEeWP89wnxV1F7g" name="RequestCentring">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_pbijEIcHEeWP89wnxV1F7g" name="currentSettingNo" type="_3sNd0JfkEeOQoP6u6l9OUQ"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_wGW1QIcHEeWP89wnxV1F7g" name="totalRotations" type="_3sNd0JfkEeOQoP6u6l9OUQ"/>
@@ -508,9 +498,16 @@ At most one of these two properties will be populated. lattices will be an empty
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_skGLgJ0aEeeneKIkSABvtA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_skQjkJ0aEeeneKIkSABvtA" value="2"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_MWdeA7LGEe26yp3G31lE3g" name="solutions" type="_F-oA8LLAEe26yp3G31lE3g" association="_MWdeALLGEe26yp3G31lE3g"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_OAnt8LNvEe2ML-Y8ied5hA" name="userProvidedCell" type="_qfoR4J-yEeORueP4RwNSuw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QdIzsLNvEe2ML-Y8ied5hA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_QcrRAMPTEe2vE4eW1YPdUQ" name="indexingHeader">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VCoIcMPTEe2vE4eW1YPdUQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_V5EBMMPTEe2vE4eW1YPdUQ" name="indexingFormat" type="_Kkb5cLtbEeS-Ne1HNGF1Qg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_kHhD8MPTEe2vE4eW1YPdUQ" name="indexingSolutions" type="_MR6ckLLDEe26yp3G31lE3g" isOrdered="true" association="_kHfOwMPTEe2vE4eW1YPdUQ">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kHhrAcPTEe2vE4eW1YPdUQ" value="*"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_VcLO8OLkEeaSMtPPLb0UtQ" memberEnd="_VcLO8eLkEeaSMtPPLb0UtQ __2a0QJfmEeOQoP6u6l9OUQ">
@@ -542,11 +539,11 @@ At most one of these two properties will be populated. lattices will be an empty
         </ownedEnd>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_ZzMnYBusEeeqLcUAXJQF7A" name="PrepareForCentring"/>
-      <packagedElement xmi:type="uml:Association" xmi:id="_Y4E1QLbIEe2xYrekTPGWsA" visibility="package" memberEnd="_Y4GDYrbIEe2xYrekTPGWsA _Y4GqcrbIEe2xYrekTPGWsA">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Y4GDYLbIEe2xYrekTPGWsA" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Y4GDYbbIEe2xYrekTPGWsA" key="nature" value="UML_Nature"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_kHfOwMPTEe2vE4eW1YPdUQ" memberEnd="_kHhD8MPTEe2vE4eW1YPdUQ _kHhrAsPTEe2vE4eW1YPdUQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kHgc4MPTEe2vE4eW1YPdUQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kHgc4cPTEe2vE4eW1YPdUQ" key="nature" value="UML_Nature"/>
         </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_Y4GqcrbIEe2xYrekTPGWsA" name="indexingSolutions" type="_F-oA8LLAEe26yp3G31lE3g" association="_Y4E1QLbIEe2xYrekTPGWsA"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_kHhrAsPTEe2vE4eW1YPdUQ" name="chooselattice" type="_IhOlQOJREeaKwNbMHjJZMA" association="_kHfOwMPTEe2vE4eW1YPdUQ"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_WD50kJ-yEeORueP4RwNSuw" name="DomainTypes">
@@ -964,12 +961,6 @@ At most one of these two properties will be populated. lattices will be an empty
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ak4wUAzREeyYsokLDO7Lgg"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ak8asAzREeyYsokLDO7Lgg" value="*"/>
       </ownedEnd>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_MWdeALLGEe26yp3G31lE3g" memberEnd="_MWdeA7LGEe26yp3G31lE3g _MWeFErLGEe26yp3G31lE3g">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MWdeAbLGEe26yp3G31lE3g" source="org.eclipse.papyrus">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MWdeArLGEe26yp3G31lE3g" key="nature" value="UML_Nature"/>
-      </eAnnotations>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_MWeFErLGEe26yp3G31lE3g" name="chooselattice" type="_IhOlQOJREeaKwNbMHjJZMA" association="_MWdeALLGEe26yp3G31lE3g"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_f19joLLGEe26yp3G31lE3g" memberEnd="_f1-KsrLGEe26yp3G31lE3g _f1-xwLLGEe26yp3G31lE3g">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_f1-KsLLGEe26yp3G31lE3g" source="org.eclipse.papyrus">
