@@ -29,7 +29,7 @@ import co.gphl.beamline.v2_unstable.domain_types.UnitCell;
 
 public interface ChooseLattice extends Payload {
 
-    IndexingFormat getFormat();
+    IndexingFormat getIndexingFormat();
     
     /**
      * Get the Bravais lattice(s) implied by the user's choice of crystal symmetry.
