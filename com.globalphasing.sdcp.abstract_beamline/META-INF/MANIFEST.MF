@@ -10,4 +10,4 @@ Export-Package: co.gphl.beamline.v2_unstable,
  co.gphl.beamline.v2_unstable.information,
  co.gphl.beamline.v2_unstable.instrumentation,
  co.gphl.beamline.v2_unstable.ui
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
