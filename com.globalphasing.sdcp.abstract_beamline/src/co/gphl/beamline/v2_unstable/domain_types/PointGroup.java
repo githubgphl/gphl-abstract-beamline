@@ -1,5 +1,5 @@
 /**
- * Copyright © 2017 by Global Phasing Ltd. All rights reserved
+ * Copyright © 2017, 2023 by Global Phasing Ltd. All rights reserved
  *
  * This software is proprietary to and embodies the confidential
  * technology of Global Phasing Limited (GPhL).
@@ -17,38 +17,39 @@ import static co.gphl.beamline.v2_unstable.domain_types.CrystalFamily.*;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Enumeration of the point groups needed to allow for user specification.
  * This enumeration is for user interface purposes only, and
  * is not crystallographically complete. Centrosymmetric point groups
- * are omitted. {@link #PG32 32} includes {@code 321} and {@code 312},
- * since making a choice from the three trigonal point groups specifies
- * the space group (apart from screw axes, but they are never required
- * in the context of the Abstract Beamline Interface).
+ * are omitted.
  * 
  * @author pkeller
  *
  */
-public enum PointGroup {
+public enum PointGroup implements SpaceGroupSet {
 
-    PG1(TRICLINIC, 1),
-    PG2(MONOCLINIC, 3),
-    PG222(ORTHORHOMBIC, 16),
-    PG4(TETRAGONAL, 75), PG422(TETRAGONAL, 89),
-    PG3(HEXAGONAL, 143), 
-    /* There is no reason to prefer P 3 1 2 (149) over P 3 2 1 (150) here,
-     * but we have to specify one */
-    PG32(HEXAGONAL, 149),
-    PG6(HEXAGONAL, 168), PG622(HEXAGONAL, 177),
-    PG23(CUBIC, 195), PG432(CUBIC, 207);
+    PG1(TRICLINIC,      CrystalClass.P1),
+    PG2(MONOCLINIC,     CrystalClass.P2,   CrystalClass.C2),
+    PG222(ORTHORHOMBIC, CrystalClass.P222, CrystalClass.C222, CrystalClass.F222, CrystalClass.I222),
+    PG4(TETRAGONAL,     CrystalClass.P4,   CrystalClass.I4),
+    PG422(TETRAGONAL,   CrystalClass.P422, CrystalClass.I422),
+    PG3(HEXAGONAL,      CrystalClass.P3,   CrystalClass.R3), 
+    PG32(HEXAGONAL,     CrystalClass.P32,  CrystalClass.R32),
+    PG6(HEXAGONAL,      CrystalClass.P6),
+    PG622(HEXAGONAL,    CrystalClass.P622),
+    PG23(CUBIC,         CrystalClass.P23,  CrystalClass.F23,  CrystalClass.I23),
+    PG432(CUBIC,        CrystalClass.P432, CrystalClass.F432, CrystalClass.I432);
     
     private final CrystalFamily crystalFamily;
-    private final short primitiveSpaceGroup;
+    private final Set<CrystalClass> crystalClasses;
     
-    PointGroup(CrystalFamily crystalFamily, int primitiveSpaceGroup) {
+    PointGroup(CrystalFamily crystalFamily, CrystalClass... crystalClasses) {
         this.crystalFamily = crystalFamily;
-        this.primitiveSpaceGroup = (short) primitiveSpaceGroup;
+        this.crystalClasses = Collections.unmodifiableSet( Stream.of(crystalClasses).collect(Collectors.toSet()) );
     }
     
     public String toString() {
@@ -59,8 +60,13 @@ public enum PointGroup {
         return this.crystalFamily;
     }
     
-    public short getPrimitiveSpaceGroup() {
-        return this.primitiveSpaceGroup;
+    public Set<CrystalClass> getCrystalClasses() {
+        return this.crystalClasses;
+    }
+    
+    @Override
+    public Set<Short> getSpaceGroups() {
+        return this.crystalClasses.stream().flatMap( s -> s.getSpaceGroups().stream() ).collect(Collectors.toSet());
     }
     
     /**

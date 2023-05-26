@@ -45,13 +45,4 @@ public enum CrystalFamily {
         
     }
     
-    /** @deprecated use {@link #getPearsonChar()} */
-    @Deprecated public Character getXdsChar() {
-        return this.getPearsonChar();
-    }
-    
-    /** @deprecated use {@link #getByPearsonChar(char)} */
-    @Deprecated public static CrystalFamily getByXdsChar(char pearsonChar) {
-        return CrystalFamily.getByPearsonChar(pearsonChar);
-    }
 }
