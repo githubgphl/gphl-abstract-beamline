@@ -38,7 +38,7 @@ public enum PointGroup implements SpaceGroupSet {
     PG4(TETRAGONAL,     CrystalClass.P4,   CrystalClass.I4),
     PG422(TETRAGONAL,   CrystalClass.P422, CrystalClass.I422),
     PG3(HEXAGONAL,      CrystalClass.P3,   CrystalClass.R3), 
-    PG32(HEXAGONAL,     CrystalClass.P32,  CrystalClass.R32),
+    PG32(HEXAGONAL,     CrystalClass.P312, CrystalClass.P321, CrystalClass.R32),
     PG6(HEXAGONAL,      CrystalClass.P6),
     PG622(HEXAGONAL,    CrystalClass.P622),
     PG23(CUBIC,         CrystalClass.P23,  CrystalClass.F23,  CrystalClass.I23),
