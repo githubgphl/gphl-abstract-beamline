@@ -6,7 +6,7 @@
 If AbstractBeamline::Instructions::GeometricStrategy::userModifiable == true and the user has specified new rotation axis settings, a new GoniostatSweepSetting instance should be used to populate GoniostatTranslation::actualRotation. </body>
     </ownedComment>
     <ownedComment xmi:type="uml:Comment" xmi:id="_o9wa8LjWEeOB9q44TOrPvQ" annotatedElement="_AqMaIJ-0EeORueP4RwNSuw">
-      <body> Either scatterer(s) or phasingWavelengths must be specified now or PhasingWavelengths later on.</body>
+      <body> Either scatterer(s) must be specified now or PhasingWavelengths later on.</body>
     </ownedComment>
     <ownedComment xmi:type="uml:Comment" xmi:id="_NLHdgCg_EeSuSbp_QHtIcg" annotatedElement="_4Ycb0J-yEeORueP4RwNSuw _ED0d0J-zEeORueP4RwNSuw _MNqSwJ-zEeORueP4RwNSuw">
       <body> Many combinations of element and edge will be disallowed, depending on basic scientific criteria and/or the capabilities of the beamline</body>
