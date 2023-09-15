@@ -1,5 +1,6 @@
 package co.gphl.beamline.v2_unstable.ui;
 
+import java.net.URI;
 import java.util.Set;
 
 import co.gphl.beamline.v2_unstable.domain_types.AnomalousScatterer;
@@ -15,6 +16,8 @@ public interface UserProvidedInfo {
     Set<CrystalClass> getCrystalClasses();
     UnitCell getCell();
     boolean isSetCell();
+    URI getReferenceReflectionFile();
+    boolean isSetReferenceReflectionFile();
     
     float getExpectedResolution();
 

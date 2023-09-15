@@ -9,8 +9,6 @@ public interface PriorInformation extends Payload {
     UUID getSampleId();
     boolean isSetSampleName();
     String getSampleName();
-    // For future use. 
-    // URL getReflectionFile();
     boolean isSetUserProvidedInfo();
     UserProvidedInfo getUserProvidedInfo();
     boolean isSetRootDirectory();

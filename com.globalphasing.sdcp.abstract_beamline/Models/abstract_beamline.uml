@@ -184,6 +184,12 @@ userSpaceGroup and userCrystalClasses are additional symmetry information derive
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_BFgIAJ-yEeORueP4RwNSuw" name="Types">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_2YzVsFOsEe6ti96A70UxSA" annotatedElement="_cXeUEFOnEe6ti96A70UxSA">
+        <body>According to rfc2396 appendix A, an absolute URI is one that has a scheme. We don't cater for relative URIs in this set of specifications</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_QjfZwFPVEe6ti96A70UxSA" annotatedElement="_1nPLUFOrEe6ti96A70UxSA">
+        <body>&quot;ssp&quot; stands for &quot;scheme-specific part&quot;</body>
+      </ownedComment>
       <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_LXRoUJfnEeOQoP6u6l9OUQ" name="NonNegativeInt">
         <generalization xmi:type="uml:Generalization" xmi:id="_7BfvcJ-3EeORueP4RwNSuw">
           <general xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -200,14 +206,7 @@ userSpaceGroup and userCrystalClasses are additional symmetry information derive
       <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_-MC2wJfeEeOQoP6u6l9OUQ" name="Uuid"/>
       <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_i169sJffEeOQoP6u6l9OUQ" name="Float"/>
       <packagedElement xmi:type="uml:DataType" xmi:id="_4YRf4J-2EeORueP4RwNSuw" name="Url">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_6PuJsJ-2EeORueP4RwNSuw" name="scheme" visibility="public">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6ijmIJ-2EeORueP4RwNSuw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6ikNMJ-2EeORueP4RwNSuw" value="1"/>
-          <defaultValue xmi:type="uml:LiteralString" xmi:id="_6ik0QJ-2EeORueP4RwNSuw">
-            <value xsi:nil="true"/>
-          </defaultValue>
-        </ownedAttribute>
+        <generalization xmi:type="uml:Generalization" xmi:id="_-87sMFOnEe6ti96A70UxSA" general="_cXeUEFOnEe6ti96A70UxSA" generalizationSet="_d1R8kFOsEe6ti96A70UxSA"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_HvgIkJ-3EeORueP4RwNSuw" name="host" visibility="public">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IcH-AJ-3EeORueP4RwNSuw"/>
@@ -215,6 +214,9 @@ userSpaceGroup and userCrystalClasses are additional symmetry information derive
           <defaultValue xmi:type="uml:LiteralString" xmi:id="_IcJMIJ-3EeORueP4RwNSuw">
             <value xsi:nil="true"/>
           </defaultValue>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_AlvVsFOrEe6ti96A70UxSA" name="port" type="_3sNd0JfkEeOQoP6u6l9OUQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Fda2UFOrEe6ti96A70UxSA"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_LkW6QJ-3EeORueP4RwNSuw" name="path" visibility="public">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -230,6 +232,24 @@ userSpaceGroup and userCrystalClasses are additional symmetry information derive
       </packagedElement>
       <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_lmMwEKyIEeSAYN-eWA_Wkw" name="Boolean"/>
       <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_U3N2kLpSEeeYTqtFdXaPuQ" name="Character"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_cXeUEFOnEe6ti96A70UxSA" name="AbsoluteUri" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_6PuJsJ-2EeORueP4RwNSuw" name="scheme" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6ijmIJ-2EeORueP4RwNSuw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6ikNMJ-2EeORueP4RwNSuw" value="1"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_6ik0QJ-2EeORueP4RwNSuw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_1nPLUFOrEe6ti96A70UxSA" name="OpaqueUri">
+        <generalization xmi:type="uml:Generalization" xmi:id="_MJOxkFOsEe6ti96A70UxSA" general="_cXeUEFOnEe6ti96A70UxSA" generalizationSet="_d1R8kFOsEe6ti96A70UxSA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_-iVeEFOrEe6ti96A70UxSA" name="ssp" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GbdWcFOsEe6ti96A70UxSA"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:GeneralizationSet" xmi:id="_d1R8kFOsEe6ti96A70UxSA" name="GeneralizationSet_OpaqueUri_Url" isCovering="true" isDisjoint="true" generalization="_MJOxkFOsEe6ti96A70UxSA _-87sMFOnEe6ti96A70UxSA"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_JPTgsJ-yEeORueP4RwNSuw" name="Instructions">
       <ownedComment xmi:type="uml:Comment" xmi:id="_ljidQJ-wEeORueP4RwNSuw" annotatedElement="_Xu3QEJfnEeOQoP6u6l9OUQ">
@@ -714,6 +734,11 @@ At most one of these two properties will be populated. priorCrystalClasses will 
             <value xsi:nil="true"/>
           </defaultValue>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_5GXxcJ-1EeORueP4RwNSuw" name="referenceReflectionFile" visibility="public" type="_cXeUEFOnEe6ti96A70UxSA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5XJYYJ-1EeORueP4RwNSuw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5XJ_cJ-1EeORueP4RwNSuw" value="1"/>
+          <defaultValue xmi:type="uml:LiteralNull" xmi:id="_3yKRoNC5EeWoq59tXBFkgw"/>
+        </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_VVfvEJ-1EeORueP4RwNSuw" name="expectedResolution" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VyFkcJ-1EeORueP4RwNSuw"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VyGLgJ-1EeORueP4RwNSuw" value="1"/>
@@ -833,11 +858,6 @@ At most one of these two properties will be populated. priorCrystalClasses will 
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sUtc0J-1EeORueP4RwNSuw"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sUuD4J-1EeORueP4RwNSuw" value="1"/>
           <defaultValue xmi:type="uml:LiteralNull" xmi:id="_KFOZUNC6EeWoq59tXBFkgw"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_5GXxcJ-1EeORueP4RwNSuw" name="reflectionFile" visibility="public" type="_4YRf4J-2EeORueP4RwNSuw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5XJYYJ-1EeORueP4RwNSuw"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5XJ_cJ-1EeORueP4RwNSuw" value="1"/>
-          <defaultValue xmi:type="uml:LiteralNull" xmi:id="_3yKRoNC5EeWoq59tXBFkgw"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_HhTJ8J-2EeORueP4RwNSuw" name="userProvidedInformation" type="_AqMaIJ-0EeORueP4RwNSuw" association="_HhTxAJ-2EeORueP4RwNSuw">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HhTJ8Z-2EeORueP4RwNSuw"/>
