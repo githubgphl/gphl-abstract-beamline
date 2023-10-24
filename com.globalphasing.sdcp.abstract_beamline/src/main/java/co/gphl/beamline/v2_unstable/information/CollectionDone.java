@@ -13,9 +13,11 @@
 
 package co.gphl.beamline.v2_unstable.information;
 
+import java.util.Set;
 import java.util.UUID;
 
 import co.gphl.beamline.v2_unstable.Payload;
+import co.gphl.beamline.v2_unstable.instrumentation.GoniostatTranslation;
 
 /**
  * @author pkeller
@@ -24,8 +26,10 @@ import co.gphl.beamline.v2_unstable.Payload;
 public interface CollectionDone extends Payload {
 
     UUID getProposalId();
-    String getImageRoot();
+    @Deprecated String getImageRoot();
     int getStatus();
     boolean isSetImageRoot();
     boolean getProcWithLatticeParams();
+    Set<UUID> getScanIds();
+    GoniostatTranslation getCentring(UUID scanId);
 }

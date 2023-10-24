@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Profile="http:///schemas/Profile/_wTZcACjgEeezA761iS43gg/16" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/Profile/_wTZcACjgEeezA761iS43gg/16 id.profile.uml#_wTaDECjgEeezA761iS43gg">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Profile="http:///schemas/Profile/_G2A1QHKJEe6gkpBxuaqq7g/19" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/Profile/_G2A1QHKJEe6gkpBxuaqq7g/19 id.profile.uml#_G2BcUHKJEe6gkpBxuaqq7g">
   <uml:Model xmi:id="_ImsGIJfeEeOQoP6u6l9OUQ" name="AbstractBeamline" URI="">
     <ownedComment xmi:type="uml:Comment" xmi:id="_rQFPsJ-4EeORueP4RwNSuw" annotatedElement="_2wXOQJ-zEeORueP4RwNSuw _xS1BsIcCEeWP89wnxV1F7g">
       <body>For any GoniostatSweepSetting instance provided to the beamline via a GeometricStrategy where the (X, Y, Z) translation settings were corrected by a centring operation or not specified, the beamline must return a GoniostatTranslationSettings instance with populated (X, Y, Z) values. The beamline must also set GoniostatTranslation::requestedRotation to the id of the corresponding GoniostatSweepSetting instance sent from the workflow. 
@@ -1020,6 +1020,18 @@ At most one of these two properties will be populated. priorCrystalClasses will 
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_f1-xwLLGEe26yp3G31lE3g" name="selectedlattice" type="_1mzGIOJREeaKwNbMHjJZMA" association="_f19joLLGEe26yp3G31lE3g"/>
       </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_NCMDoHKJEe6gkpBxuaqq7g" name="ScanQual">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_QSPfIHKJEe6gkpBxuaqq7g" name="scan" type="_hjJDAJfmEeOQoP6u6l9OUQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_EVTWk3KKEe6gkpBxuaqq7g" name="centring" type="_xS1BsIcCEeWP89wnxV1F7g" aggregation="shared" association="_EVTWkHKKEe6gkpBxuaqq7g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_EVTWkHKKEe6gkpBxuaqq7g" memberEnd="_EVTWk3KKEe6gkpBxuaqq7g _EVT9oXKKEe6gkpBxuaqq7g">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EVTWkXKKEe6gkpBxuaqq7g" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EVTWknKKEe6gkpBxuaqq7g" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_EVT9oXKKEe6gkpBxuaqq7g" name="scanqual" type="_NCMDoHKJEe6gkpBxuaqq7g" association="_EVTWkHKKEe6gkpBxuaqq7g">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mziP4HKLEe6c0ZwixoxT8w" value="*"/>
+        </ownedEnd>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_hfUPkCjTEeezA761iS43gg" name="IdentifiedElement" isAbstract="true">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_trn0YCjTEeezA761iS43gg" name="id" type="_-MC2wJfeEeOQoP6u6l9OUQ" isUnique="false" isReadOnly="true"/>
@@ -1038,15 +1050,15 @@ At most one of these two properties will be populated. priorCrystalClasses will 
       <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
     </profileApplication>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_6WxgcOJKEeaKwNbMHjJZMA">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_y6QwkCjgEeezA761iS43gg" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_y6QwkSjgEeezA761iS43gg" key="Version" value="0.2.5"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_y6QwkijgEeezA761iS43gg" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_y6QwkyjgEeezA761iS43gg" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_y6QwlCjgEeezA761iS43gg" key="Date" value="2017-04-24"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_y6QwlSjgEeezA761iS43gg" key="Author" value=""/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JESDoHKJEe6gkpBxuaqq7g" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JESDoXKJEe6gkpBxuaqq7g" key="Version" value="0.2.8"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JESDonKJEe6gkpBxuaqq7g" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JESDo3KJEe6gkpBxuaqq7g" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JESDpHKJEe6gkpBxuaqq7g" key="Date" value="2023-10-24"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JESDpXKJEe6gkpBxuaqq7g" key="Author" value=""/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6XfSIOJKEeaKwNbMHjJZMA" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="id.profile.uml#_wTaDECjgEeezA761iS43gg"/>
+        <references xmi:type="ecore:EPackage" href="id.profile.uml#_G2BcUHKJEe6gkpBxuaqq7g"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="id.profile.uml#_BF8GILGCEeak3rj-C-pKhA"/>
     </profileApplication>
@@ -1077,4 +1089,6 @@ At most one of these two properties will be populated. priorCrystalClasses will 
   <Profile:Identifiable xmi:id="_ZHgGsCjsEeezA761iS43gg" base_Classifier="_r2aUgJfkEeOQoP6u6l9OUQ" base_Class="_r2aUgJfkEeOQoP6u6l9OUQ"/>
   <Profile:Identifiable xmi:id="_WpldUCjtEeezA761iS43gg" base_Classifier="_8pRr8LW4EeOZTslGMEIgsw" base_Class="_8pRr8LW4EeOZTslGMEIgsw"/>
   <Profile:IdRef xmi:id="_ffRPICjuEeezA761iS43gg" base_Association="_PWnJgCjuEeezA761iS43gg"/>
+  <Profile:Deprecated xmi:id="_blWSUHGdEe6aa8nqO4s-rw" base_Property="_40zgsKyNEeSAYN-eWA_Wkw"/>
+  <Profile:IdRef xmi:id="_kXCDIHKJEe6gkpBxuaqq7g" base_Property="_QSPfIHKJEe6gkpBxuaqq7g"/>
 </xmi:XMI>
