@@ -13,7 +13,7 @@
 
 package co.gphl.beamline.v2_unstable.information;
 
-import java.util.Optional;
+import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
@@ -38,15 +38,19 @@ public interface CollectionDone extends Payload {
      * @param scanId
      * @return centring id
      * @throws IllegalArgumentException if {@code scanId} is not in the set returned by {@link #getScanIds()}
+     * @throws NullPointerException if {@code scanId == null}
      */
     UUID getCentringId(UUID scanId);
     /**
-     * Get an Optional containing the centring that was used for the scan.
-     * If the returned optional is empty, the centring is expected to be already present in the persistence layer.
+     * Get the BCS-provided centring that was used for the scan.
      * 
      * @param scanId
-     * @return centring instance
+     * @return centring instance, or {@code null} if the BCS did not provide a centring for this scan.
      * @throws IllegalArgumentException if {@code scanId} is not in the set returned by {@link #getScanIds()}
+     * @throws NullPointerException if {@code scanId == null}
      */
-    Optional<GoniostatTranslation> getCentring(UUID scanId);
+    GoniostatTranslation getCentring(UUID scanId);
+    
+    Map<UUID, UUID> getScanIdMap();
+    Map<UUID, GoniostatTranslation> getCentringIdMap();
 }
