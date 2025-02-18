@@ -8,4 +8,5 @@ open module com.globalphasing.sdcp.abstract_beamline {
     exports co.gphl.beamline.v2_unstable.information;
     exports co.gphl.beamline.v2_unstable.instrumentation;
     exports co.gphl.beamline.v2_unstable.ui;
+    exports co.gphl.beamline.v2_unstable.types;
 }

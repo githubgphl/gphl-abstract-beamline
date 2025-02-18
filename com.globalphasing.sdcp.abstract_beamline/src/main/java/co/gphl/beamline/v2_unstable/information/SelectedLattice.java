@@ -1,5 +1,5 @@
 /*
- * Copyright © 2023 by Global Phasing Ltd. and Diamond Light Source.
+ * Copyright © 2023, 2025 by Global Phasing Ltd. and Diamond Light Source.
  * All rights reserved.
  * 
  * Author(s): Peter Keller.
@@ -23,6 +23,7 @@ import java.util.Set;
 import co.gphl.beamline.v2_unstable.Payload;
 import co.gphl.beamline.v2_unstable.domain_types.CrystalClass;
 import co.gphl.beamline.v2_unstable.instrumentation.BcsDetectorSetting;
+import co.gphl.beamline.v2_unstable.types.AbsoluteUri;
 import co.gphl.beamline.v2_unstable.ui.IndexingSolution;
 import co.gphl.beamline.v2_unstable.ui.PhasingWavelength;
 
@@ -44,5 +45,8 @@ public interface SelectedLattice extends Payload {
     
     int sizeOfUserCrystalClasses();
     Set<CrystalClass> getUserCrystalClasses();
+    
+    int sizeOfReferenceReflectionFiles();
+    Set<AbsoluteUri> getReferenceReflectionFiles();
     
 }

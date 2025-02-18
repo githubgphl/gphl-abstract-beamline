@@ -734,11 +734,6 @@ At most one of these two properties will be populated. priorCrystalClasses will 
             <value xsi:nil="true"/>
           </defaultValue>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_5GXxcJ-1EeORueP4RwNSuw" name="referenceReflectionFile" visibility="public" type="_cXeUEFOnEe6ti96A70UxSA">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5XJYYJ-1EeORueP4RwNSuw"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5XJ_cJ-1EeORueP4RwNSuw" value="1"/>
-          <defaultValue xmi:type="uml:LiteralNull" xmi:id="_3yKRoNC5EeWoq59tXBFkgw"/>
-        </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_VVfvEJ-1EeORueP4RwNSuw" name="expectedResolution" visibility="public" type="_UWanMJffEeOQoP6u6l9OUQ">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VyFkcJ-1EeORueP4RwNSuw"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VyGLgJ-1EeORueP4RwNSuw" value="1"/>
@@ -975,6 +970,10 @@ At most one of these two properties will be populated. priorCrystalClasses will 
         <ownedAttribute xmi:type="uml:Property" xmi:id="_B5jaYNhOEe2NPPFiA19HFw" name="userCrystalClasses" type="__hlF4MymEe2K_oUramSsmg">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FvbfwNhOEe2NPPFiA19HFw"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FvntANhOEe2NPPFiA19HFw" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_8Cm-QO0NEe-dU8CxOfPJhA" name="referenceReflectionFiles" type="_cXeUEFOnEe6ti96A70UxSA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AjfvgO0OEe-dU8CxOfPJhA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Aj5YIO0OEe-dU8CxOfPJhA" value="*"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_bazbMBuoEeeqLcUAXJQF7A" name="ObtainPriorInformation"/>
