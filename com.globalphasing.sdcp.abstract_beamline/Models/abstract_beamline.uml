@@ -182,6 +182,9 @@ userSpaceGroup and userCrystalClasses are additional symmetry information derive
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6BFsEBQXEem84ubf8V2GOQ" value="2"/>
         </ownedAttribute>
       </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TWYVkPT3Ee-ZNOVoLJ5A8g" name="ConfigurationData">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_npqokPT3Ee-ZNOVoLJ5A8g" name="location" type="_4YRf4J-2EeORueP4RwNSuw"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_BFgIAJ-yEeORueP4RwNSuw" name="Types">
       <ownedComment xmi:type="uml:Comment" xmi:id="_2YzVsFOsEe6ti96A70UxSA" annotatedElement="_cXeUEFOnEe6ti96A70UxSA">
@@ -558,6 +561,9 @@ At most one of these two properties will be populated. priorCrystalClasses will 
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kHgc4cPTEe2vE4eW1YPdUQ" key="nature" value="UML_Nature"/>
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_kHhrAsPTEe2vE4eW1YPdUQ" name="chooselattice" type="_IhOlQOJREeaKwNbMHjJZMA" association="_kHfOwMPTEe2vE4eW1YPdUQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_1FHL8PT1Ee-ZNOVoLJ5A8g" name="RequestConfiguration">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_dmCc8PT2Ee-ZNOVoLJ5A8g" name="enactmentId" type="_-MC2wJfeEeOQoP6u6l9OUQ"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_WD50kJ-yEeORueP4RwNSuw" name="DomainTypes">
@@ -1090,4 +1096,6 @@ At most one of these two properties will be populated. priorCrystalClasses will 
   <Profile:IdRef xmi:id="_ffRPICjuEeezA761iS43gg" base_Association="_PWnJgCjuEeezA761iS43gg"/>
   <Profile:Deprecated xmi:id="_blWSUHGdEe6aa8nqO4s-rw" base_Property="_40zgsKyNEeSAYN-eWA_Wkw"/>
   <Profile:IdRef xmi:id="_kXCDIHKJEe6gkpBxuaqq7g" base_Property="_QSPfIHKJEe6gkpBxuaqq7g"/>
+  <Profile:Payload xmi:id="_IQdmgPT2Ee-ZNOVoLJ5A8g" intent="COMMAND" base_Classifier="_1FHL8PT1Ee-ZNOVoLJ5A8g"/>
+  <Profile:Payload xmi:id="_gWWL8PT3Ee-ZNOVoLJ5A8g" base_Classifier="_TWYVkPT3Ee-ZNOVoLJ5A8g"/>
 </xmi:XMI>
