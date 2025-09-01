@@ -1,5 +1,5 @@
-/*
- * Copyright © 2015, 2025 by Global Phasing Ltd. All rights reserved
+/**
+ * Copyright © 2025 by Global Phasing Ltd. All rights reserved
  *
  * This software is proprietary to and embodies the confidential
  * technology of Global Phasing Limited (GPhL).
@@ -10,20 +10,14 @@
  * use is in force.
  *
  */
-
-package co.gphl.beamline.v2_unstable.instrumentation;
-
-import java.util.UUID;
-
-import co.gphl.beamline.v2_unstable.Payload;
-import co.gphl.beamline.v2_unstable.types.VersionInfo;
+package co.gphl.beamline.v2_unstable.types;
 
 /**
- * @author pkeller
- *
+ * 
  */
-public interface RequestConfiguration extends Payload {
-
-    UUID getEnactmentId();
-    VersionInfo getWorkflowVersion();
+public interface SimpleVersionInfo {
+    int getMajor();
+    int getMinor();
+    int getPatch();
+    String getPrerelease();
 }

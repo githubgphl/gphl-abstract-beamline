@@ -253,6 +253,27 @@ userSpaceGroup and userCrystalClasses are additional symmetry information derive
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:GeneralizationSet" xmi:id="_d1R8kFOsEe6ti96A70UxSA" name="GeneralizationSet_OpaqueUri_Url" isCovering="true" isDisjoint="true" generalization="_MJOxkFOsEe6ti96A70UxSA _-87sMFOnEe6ti96A70UxSA"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_nD2r8IdWEfCHHvS25qVILQ" name="SimpleVersionInfo">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_sZzc8IdWEfCHHvS25qVILQ" name="major" type="_LXRoUJfnEeOQoP6u6l9OUQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_0XGqsIdWEfCHHvS25qVILQ" name="minor" type="_LXRoUJfnEeOQoP6u6l9OUQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4TIbYIdWEfCHHvS25qVILQ" name="patch" type="_LXRoUJfnEeOQoP6u6l9OUQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_6ewlcIdWEfCHHvS25qVILQ" name="prerelease">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__bch4IdWEfCHHvS25qVILQ"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_OK_fgIdXEfCHHvS25qVILQ" name="VersionInfo">
+        <generalization xmi:type="uml:Generalization" xmi:id="_uvFc0IdXEfCHHvS25qVILQ" general="_nD2r8IdWEfCHHvS25qVILQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_VbKhgIdXEfCHHvS25qVILQ" name="buildMetadata">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sodHgIdXEfCHHvS25qVILQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_YzxcEIdXEfCHHvS25qVILQ" name="buildTime" type="_ps3DoIdYEfCHHvS25qVILQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_h70lsIdXEfCHHvS25qVILQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_amxDsIdXEfCHHvS25qVILQ" name="isClean" type="_lmMwEKyIEeSAYN-eWA_Wkw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_ps3DoIdYEfCHHvS25qVILQ" name="DateTime"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_JPTgsJ-yEeORueP4RwNSuw" name="Instructions">
       <ownedComment xmi:type="uml:Comment" xmi:id="_ljidQJ-wEeORueP4RwNSuw" annotatedElement="_Xu3QEJfnEeOQoP6u6l9OUQ">
