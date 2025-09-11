@@ -193,6 +193,9 @@ userSpaceGroup and userCrystalClasses are additional symmetry information derive
       <ownedComment xmi:type="uml:Comment" xmi:id="_QjfZwFPVEe6ti96A70UxSA" annotatedElement="_1nPLUFOrEe6ti96A70UxSA">
         <body>&quot;ssp&quot; stands for &quot;scheme-specific part&quot;</body>
       </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_wHNa0I8BEfC2UYVeBKOA8w" annotatedElement="_OK_fgIdXEfCHHvS25qVILQ">
+        <body>buildTime is expressed as seconds since the start of the epoch, i.e. since 1970-01-01T00:00:00Z</body>
+      </ownedComment>
       <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_LXRoUJfnEeOQoP6u6l9OUQ" name="NonNegativeInt">
         <generalization xmi:type="uml:Generalization" xmi:id="_7BfvcJ-3EeORueP4RwNSuw">
           <general xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -268,7 +271,7 @@ userSpaceGroup and userCrystalClasses are additional symmetry information derive
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sodHgIdXEfCHHvS25qVILQ"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_YzxcEIdXEfCHHvS25qVILQ" name="buildTime" type="_ps3DoIdYEfCHHvS25qVILQ">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_YzxcEIdXEfCHHvS25qVILQ" name="buildTime" type="_LXRoUJfnEeOQoP6u6l9OUQ">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_h70lsIdXEfCHHvS25qVILQ"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_amxDsIdXEfCHHvS25qVILQ" name="isClean" type="_lmMwEKyIEeSAYN-eWA_Wkw"/>
