@@ -589,6 +589,9 @@ At most one of these two properties will be populated. priorCrystalClasses will 
       <packagedElement xmi:type="uml:Class" xmi:id="_1FHL8PT1Ee-ZNOVoLJ5A8g" name="RequestConfiguration">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_dmCc8PT2Ee-ZNOVoLJ5A8g" name="enactmentId" type="_-MC2wJfeEeOQoP6u6l9OUQ"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_FSomII2WEfCDxvABMMt2aw" name="workflowVersion" type="_OK_fgIdXEfCHHvS25qVILQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_-162cI-7EfCBJawS9Re4sQ" name="abiVersion" type="_nD2r8IdWEfCHHvS25qVILQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EDQeAI-8EfCBJawS9Re4sQ"/>
+        </ownedAttribute>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_WD50kJ-yEeORueP4RwNSuw" name="DomainTypes">

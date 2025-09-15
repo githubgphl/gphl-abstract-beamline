@@ -16,6 +16,7 @@ package co.gphl.beamline.v2_unstable.instrumentation;
 import java.util.UUID;
 
 import co.gphl.beamline.v2_unstable.Payload;
+import co.gphl.beamline.v2_unstable.types.SimpleVersionInfo;
 import co.gphl.beamline.v2_unstable.types.VersionInfo;
 
 /**
@@ -26,4 +27,5 @@ public interface RequestConfiguration extends Payload {
 
     UUID getEnactmentId();
     VersionInfo getWorkflowVersion();
+    SimpleVersionInfo getAbiVersion();
 }
